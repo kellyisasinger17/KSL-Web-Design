@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KSL Web Design | Recent Commissions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU+Guides&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --ksl-primary: #0F1F3D;
+      --ksl-secondary: #F8F5EF;
+      --ksl-accent: #C9A558;
+      --ksl-panel: #f1ece7;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ksl-primary);
+      background: var(--ksl-panel);
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    .navbar,
+    .btn {
+      font-family: "Libre Baskerville", Georgia, serif;
+    }
+
+    p {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    .site-header {
+      background: var(--ksl-primary);
+    }
+
+    .navbar {
+      min-height: 106px;
+      padding: 0;
+    }
+
+    .nav-inner {
+      width: min(100%, 1700px);
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 5.5rem;
+    }
+
+    .navbar-brand img {
+      width: 82px;
+      height: auto;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(248, 245, 239, 0.45);
+      margin-left: auto;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    .navbar-nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .nav-link {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus,
+    .navbar .nav-link.active {
+      color: var(--ksl-accent) !important;
+    }
+
+    .commissions-hero {
+      padding: 3.1rem 0 2.55rem;
+      background: var(--ksl-panel);
+      border-bottom: 1px solid var(--ksl-accent);
+    }
+
+    .commissions-hero-grid {
+      width: min(100%, 1500px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 5.5rem;
+    }
+
+    .hero-title-block {
+      text-align: center;
+    }
+
+    .hero-title-block h1 {
+      margin: 0 0 1.4rem;
+      font-size: clamp(2.2rem, 3vw, 3.15rem);
+      font-weight: 400;
+      line-height: 1.12;
+      text-transform: uppercase;
+    }
+
+    .gold-star-divider {
+      width: 215px;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin: 0 auto 1.3rem;
+    }
+
+    .gold-star-divider::before,
+    .gold-star-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--ksl-accent);
+    }
+
+    .gold-star-divider span {
+      width: 22px;
+      height: 22px;
+      display: block;
+      background: #f3c22f;
+      clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+    }
+
+    .script-heading {
+      margin: 0;
+      color: #dfad22;
+      font-family: "Allura", cursive;
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      justify-self: center;
+      text-align: center;
+    }
+
+    .hero-copy p {
+      margin: 0 0 1.45rem;
+      font-size: 1.08rem;
+      line-height: 1.3;
+    }
+
+    .hero-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .hero-copy .project-image-link {
+      margin-top: 2.1rem;
+    }
+
+    .project-row {
+      border-bottom: 1px solid var(--ksl-accent);
+      background: var(--ksl-panel);
+    }
+
+    .project-grid {
+      width: min(100%, 1500px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin: 0 auto;
+      padding: 2.15rem 5.5rem 1.75rem;
+    }
+
+    .project-copy {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      gap: 1.55rem;
+      align-items: start;
+    }
+
+    .project-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--ksl-accent);
+      border-radius: 50%;
+      color: var(--ksl-accent);
+    }
+
+    .project-icon svg {
+      width: 33px;
+      height: 33px;
+      stroke-width: 1.25;
+    }
+
+    .project-copy h2 {
+      margin: 0 0 0.55rem;
+      font-size: clamp(2rem, 2.55vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .project-kicker {
+      margin: 0 0 1.35rem;
+      color: #d6a236;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.14rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .project-copy p {
+      max-width: 720px;
+      margin: 0 0 1.6rem;
+      font-size: 1.02rem;
+      line-height: 1.35;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.15rem 2.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 0.55rem;
+      align-items: start;
+      font-size: 0.98rem;
+      line-height: 1.3;
+    }
+
+    .feature-list svg {
+      width: 18px;
+      height: 18px;
+      color: var(--ksl-accent);
+      stroke-width: 1.8;
+    }
+
+    .project-image-link {
+      display: block;
+      justify-self: center;
+      transition: transform 220ms ease, filter 220ms ease;
+    }
+
+    .project-image-link:hover,
+    .project-image-link:focus {
+      transform: translateY(-4px);
+      filter: drop-shadow(0 18px 20px rgba(35, 38, 43, 0.15));
+    }
+
+    .project-image-link img {
+      width: min(100%, 460px);
+      height: auto;
+      display: block;
+    }
+
+    .hero-copy .project-image-link img {
+      width: min(100%, 430px);
+      margin: 0 auto;
+    }
+
+    .commissions-anchor {
+      padding: 2.35rem 0 2.7rem;
+      border-bottom: 1px solid var(--ksl-accent);
+      background: #e5ded4;
+      color: var(--ksl-primary);
+    }
+
+    .anchor-grid {
+      width: min(100%, 1500px);
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 5.5rem;
+    }
+
+    .anchor-copy {
+      text-align: center;
+    }
+
+    .anchor-copy h2 {
+      margin: 0 0 2rem;
+      font-size: clamp(1.8rem, 2.25vw, 2.35rem);
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .anchor-statement {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr) 56px;
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .anchor-statement::before,
+    .anchor-statement::after {
+      color: var(--ksl-accent);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .anchor-statement::before {
+      content: "{";
+    }
+
+    .anchor-statement::after {
+      content: "}";
+    }
+
+    .anchor-statement p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+
+    .anchor-button {
+      min-height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: min(100%, 530px);
+      border-radius: 8px;
+      color: var(--ksl-accent);
+      background: #273653;
+      box-shadow: 18px 18px 28px rgba(35, 38, 43, 0.16);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .anchor-button:hover,
+    .anchor-button:focus {
+      color: var(--ksl-secondary);
+      background: var(--ksl-primary);
+    }
+
+    .site-footer {
+      padding: 5rem 0 0.75rem;
+      background: var(--ksl-primary);
+      color: var(--ksl-secondary);
+    }
+
+    .footer-cta {
+      display: grid;
+      grid-template-columns: 200px minmax(0, 1fr) 320px;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3.6rem;
+    }
+
+    .footer-logo-large {
+      width: 170px;
+      height: auto;
+    }
+
+    .footer-cta h2 {
+      margin: 0 0 0.8rem;
+      color: var(--ksl-secondary);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .footer-cta h2 em {
+      font-style: italic;
+    }
+
+    .footer-cta p {
+      max-width: 720px;
+      margin: 0;
+      color: var(--ksl-secondary);
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    .footer-cta .btn {
+      min-height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      color: #fff;
+      background: rgba(201, 165, 88, 0.92);
+      box-shadow: 0 14px 24px rgba(0, 0, 0, 0.14);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .footer-cta .btn:hover,
+    .footer-cta .btn:focus {
+      color: var(--ksl-primary);
+      background: var(--ksl-secondary);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.25fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .footer-brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.35rem;
+      color: var(--ksl-accent);
+      font-size: 1.2rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .footer-brand-mark img {
+      width: 42px;
+      height: auto;
+    }
+
+    .footer-brand p,
+    .footer-column p,
+    .footer-column a,
+    .footer-bottom {
+      color: var(--ksl-secondary);
+      font-size: 0.96rem;
+      line-height: 1.35;
+    }
+
+    .footer-brand p {
+      max-width: 260px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.9rem;
+      margin-top: 1.9rem;
+    }
+
+    .social-links a {
+      color: var(--ksl-secondary);
+      text-decoration: none;
+    }
+
+    .social-links svg {
+      width: 24px;
+      height: 24px;
+      stroke-width: 1.7;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 1rem;
+      color: var(--ksl-secondary);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-column a {
+      text-decoration: none;
+    }
+
+    .footer-column a:hover,
+    .footer-column a:focus {
+      color: var(--ksl-accent);
+    }
+
+    .footer-email {
+      display: inline-block;
+      margin-bottom: 4rem;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: 991.98px) {
+      .nav-inner {
+        grid-template-columns: auto auto;
+        padding: 0 1.5rem;
+      }
+
+      .navbar-collapse {
+        grid-column: 1 / -1;
+        padding: 1rem 0;
+      }
+
+      .commissions-hero-grid,
+      .project-grid,
+      .anchor-grid,
+      .footer-cta,
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .commissions-hero-grid,
+      .project-grid {
+        padding-inline: 1.5rem;
+      }
+
+      .project-copy {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .project-icon {
+        margin: 0 auto;
+      }
+
+      .feature-list {
+        max-width: 560px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .project-row:nth-of-type(3) .project-image {
+        order: 2;
+      }
+
+      .anchor-grid {
+        text-align: center;
+      }
+
+      .footer-cta {
+        text-align: center;
+      }
+
+      .footer-logo-large {
+        margin: 0 auto;
+      }
+
+      .footer-cta p,
+      .footer-brand p {
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+
+      .anchor-statement {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .anchor-statement::before,
+      .anchor-statement::after {
+        display: none;
+      }
+
+      .footer-cta .btn {
+        min-height: 64px;
+        width: 100%;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="navbar-brand" href="index.html" aria-label="KSL Web Design home">
+          <img src="Images/KSL Laurel Wreath Logo.png" alt="KSL Laurel Wreath Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="primaryNavbar">
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="commissions.html">Recent Commissions</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="commissions-hero" aria-label="Recent commissions introduction">
+      <div class="commissions-hero-grid">
+        <div class="hero-title-block">
+          <h1>Recent Commissions</h1>
+          <div class="gold-star-divider" aria-hidden="true"><span></span></div>
+          <h2 class="script-heading">Every project begins with understanding.</h2>
+        </div>
+        <div class="hero-copy">
+          <p>A website is more than a collection of pages: it's often the first introduction to your organization, your mission, and the people behind it.</p>
+          <p>Before design begins, we take the time to understand not only the goals of the project, but the people, values, and vision that drive it. Our goal remains the same: to create a website that reflects the character of the organization and communicates its purpose with clarity and confidence.</p>
+          <a class="project-image-link" href="https://maisonlancon.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Maison Lancon website">
+            <img src="Images/Maison Lancon macbooks.png" alt="Maison Lancon website displayed on a MacBook">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-row" aria-label="Maison Lancon commission">
+      <div class="project-grid">
+        <div class="project-copy">
+          <div class="project-icon" aria-hidden="true"><i data-lucide="gem"></i></div>
+          <div>
+            <h2>Maison Lançon</h2>
+            <p class="project-kicker">Luxury Brand Website &amp; Digital Foundation</p>
+            <p>Maison Lançon is a custom jewelry design business, just opening their doors. They wanted a dynamic website with a luxurious feel to display their own jewelry pieces, and so consumers can order custom jewelry to be designed as well.</p>
+            <ul class="feature-list">
+              <li><i data-lucide="circle-check"></i><span>Custom design</span></li>
+              <li><i data-lucide="circle-check"></i><span>Custom inquiry and contact forms</span></li>
+              <li><i data-lucide="circle-check"></i><span>Mobile optimization</span></li>
+              <li><i data-lucide="circle-check"></i><span>Technical SEO foundations</span></li>
+              <li><i data-lucide="circle-check"></i><span>Luxury-inspired brand implementation</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-row" aria-label="Lightning Auto Service commission">
+      <div class="project-grid">
+        <a class="project-image-link project-image" href="https://lightningautoservice.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Lightning Auto Service website">
+          <img src="Images/LIghtning Macbooks.png" alt="Lightning Auto Service website displayed on a MacBook">
+        </a>
+        <div class="project-copy">
+          <div class="project-icon" aria-hidden="true"><i data-lucide="car-front"></i></div>
+          <div>
+            <h2>Lightning Auto Service</h2>
+            <p class="project-kicker">Website Redesign &amp; Business Growth Strategy</p>
+            <p>Based in south Jersey / Philadelphia, Lightning Auto Service requested a website redesign from their old Wix setup. We worked with them to improve branding, make their content clearer and easier to search, and added several contact forms for local collision repair shops to easily find them online.</p>
+            <ul class="feature-list">
+              <li><i data-lucide="circle-check"></i><span>Website migration and redesign</span></li>
+              <li><i data-lucide="circle-check"></i><span>Custom contact forms for collision repair facilities</span></li>
+              <li><i data-lucide="circle-check"></i><span>Improved architecture</span></li>
+              <li><i data-lucide="circle-check"></i><span>Technical SEO foundations</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="commissions-anchor" aria-label="Start your commission">
+      <div class="anchor-grid">
+        <div class="anchor-copy">
+          <h2>Your Organization Has a Story Worth Telling.</h2>
+          <div class="anchor-statement">
+            <p>Whether you're launching a new venture, serving your community, or reimagining an established brand, I'd be honored to help bring your vision online.</p>
+          </div>
+        </div>
+        <a class="anchor-button" href="contact.html">Let's Create Something Meaningful</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <img class="footer-logo-large" src="Images/KSL Laurel Wreath Logo.png" alt="KSL Laurel Wreath Logo">
+        <div>
+          <h2>Let's build something classically <em>you.</em></h2>
+          <p>Whether you're a growing business or a mission-driven nonprofit, we're here to help you create a website that makes an impact.</p>
+        </div>
+        <a class="btn" href="contact.html">Let's Build Your<br>Website</a>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-brand-mark">
+            <img src="Images/KSL Standalone Logo.png" alt="">
+            <span>Web<br>Design</span>
+          </div>
+          <p>Thoughtfully designed websites for small businesses and nonprofits.</p>
+          <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:info@kslwebdesign.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+
+        <nav class="footer-column" aria-label="Footer quick links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">What We Build</a></li>
+            <li><a href="index.html#our-process">Our Process</a></li>
+            <li><a href="commissions.html">Recent Commissions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-column" aria-label="Footer services">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Custom Web Design</a></li>
+            <li><a href="services.html">Website Migration</a></li>
+            <li><a href="services.html">SEO Foundations</a></li>
+            <li><a href="services.html">Accessibility</a></li>
+            <li><a href="services.html">Website Care</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-column">
+          <h3>Let's Connect!</h3>
+          <a class="footer-email" href="mailto:info@kslwebdesign.com">info@kslwebdesign.com</a>
+          <p>Romans 8:28</p>
+        </div>
+      </div>
+
+      <p class="footer-bottom">&copy; 2026 KSL Web Design. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
