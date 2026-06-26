@@ -49,21 +49,21 @@
     }
 
     .navbar {
-      min-height: 45px;
+      min-height: 98px;
       padding: 0;
     }
 
     .nav-inner {
-      width: min(100%, 1220px);
+      width: min(100%, 1500px);
       display: grid;
-      grid-template-columns: 112px 1fr;
+      grid-template-columns: 220px 1fr;
       align-items: center;
       margin: 0 auto;
-      padding: 0 3.7rem;
+      padding: 0 7.35rem;
     }
 
     .navbar-brand img {
-      width: 38px;
+      width: 66px;
       height: auto;
     }
 
@@ -83,7 +83,7 @@
 
     .nav-link {
       color: #fff;
-      font-size: 0.58rem;
+      font-size: 0.95rem;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 0;
@@ -96,36 +96,45 @@
     }
 
     .contact-page {
-      display: grid;
-      grid-template-columns: 322fr 508fr;
-      width: min(100%, 830px);
-      min-height: 592px;
-      margin: 0 auto;
-      border-bottom: 1px solid var(--ksl-accent);
-    }
-
-    .contact-aside {
-      display: grid;
-      grid-template-rows: auto auto;
-      align-content: start;
-      border-right: 1px solid var(--ksl-accent);
+      padding: 3.1rem 0 3.4rem;
       background: var(--ksl-panel);
     }
 
-    .contact-intro {
-      padding: 2rem 0.25rem 1.45rem 4.35rem;
+    .contact-inner {
+      width: min(100% - 3rem, 1558px);
+      margin: 0 auto;
     }
 
-    .contact-intro h1 {
-      margin: 0 0 0.9rem;
-      font-size: 0.86rem;
+    .contact-hero {
+      display: grid;
+      grid-template-columns: minmax(520px, 1.14fr) minmax(360px, 0.84fr) minmax(320px, 0.84fr);
+      gap: 3.8rem;
+      align-items: start;
+      margin-bottom: 2.3rem;
+    }
+
+    .contact-title h1 {
+      margin: 0 0 1.3rem;
+      font-size: clamp(2.25rem, 2.75vw, 3.15rem);
       font-weight: 400;
-      line-height: 1.32;
+      line-height: 1.28;
       text-transform: uppercase;
     }
 
-    .contact-intro h1 span {
+    .contact-title h1 span {
       color: var(--ksl-accent);
+    }
+
+    .contact-copy {
+      padding-top: 0.35rem;
+      text-align: center;
+    }
+
+    .contact-copy p {
+      max-width: 405px;
+      margin: 0 auto 1.25rem;
+      font-size: 1.05rem;
+      line-height: 1.35;
     }
 
     .gold-star-divider {
@@ -152,30 +161,24 @@
       clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
     }
 
-    .contact-intro p {
-      margin: 0 0 0.85rem;
-      font-size: 0.68rem;
-      line-height: 1.28;
-    }
-
     .contact-info {
       display: grid;
-      gap: 0.9rem;
-      margin-top: 1.35rem;
+      gap: 1.45rem;
+      padding-top: 0.2rem;
     }
 
     .contact-info-item {
       display: grid;
-      grid-template-columns: 34px 1fr;
-      gap: 1rem;
+      grid-template-columns: 52px 1fr;
+      gap: 1.25rem;
       align-items: center;
     }
 
     .contact-info-item i {
-      width: 27px;
-      height: 27px;
+      width: 40px;
+      height: 40px;
       color: var(--ksl-accent);
-      stroke-width: 1.3;
+      stroke-width: 1.15;
     }
 
     .contact-info-item p {
@@ -185,34 +188,32 @@
     .contact-info-label {
       display: block;
       font-family: "Libre Baskerville", Georgia, serif;
-      font-size: 0.66rem;
+      font-size: 1rem;
       text-transform: uppercase;
     }
 
-    .contact-photo {
-      height: 207px;
-      background: url("Images/Desk Web Design.png") center / cover no-repeat;
-      border-top: 1px solid var(--ksl-accent);
+    .contact-info-item p {
+      font-size: 1rem;
+      line-height: 1.35;
     }
 
-    .contact-form-area {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 1rem 0 1rem 1.5rem;
-      background: var(--ksl-panel);
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(540px, 804px) minmax(440px, 600px);
+      gap: 3.6rem;
+      align-items: start;
     }
 
     .form-shell {
-      width: min(100%, 430px);
-      padding: 1.25rem 3.35rem 0.7rem;
+      width: 100%;
+      padding: 1.85rem 8rem 1.35rem;
       border: 1px solid var(--ksl-accent);
       background: #fff;
     }
 
     .form-shell h2 {
-      margin: 0 0 0.75rem;
-      font-size: 1rem;
+      margin: 0 0 0.9rem;
+      font-size: 1.55rem;
       font-weight: 400;
       line-height: 1.2;
       text-align: center;
@@ -220,23 +221,24 @@
     }
 
     .form-shell .gold-star-divider {
-      margin-bottom: 1.3rem;
+      width: 138px;
+      margin-bottom: 2rem;
     }
 
     .contact-form {
       display: grid;
-      gap: 1.05rem;
+      gap: 1.3rem;
     }
 
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.05rem 3.45rem;
+      gap: 1.8rem 4.6rem;
     }
 
     .form-field {
       display: grid;
-      gap: 0.42rem;
+      gap: 0.7rem;
     }
 
     .form-field-full {
@@ -245,7 +247,7 @@
 
     label {
       margin: 0;
-      font-size: 0.62rem;
+      font-size: 0.95rem;
       line-height: 1;
       text-transform: uppercase;
     }
@@ -265,14 +267,18 @@
 
     input,
     select {
-      min-height: 23px;
-      padding: 0.1rem 0.45rem;
+      min-height: 36px;
+      padding: 0.25rem 0.6rem;
     }
 
     textarea {
-      min-height: 112px;
+      min-height: 55px;
       padding: 0.45rem;
       resize: vertical;
+    }
+
+    .textarea-short {
+      min-height: 55px;
     }
 
     input:focus,
@@ -285,12 +291,12 @@
     .form-submit {
       display: flex;
       justify-content: center;
-      margin-top: 1.25rem;
+      margin-top: 0.6rem;
     }
 
     .form-submit button {
-      min-width: 138px;
-      min-height: 36px;
+      min-width: 146px;
+      min-height: 38px;
       border: 1px solid #273653;
       border-radius: 6px;
       color: var(--ksl-accent);
@@ -304,6 +310,19 @@
     .form-submit button:focus {
       color: var(--ksl-secondary);
       background: var(--ksl-primary);
+    }
+
+    .contact-photo-frame {
+      margin: 5.8rem 0 0;
+      overflow: hidden;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 16px 17px 14px rgba(35, 38, 43, 0.22);
+    }
+
+    .contact-photo-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .site-footer {
@@ -453,7 +472,35 @@
       text-align: center;
     }
 
-    @media (max-width: 767.98px) {
+    @media (max-width: 1199.98px) {
+      .nav-inner {
+        padding: 0 3rem;
+      }
+
+      .contact-hero,
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .contact-title,
+      .contact-copy,
+      .contact-info {
+        max-width: 760px;
+        margin-inline: auto;
+      }
+
+      .contact-title {
+        text-align: center;
+      }
+
+      .contact-photo-frame {
+        max-width: 680px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 991.98px) {
       .nav-inner {
         grid-template-columns: auto auto;
         padding: 0 1.5rem;
@@ -466,27 +513,30 @@
     }
 
     @media (max-width: 767.98px) {
-      .contact-page,
       .footer-cta,
       .footer-content {
         grid-template-columns: 1fr;
       }
 
       .contact-page {
-        width: 100%;
+        padding: 2.5rem 0;
       }
 
-      .contact-aside {
-        border-right: 0;
+      .contact-inner {
+        width: min(100% - 2rem, 720px);
       }
 
-      .contact-intro {
-        padding: 2.5rem 1.5rem;
+      .contact-title h1 {
+        font-size: 2rem;
       }
 
-      .contact-form-area {
-        padding: 2rem 1.5rem;
-        justify-content: center;
+      .form-shell {
+        padding: 1.5rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
       }
 
       .footer-cta {
@@ -505,15 +555,6 @@
     }
 
     @media (max-width: 575.98px) {
-      .form-shell {
-        padding: 1.25rem;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
       .footer-cta .btn {
         min-height: 64px;
         width: 100%;
@@ -550,12 +591,16 @@
 
   <main>
     <section class="contact-page" aria-label="Contact KSL Web Design">
-      <aside class="contact-aside">
-        <div class="contact-intro">
-          <h1>Let's&nbsp;Craft&nbsp;Something<br><span>Meaningful&nbsp;Together.</span></h1>
-          <div class="gold-star-divider" aria-hidden="true"><span></span></div>
-          <p>Launching a new website? Refreshing your existing one? I'd love to hear about your project.</p>
-          <p>Please fill out the form here, and I'll be in touch within 1-2 business days.</p>
+      <div class="contact-inner">
+        <div class="contact-hero">
+          <div class="contact-title">
+            <h1>Let's Craft Something<br><span>Meaningful</span> Together.</h1>
+            <div class="gold-star-divider" aria-hidden="true"><span></span></div>
+          </div>
+          <div class="contact-copy">
+            <p>Launching a new website? Refreshing your existing one? I'd love to hear about your project.</p>
+            <p>Please fill out the form here, and I'll be in touch within 1-2 business days.</p>
+          </div>
           <div class="contact-info">
             <div class="contact-info-item">
               <i data-lucide="clock-3" aria-hidden="true"></i>
@@ -567,64 +612,67 @@
             </div>
           </div>
         </div>
-        <div class="contact-photo" role="img" aria-label="Desk with website mockup"></div>
-      </aside>
 
-      <div class="contact-form-area">
-        <div class="form-shell">
-          <h2>Consultation Form</h2>
-          <div class="gold-star-divider" aria-hidden="true"><span></span></div>
-          <form class="contact-form" action="https://formspree.io/f/mlgybnjl" method="POST">
-            <input type="hidden" name="_subject" value="New KSL Web Design consultation request">
-            <div class="form-grid">
-              <div class="form-field">
-                <label for="name">Your Name</label>
-                <input id="name" name="name" type="text" required autocomplete="name">
+        <div class="contact-layout">
+          <div class="form-shell">
+            <h2>Consultation Form</h2>
+            <div class="gold-star-divider" aria-hidden="true"><span></span></div>
+            <form class="contact-form" action="https://formspree.io/f/mlgybnjl" method="POST">
+              <input type="hidden" name="_subject" value="New KSL Web Design consultation request">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="name">Your Name</label>
+                  <input id="name" name="name" type="text" required autocomplete="name">
+                </div>
+                <div class="form-field">
+                  <label for="email">Email Address</label>
+                  <input id="email" name="email" type="email" required autocomplete="email">
+                </div>
+                <div class="form-field">
+                  <label for="organization">Business/Organization</label>
+                  <input id="organization" name="organization" type="text" autocomplete="organization">
+                </div>
+                <div class="form-field">
+                  <label for="website">Website (If Applicable)</label>
+                  <input id="website" name="website" type="url" autocomplete="url">
+                </div>
+                <div class="form-field form-field-full">
+                  <label for="message">Details About Your Project</label>
+                  <textarea class="textarea-short" id="message" name="message" required></textarea>
+                </div>
+                <div class="form-field form-field-full">
+                  <label for="inspiration">Inspiration Websites</label>
+                  <textarea class="textarea-short" id="inspiration" name="inspiration_websites"></textarea>
+                </div>
+                <div class="form-field">
+                  <label for="referral">How Did You Hear About Us?</label>
+                  <select id="referral" name="referral_source">
+                    <option value="" selected disabled></option>
+                    <option value="Google Search">Google Search</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Friend Recommendation">Friend Recommendation</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="timeline">Timeline</label>
+                  <select id="timeline" name="timeline" required>
+                    <option value="" selected disabled></option>
+                    <option value="ASAP (1 week)">ASAP (1 week)</option>
+                    <option value="Flexible (2-4 weeks)">Flexible (2-4 weeks)</option>
+                    <option value="Still Exploring">Still Exploring</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-field">
-                <label for="email">Email Address</label>
-                <input id="email" name="email" type="email" required autocomplete="email">
+              <div class="form-submit">
+                <button type="submit">Submit</button>
               </div>
-              <div class="form-field">
-                <label for="organization">Business/Organization</label>
-                <input id="organization" name="organization" type="text" autocomplete="organization">
-              </div>
-              <div class="form-field">
-                <label for="website">Website (If Applicable)</label>
-                <input id="website" name="website" type="url" autocomplete="url">
-              </div>
-              <div class="form-field">
-                <label for="timeline">Timeline</label>
-                <select id="timeline" name="timeline" required>
-                  <option value="" selected disabled></option>
-                  <option value="ASAP (1 week)">ASAP (1 week)</option>
-                  <option value="Flexible (2-4 weeks)">Flexible (2-4 weeks)</option>
-                  <option value="Still Exploring">Still Exploring</option>
-                </select>
-              </div>
-              <div class="form-field">
-                <label for="package">Preferred Package</label>
-                <input id="package" name="preferred_package" type="text">
-              </div>
-              <div class="form-field form-field-full">
-                <label for="message">Details About Your Project</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-              <div class="form-field form-field-full">
-                <label for="referral">How Did You Hear About Us?</label>
-                <select id="referral" name="referral_source">
-                  <option value="" selected disabled></option>
-                  <option value="Google Search">Google Search</option>
-                  <option value="Social Media">Social Media</option>
-                  <option value="Friend Recommendation">Friend Recommendation</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-submit">
-              <button type="submit">Submit</button>
-            </div>
-          </form>
+            </form>
+          </div>
+
+          <figure class="contact-photo-frame">
+            <img src="Images/Desk Web Design.png" alt="Desk with KSL homepage displayed on a desktop computer">
+          </figure>
         </div>
       </div>
     </section>
