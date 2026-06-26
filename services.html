@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KSL Web Design | Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU+Guides&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --ksl-primary: #0F1F3D;
+      --ksl-secondary: #F8F5EF;
+      --ksl-accent: #C9A558;
+      --ksl-panel: #f1ece7;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ksl-primary);
+      background: var(--ksl-panel);
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    .navbar,
+    .btn {
+      font-family: "Libre Baskerville", Georgia, serif;
+    }
+
+    p {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    .site-header {
+      background: var(--ksl-primary);
+    }
+
+    .navbar {
+      min-height: 106px;
+      padding: 0;
+    }
+
+    .nav-inner {
+      width: min(100%, 1700px);
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 5.5rem;
+    }
+
+    .navbar-brand img {
+      width: 82px;
+      height: auto;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(248, 245, 239, 0.45);
+      margin-left: auto;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    .navbar-nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .nav-link {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus,
+    .navbar .nav-link.active {
+      color: var(--ksl-accent) !important;
+    }
+
+    .services-hero {
+      background: var(--ksl-panel);
+      border-bottom: 1px solid var(--ksl-accent);
+    }
+
+    .services-hero-grid {
+      display: grid;
+      grid-template-columns: 57% 43%;
+      min-height: 337px;
+    }
+
+    .services-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3.4rem 5rem 2.75rem;
+      text-align: center;
+    }
+
+    .services-copy h1 {
+      margin: 0 0 1.35rem;
+      font-size: clamp(2.2rem, 3vw, 3rem);
+      font-weight: 400;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .gold-star-divider {
+      width: 215px;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin: 0 0 1.25rem;
+    }
+
+    .gold-star-divider::before,
+    .gold-star-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--ksl-accent);
+    }
+
+    .gold-star-divider span {
+      width: 22px;
+      height: 22px;
+      display: block;
+      background: #f3c22f;
+      clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+    }
+
+    .script-heading {
+      margin: 0 0 3.05rem;
+      color: #dfad22;
+      font-family: "Allura", cursive;
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .services-copy p {
+      max-width: 690px;
+      margin: 0;
+      color: var(--ksl-primary);
+      font-size: 1.08rem;
+      line-height: 1.38;
+    }
+
+    .services-hero-image {
+      min-height: 337px;
+      background: url("Images/Desk Web Design.png") center / cover no-repeat;
+      border-left: 1px solid var(--ksl-accent);
+    }
+
+    .service-summary {
+      position: relative;
+      padding: 2rem 0 2.35rem;
+      background: #e5ded4;
+      color: var(--ksl-primary);
+    }
+
+    .section-bridge-logo {
+      position: absolute;
+      left: calc(50% - 54px);
+      bottom: -54px;
+      z-index: 2;
+      width: 108px;
+      height: 108px;
+    }
+
+    .section-bridge-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .service-summary-grid {
+      width: min(100%, 1660px);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: start;
+      margin: 0 auto;
+      padding: 0 4.5rem;
+    }
+
+    .service-card {
+      min-height: 176px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 2.4rem;
+      text-align: center;
+    }
+
+    .service-card + .service-card {
+      border-left: 1px solid var(--ksl-accent);
+    }
+
+    .service-card svg {
+      width: 62px;
+      height: 62px;
+      margin-bottom: 1.2rem;
+      color: var(--ksl-accent);
+      stroke-width: 1.25;
+    }
+
+    .service-card h2 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.15rem, 1.35vw, 1.45rem);
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .service-card p {
+      max-width: 330px;
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+
+    .pricing-section {
+      background: var(--ksl-panel);
+      color: var(--ksl-primary);
+    }
+
+    .audience-packages {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-bottom: 1px solid var(--ksl-accent);
+    }
+
+    .audience-column {
+      padding: 3.9rem 4rem 2.8rem;
+    }
+
+    .audience-column + .audience-column {
+      border-left: 1px solid var(--ksl-accent);
+    }
+
+    .audience-heading {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .audience-heading h2,
+    .enhancements h2 {
+      margin: 0 0 1rem;
+      font-size: calc(clamp(1.8rem, 2.25vw, 2.45rem) + 1px);
+      font-weight: 400;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .mini-star-divider {
+      width: 215px;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin: 0 auto 1.35rem;
+    }
+
+    .mini-star-divider::before,
+    .mini-star-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--ksl-accent);
+    }
+
+    .mini-star-divider span {
+      width: 22px;
+      height: 22px;
+      display: block;
+      background: #f3c22f;
+      clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+    }
+
+    .audience-heading p {
+      max-width: 580px;
+      margin: 0 auto;
+      font-size: calc(1.08rem + 1px);
+      line-height: 1.35;
+    }
+
+    .packages-label {
+      margin: 2rem 0 1.4rem;
+      color: #d6a236;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: calc(1.25rem + 1px);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .package-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2.1rem;
+      align-items: stretch;
+    }
+
+    .package-card,
+    .enhancement-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--ksl-accent);
+      background: rgba(248, 245, 239, 0.2);
+    }
+
+    .package-card {
+      min-height: 386px;
+      padding: 1.35rem 1.45rem 1.25rem;
+    }
+
+    .package-card h3,
+    .enhancement-card h3 {
+      margin: 0 0 0.9rem;
+      font-size: calc(1.05rem + 1px);
+      font-weight: 400;
+      line-height: 1.22;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .package-card p,
+    .enhancement-card p,
+    .package-card li,
+    .enhancement-card li,
+    .package-note {
+      font-size: calc(0.78rem + 1px);
+      line-height: 1.18;
+    }
+
+    .package-card p,
+    .enhancement-card p {
+      margin: 0 0 1rem;
+      text-align: center;
+    }
+
+    .package-card ul,
+    .enhancement-card ul {
+      margin: 0 0 1.2rem;
+      padding-left: 1rem;
+    }
+
+    .package-card .price,
+    .enhancement-card .price {
+      margin-top: auto;
+      color: var(--ksl-accent);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: calc(1.35rem + 1px);
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .consultation-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+      gap: 1.15rem;
+      width: min(100%, 470px);
+      margin: 3rem auto 2.5rem;
+    }
+
+    .consultation-actions .btn {
+      min-height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      color: #fff;
+      font-size: calc(1rem + 1px);
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .btn-outline-gold {
+      color: #dfad22 !important;
+      background: transparent;
+      border: 1px solid var(--ksl-accent);
+    }
+
+    .btn-fill-gold {
+      background: rgba(201, 165, 88, 0.9);
+      border: 1px solid var(--ksl-accent);
+      box-shadow: 18px 18px 28px rgba(35, 38, 43, 0.13);
+    }
+
+    .btn-outline-gold:hover,
+    .btn-outline-gold:focus,
+    .btn-fill-gold:hover,
+    .btn-fill-gold:focus {
+      color: var(--ksl-primary) !important;
+      background: var(--ksl-secondary);
+    }
+
+    .package-note {
+      margin: 1rem 0 0;
+      text-align: center;
+    }
+
+    .enhancements {
+      padding: 2.35rem 3.2rem 2.2rem;
+    }
+
+    .enhancements h2 {
+      text-align: center;
+    }
+
+    .enhancement-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 2rem;
+      margin-top: 3.25rem;
+    }
+
+    .enhancement-card {
+      min-height: 334px;
+      padding: 1.1rem 1.05rem 1.3rem;
+    }
+
+    .site-footer {
+      padding: 5rem 0 0.75rem;
+      background: var(--ksl-primary);
+      color: var(--ksl-secondary);
+    }
+
+    .footer-cta {
+      display: grid;
+      grid-template-columns: 200px minmax(0, 1fr) 320px;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3.6rem;
+    }
+
+    .footer-logo-large {
+      width: 170px;
+      height: auto;
+    }
+
+    .footer-cta h2 {
+      margin: 0 0 0.8rem;
+      color: var(--ksl-secondary);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .footer-cta h2 em {
+      font-style: italic;
+    }
+
+    .footer-cta p {
+      max-width: 720px;
+      margin: 0;
+      color: var(--ksl-secondary);
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    .footer-cta .btn {
+      min-height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      color: #fff;
+      background: rgba(201, 165, 88, 0.92);
+      box-shadow: 0 14px 24px rgba(0, 0, 0, 0.14);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .footer-cta .btn:hover,
+    .footer-cta .btn:focus {
+      color: var(--ksl-primary);
+      background: var(--ksl-secondary);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.25fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .footer-brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.35rem;
+      color: var(--ksl-accent);
+      font-size: 1.2rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .footer-brand-mark img {
+      width: 42px;
+      height: auto;
+    }
+
+    .footer-brand p,
+    .footer-column p,
+    .footer-column a,
+    .footer-bottom {
+      color: var(--ksl-secondary);
+      font-size: 0.96rem;
+      line-height: 1.35;
+    }
+
+    .footer-brand p {
+      max-width: 260px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.9rem;
+      margin-top: 1.9rem;
+    }
+
+    .social-links a {
+      color: var(--ksl-secondary);
+      text-decoration: none;
+    }
+
+    .social-links svg {
+      width: 24px;
+      height: 24px;
+      stroke-width: 1.7;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 1rem;
+      color: var(--ksl-secondary);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-column a {
+      text-decoration: none;
+    }
+
+    .footer-column a:hover,
+    .footer-column a:focus {
+      color: var(--ksl-accent);
+    }
+
+    .footer-email {
+      display: inline-block;
+      margin-bottom: 4rem;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: 991.98px) {
+      .nav-inner {
+        grid-template-columns: auto auto;
+        padding: 0 1.5rem;
+      }
+
+      .navbar-collapse {
+        grid-column: 1 / -1;
+        padding: 1rem 0;
+      }
+
+      .services-hero-grid,
+      .service-summary-grid,
+      .audience-packages,
+      .footer-cta,
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      .services-copy {
+        padding: 3rem 1.5rem;
+      }
+
+      .services-hero-image {
+        border-left: 0;
+        border-top: 1px solid var(--ksl-accent);
+      }
+
+      .service-summary-grid {
+        gap: 2rem;
+        padding: 0 1.5rem;
+      }
+
+      .service-card {
+        min-height: auto;
+        padding: 0 0 2rem;
+      }
+
+      .service-card + .service-card {
+        border-left: 0;
+        border-top: 1px solid var(--ksl-accent);
+        padding-top: 2rem;
+      }
+
+      .audience-column {
+        padding: 3rem 1.5rem;
+      }
+
+      .audience-column + .audience-column {
+        border-left: 0;
+        border-top: 1px solid var(--ksl-accent);
+      }
+
+      .package-row {
+        grid-template-columns: 1fr;
+      }
+
+      .consultation-actions {
+        margin: 2rem auto;
+      }
+
+      .enhancements {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .enhancement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .footer-cta {
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .footer-logo-large {
+        margin: 0 auto;
+      }
+
+      .footer-cta p,
+      .footer-brand p {
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .consultation-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-cta .btn {
+        min-height: 64px;
+        width: 100%;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+
+      .enhancement-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="navbar-brand" href="index.html" aria-label="KSL Web Design home">
+          <img src="Images/KSL Laurel Wreath Logo.png" alt="KSL Laurel Wreath Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="primaryNavbar">
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="commissions.html">Recent Commissions</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="services-hero" aria-label="Services introduction">
+      <div class="services-hero-grid">
+        <div class="services-copy">
+          <h1>Services</h1>
+          <div class="gold-star-divider" aria-hidden="true">
+            <span></span>
+          </div>
+          <h2 class="script-heading">Thoughtfully crafted digital foundations.</h2>
+          <p>As a small business built for small businesses and nonprofits, we understand the importance of earning trust, telling your story well, and creating meaningful connections with the people you serve.</p>
+        </div>
+        <div class="services-hero-image" role="img" aria-label="Elegant desktop website mockup"></div>
+      </div>
+    </section>
+
+    <section class="service-summary" aria-label="Service categories">
+      <div class="service-summary-grid">
+        <article class="service-card">
+          <i data-lucide="monitor"></i>
+          <h2>Website Design</h2>
+          <p>Custom websites designed around your mission, audience, and goals.</p>
+        </article>
+        <article class="service-card">
+          <i data-lucide="panel-right-open"></i>
+          <h2>Website Migration</h2>
+          <p>Guiding organizations from outdated platforms to modern, maintainable websites.</p>
+        </article>
+        <article class="service-card">
+          <i data-lucide="search"></i>
+          <h2>Technical SEO</h2>
+          <p>Helping search engines understand your website so the right people can find it.</p>
+        </article>
+        <article class="service-card">
+          <i data-lucide="shield-check"></i>
+          <h2>Website Stewardship</h2>
+          <p>Ongoing care, updates, and maintenance to keep your website secure and effective.</p>
+        </article>
+      </div>
+      <div class="section-bridge-logo" aria-hidden="true">
+        <img src="Images/KSL White Logo Circle (1).png" alt="">
+      </div>
+    </section>
+
+    <section class="pricing-section" aria-label="Service packages and enhancements">
+      <div class="audience-packages">
+        <div class="audience-column">
+          <div class="audience-heading">
+            <h2>For Small Businesses</h2>
+            <div class="mini-star-divider" aria-hidden="true"><span></span></div>
+            <p>Professional websites that build credibility, attract the right clients, and support the growth of your business.</p>
+          </div>
+          <p class="packages-label">Packages</p>
+          <div class="package-row">
+            <article class="package-card">
+              <h3>Foundation</h3>
+              <p><strong>Ideal for:</strong> consultants, tradespeople, service providers, creatives, and new businesses seeking a professional online presence.</p>
+              <p>Includes:</p>
+              <ul>
+                <li>Up to 3 custom-designed pages</li>
+                <li>Responsive design for mobile and desktop</li>
+                <li>Basic SEO foundation setup</li>
+                <li>Domain registration assistance (for new websites)</li>
+                <li>Google Analytics installation</li>
+                <li>WCAG accessibility audit</li>
+                <li>Performance optimization</li>
+                <li>Secure SSL configuration</li>
+                <li>2 rounds of revisions</li>
+                <li>Launch support and quality assurance testing</li>
+              </ul>
+              <p class="price">$450+</p>
+            </article>
+            <article class="package-card">
+              <h3>Growth</h3>
+              <p><strong>Ideal for:</strong> professional services firms, multi-service organizations, and businesses focused on growth.</p>
+              <p>Includes:</p>
+              <ul>
+                <li>Everything in <strong>Foundation</strong>, plus:</li>
+                <li>Up to 10 custom-designed pages</li>
+                <li>SEO Foundations Plus package</li>
+                <li>Contact and lead generation forms</li>
+                <li>Blog or resource section setup</li>
+                <li>Google Search Console setup</li>
+                <li>Social media integrations</li>
+                <li>3 rounds of revisions</li>
+              </ul>
+              <p class="price">$750+</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="audience-column">
+          <div class="audience-heading">
+            <h2>For Nonprofits</h2>
+            <div class="mini-star-divider" aria-hidden="true"><span></span></div>
+            <p>Thoughtful websites that communicate your mission clearly, strengthen engagement, and inspire confidence.</p>
+          </div>
+          <p class="packages-label">Packages</p>
+          <div class="package-row">
+            <article class="package-card">
+              <h3>Impact</h3>
+              <p><strong>Ideal for:</strong> new nonprofits, community organizations, local initiatives, and grassroots programs.</p>
+              <p>Includes:</p>
+              <ul>
+                <li>Up to 3 custom-designed pages</li>
+                <li>Responsive design for mobile and desktop</li>
+                <li>Basic SEO foundation setup</li>
+                <li>Domain registration assistance (for new websites)</li>
+                <li>Google Analytics installation</li>
+                <li>WCAG accessibility audit</li>
+                <li>Secure SSL configuration</li>
+                <li>2 rounds of revisions</li>
+                <li>Launch support and quality assurance testing</li>
+              </ul>
+              <p class="price">$250+</p>
+            </article>
+            <article class="package-card">
+              <h3>Legacy</h3>
+              <p><strong>Ideal for:</strong> growing nonprofits, educational organizations, faith-based organizations, foundations, and community service groups.</p>
+              <p>Includes:</p>
+              <ul>
+                <li>Everything in <strong>Impact</strong>, plus:</li>
+                <li>Up to 10 custom-designed pages</li>
+                <li>SEO Foundations Plus package</li>
+                <li>Donation form integration</li>
+                <li>Volunteer application form</li>
+                <li>Event or program page setup</li>
+                <li>Google Search Console setup</li>
+                <li>Social media integrations</li>
+                <li>3 rounds of revisions</li>
+              </ul>
+              <p class="price">$550+</p>
+            </article>
+          </div>
+          <p class="package-note">*N.B. Nonprofit organizations must provide proof of 501(c)(3) filing to receive discounted pricing.</p>
+        </div>
+      </div>
+
+      <div class="consultation-actions" aria-label="Consultation actions">
+        <a class="btn btn-outline-gold" href="contact.html">Schedule a<br>Consultation</a>
+        <a class="btn btn-fill-gold" href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="enhancements">
+        <h2>Enhancements</h2>
+        <div class="mini-star-divider" aria-hidden="true"><span></span></div>
+        <div class="enhancement-grid">
+          <article class="enhancement-card">
+            <h3>Custom Forms &amp;<br>Workflow Automations</h3>
+            <p>Streamline inquiries, registrations, donations, and lead capture with tailored workflows.</p>
+            <p>Includes:</p>
+            <ul>
+              <li>Contact forms</li>
+              <li>Quote request forms</li>
+              <li>Donation forms</li>
+              <li>Volunteer applications</li>
+              <li>Event registrations</li>
+              <li>Email integrations and routing</li>
+              <li>Zapier integrations</li>
+              <li>Instagram integration</li>
+            </ul>
+            <p class="price">$25/Month</p>
+          </article>
+          <article class="enhancement-card">
+            <h3>Custom Blogs &amp;<br>Event Pages</h3>
+            <p>Help your audience stay informed, engaged, and connected with professionally designed content hubs and event experiences.</p>
+            <p>Includes:</p>
+            <ul>
+              <li>Blog setup and design</li>
+              <li>News and announcement pages</li>
+              <li>Event landing pages</li>
+              <li>Event registration pages</li>
+              <li>Featured articles and announcements</li>
+              <li>SEO-friendly blog structure</li>
+            </ul>
+            <p class="price">$25/Month</p>
+          </article>
+          <article class="enhancement-card">
+            <h3>Additional Pages</h3>
+            <p>Expand your website as your organization grows.</p>
+            <p>Examples:</p>
+            <ul>
+              <li>FAQ</li>
+              <li>Team page</li>
+              <li>Resources</li>
+              <li>Events</li>
+              <li>Blog</li>
+              <li>Service pages</li>
+              <li>Donation pages</li>
+            </ul>
+            <p class="price">$50/Page</p>
+          </article>
+          <article class="enhancement-card">
+            <h3>Brand Identity Refresh</h3>
+            <p>Refine your organization's visual identity with updated branding, typography, and design guidance.</p>
+            <p>Includes:</p>
+            <ul>
+              <li>Logo refinement or redesign</li>
+              <li>Color palette development</li>
+              <li>Typography recommendations</li>
+              <li>Brand style guide</li>
+              <li>Visual consistency review</li>
+            </ul>
+            <p class="price">$75</p>
+          </article>
+          <article class="enhancement-card">
+            <h3>Website Migration<br>&amp; Redesign</h3>
+            <p>Migrate from a Content Management System to your custom-designed and professionally-managed website.</p>
+            <p>Examples:</p>
+            <ul>
+              <li>Wix</li>
+              <li>Squarespace</li>
+              <li>WordPress</li>
+              <li>Shopify</li>
+              <li>Webflow</li>
+              <li>Lovable</li>
+            </ul>
+            <p class="price">$850</p>
+          </article>
+          <article class="enhancement-card">
+            <h3>SEO Foundations Plus</h3>
+            <p>Strengthen your website's visibility with advanced SEO setup and search optimization.</p>
+            <p>Includes:</p>
+            <ul>
+              <li>Keyword research</li>
+              <li>SEO page titles</li>
+              <li>Meta descriptions</li>
+              <li>Heading structure optimization</li>
+              <li>Content restructuring and refining</li>
+              <li>Local SEO setup</li>
+              <li>Google Search Console submission</li>
+            </ul>
+            <p class="price">$250</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <img class="footer-logo-large" src="Images/KSL Laurel Wreath Logo.png" alt="KSL Laurel Wreath Logo">
+        <div>
+          <h2>Let's build something classically <em>you.</em></h2>
+          <p>Whether you're a growing business or a mission-driven nonprofit, we're here to help you create a website that makes an impact.</p>
+        </div>
+        <a class="btn" href="contact.html">Let's Build Your<br>Website</a>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-brand-mark">
+            <img src="Images/KSL Standalone Logo.png" alt="">
+            <span>Web<br>Design</span>
+          </div>
+          <p>Thoughtfully designed websites for small businesses and nonprofits.</p>
+          <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:info@kslwebdesign.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+
+        <nav class="footer-column" aria-label="Footer quick links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">What We Build</a></li>
+            <li><a href="index.html#our-process">Our Process</a></li>
+            <li><a href="commissions.html">Recent Commissions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-column" aria-label="Footer services">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Custom Web Design</a></li>
+            <li><a href="services.html">Website Migration</a></li>
+            <li><a href="services.html">SEO Foundations</a></li>
+            <li><a href="services.html">Accessibility</a></li>
+            <li><a href="services.html">Website Care</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-column">
+          <h3>Let's Connect!</h3>
+          <a class="footer-email" href="mailto:info@kslwebdesign.com">info@kslwebdesign.com</a>
+          <p>Romans 8:28</p>
+        </div>
+      </div>
+
+      <p class="footer-bottom">&copy; 2026 KSL Web Design. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
