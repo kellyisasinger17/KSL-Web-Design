@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KSL Web Design | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU+Guides&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --ksl-primary: #0F1F3D;
+      --ksl-secondary: #F8F5EF;
+      --ksl-accent: #C9A558;
+      --ksl-muted: #6F7683;
+      --ksl-ink: #23262B;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ksl-primary);
+      background: var(--ksl-secondary);
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    h1 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    h2,
+    .script-line {
+      font-family: "Allura", cursive;
+      font-weight: 400;
+    }
+
+    h3,
+    .navbar,
+    .btn {
+      font-family: "Libre Baskerville", Georgia, serif;
+    }
+
+    p {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    .homepage-hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      background: url("Images/Homepage photo.png") center top / cover no-repeat var(--ksl-secondary);
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 3;
+      min-height: 83px;
+      background: transparent;
+    }
+
+    .navbar {
+      padding: 0;
+    }
+
+    .nav-frame {
+      position: relative;
+      width: clamp(840px, 55vw, 1056px);
+      margin: 0;
+      padding-left: clamp(96px, 10.35vw, 198px);
+    }
+
+    .brand-ribbon {
+      position: absolute;
+      top: 0;
+      left: clamp(4px, 0.9vw, 17px);
+      width: 72px;
+      height: 101px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 10px;
+      background: var(--ksl-primary);
+      clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 73%, 0 84%);
+      box-shadow: 0 8px 18px rgba(15, 31, 61, 0.16);
+    }
+
+    .brand-ribbon img {
+      width: 74px;
+      height: 74px;
+      object-fit: contain;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(15, 31, 61, 0.28);
+      margin-left: auto;
+    }
+
+    .nav-link {
+      color: var(--ksl-primary);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus,
+    .navbar .nav-link.active {
+      color: var(--ksl-accent) !important;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin: 0;
+      padding: 1.8rem 1rem 5rem clamp(96px, 10.35vw, 198px);
+    }
+
+    .hero-content {
+      max-width: 620px;
+      margin-left: 0;
+    }
+
+    .hero-content h1 {
+      max-width: 640px;
+      margin: 0 0 0.75rem;
+      color: var(--ksl-primary);
+      font-size: clamp(2rem, 2.85vw, 2.75rem);
+      font-weight: 400;
+      line-height: 1.16;
+    }
+
+    .script-line {
+      margin: 0 0 2.1rem;
+      color: var(--ksl-accent);
+      font-size: clamp(1.85rem, 3.7vw, 3.15rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .gold-rule {
+      width: 128px;
+      height: 1px;
+      margin: 0 0 2.15rem 82px;
+      background: var(--ksl-accent);
+    }
+
+    .hero-content p {
+      max-width: 430px;
+      margin: 0 0 2.15rem;
+      color: var(--ksl-primary);
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: repeat(2, 304px);
+      gap: 79px;
+      max-width: none;
+    }
+
+    .hero-actions .btn {
+      min-height: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      box-shadow: 12px 14px 22px rgba(35, 38, 43, 0.16);
+    }
+
+    .btn-audience-primary {
+      color: #fff;
+      background: linear-gradient(180deg, #efc24d 0%, #deb03a 100%);
+      border: 1px solid var(--ksl-accent);
+    }
+
+    .btn-audience-primary:hover,
+    .btn-audience-primary:focus {
+      color: var(--ksl-primary);
+      background: var(--ksl-secondary);
+      border-color: var(--ksl-accent);
+    }
+
+    .btn-audience-outline {
+      color: var(--ksl-accent);
+      background: rgba(248, 245, 239, 0.8);
+      border: 1px solid var(--ksl-accent);
+    }
+
+    .btn-audience-outline:hover,
+    .btn-audience-outline:focus {
+      color: #fff;
+      background: var(--ksl-accent);
+    }
+
+    .intro-band {
+      padding: 2.65rem 1rem 2.25rem;
+      background: var(--ksl-primary);
+      color: var(--ksl-secondary);
+      text-align: center;
+    }
+
+    .intro-band p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+      line-height: 1.22;
+    }
+
+    .star-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.25rem auto 0;
+      color: #f3c22f;
+    }
+
+    .star-divider::before,
+    .star-divider::after {
+      content: "";
+      width: 84px;
+      height: 1px;
+      background: var(--ksl-accent);
+    }
+
+    .star-divider span {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      display: block;
+      background: #f3c22f;
+      clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+    }
+
+    .services-overview {
+      padding: 2.1rem 0 2.65rem;
+      background: #fbfbfb;
+      color: var(--ksl-primary);
+    }
+
+    .section-kicker {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin: 0 0 1.45rem;
+      color: #dfad22;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .section-kicker::after {
+      content: "";
+      width: 84px;
+      height: 1px;
+      background: var(--ksl-accent);
+    }
+
+    .section-kicker-rule {
+      width: 84px;
+      height: 1px;
+      margin-top: -0.85rem;
+      margin-bottom: 1.6rem;
+      background: var(--ksl-accent);
+    }
+
+    .section-title {
+      margin: 0 0 1.35rem;
+      color: var(--ksl-primary);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      font-weight: 400;
+      line-height: 1.26;
+    }
+
+    .section-copy {
+      max-width: 540px;
+      margin-bottom: 2rem;
+      color: var(--ksl-primary);
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .btn-process {
+      min-width: 300px;
+      min-height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--ksl-accent);
+      border-radius: 0;
+      color: #fff;
+      background: rgba(201, 165, 88, 0.88);
+      box-shadow: 18px 18px 28px rgba(35, 38, 43, 0.13);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .btn-process:hover,
+    .btn-process:focus {
+      color: var(--ksl-primary);
+      background: var(--ksl-secondary);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2.4rem 3rem;
+      padding-top: 0.45rem;
+    }
+
+    .service-item {
+      text-align: center;
+    }
+
+    .service-icon {
+      width: 88px;
+      height: 88px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.65rem;
+      border-radius: 50%;
+      color: var(--ksl-primary);
+      background: #e9e2d8;
+    }
+
+    .service-icon svg {
+      width: 48px;
+      height: 48px;
+      stroke-width: 1.6;
+    }
+
+    .service-icon img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .service-item h3 {
+      margin-bottom: 0.55rem;
+      color: var(--ksl-primary);
+      font-size: 1.28rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .service-item p {
+      max-width: 260px;
+      margin: 0 auto;
+      color: var(--ksl-primary);
+      font-size: 1rem;
+      line-height: 1.32;
+    }
+
+    .featured-work {
+      padding: 2.2rem 0 4rem;
+      background: #f1ece7;
+      color: var(--ksl-primary);
+    }
+
+    .portfolio-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      color: #dfad22;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .portfolio-link svg {
+      width: 36px;
+      height: 18px;
+      stroke-width: 1.4;
+    }
+
+    .portfolio-link:hover,
+    .portfolio-link:focus {
+      color: var(--ksl-primary);
+    }
+
+    .work-card {
+      text-align: center;
+    }
+
+    .work-card img {
+      width: min(100%, 288px);
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 1px 0 rgba(15, 31, 61, 0.12);
+    }
+
+    .work-card h3 {
+      margin: 1rem 0 0.35rem;
+      color: var(--ksl-primary);
+      font-size: 1.28rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .work-card p {
+      margin: 0;
+      color: var(--ksl-primary);
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .process-anchor {
+      padding: 2.6rem 0 4.7rem;
+      background: #fbfbfb;
+      color: var(--ksl-primary);
+      text-align: center;
+    }
+
+    .center-kicker {
+      margin: 0 0 0.7rem;
+      color: #dfad22;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .center-star-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      margin: 0 auto 1.45rem;
+    }
+
+    .center-star-divider::before,
+    .center-star-divider::after {
+      content: "";
+      width: 84px;
+      height: 1px;
+      background: var(--ksl-accent);
+    }
+
+    .center-star-divider span {
+      width: 20px;
+      height: 20px;
+      display: block;
+      background: #f3c22f;
+      clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+    }
+
+    .process-anchor h2 {
+      margin: 0 0 4.7rem;
+      color: var(--ksl-primary);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.22;
+    }
+
+    .process-timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 1.45rem;
+    }
+
+    .process-timeline::before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      z-index: 0;
+      width: 100vw;
+      height: 1px;
+      transform: translateX(-50%);
+      background: var(--ksl-accent);
+    }
+
+    .process-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .process-icon {
+      width: 88px;
+      height: 88px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.45rem;
+      border-radius: 50%;
+      color: var(--ksl-primary);
+      background: #e9e2d8;
+    }
+
+    .process-icon svg {
+      width: 48px;
+      height: 48px;
+      stroke-width: 1.6;
+    }
+
+    .process-step h3 {
+      margin-bottom: 1rem;
+      color: var(--ksl-primary);
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .process-step p {
+      max-width: 230px;
+      margin: 0 auto;
+      color: var(--ksl-primary);
+      font-size: 0.98rem;
+      line-height: 1.32;
+    }
+
+    .site-footer {
+      padding: 5rem 0 0.75rem;
+      background: var(--ksl-primary);
+      color: var(--ksl-secondary);
+    }
+
+    .footer-cta {
+      display: grid;
+      grid-template-columns: 200px minmax(0, 1fr) 320px;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3.6rem;
+    }
+
+    .footer-logo-large {
+      width: 170px;
+      height: auto;
+    }
+
+    .footer-cta h2 {
+      margin: 0 0 0.8rem;
+      color: var(--ksl-secondary);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .footer-cta h2 em {
+      font-style: italic;
+    }
+
+    .footer-cta p {
+      max-width: 720px;
+      margin: 0;
+      color: var(--ksl-secondary);
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    .footer-cta .btn {
+      min-height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      color: #fff;
+      background: rgba(201, 165, 88, 0.92);
+      box-shadow: 0 14px 24px rgba(0, 0, 0, 0.14);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .footer-cta .btn:hover,
+    .footer-cta .btn:focus {
+      color: var(--ksl-primary);
+      background: var(--ksl-secondary);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.25fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .footer-brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.35rem;
+      color: var(--ksl-accent);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.2rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .footer-brand-mark img {
+      width: 42px;
+      height: auto;
+    }
+
+    .footer-brand p,
+    .footer-column p,
+    .footer-column a,
+    .footer-bottom {
+      color: var(--ksl-secondary);
+      font-size: 0.96rem;
+      line-height: 1.35;
+    }
+
+    .footer-brand p {
+      max-width: 260px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.9rem;
+      margin-top: 1.9rem;
+    }
+
+    .social-links a {
+      color: var(--ksl-secondary);
+      text-decoration: none;
+    }
+
+    .social-links svg {
+      width: 24px;
+      height: 24px;
+      stroke-width: 1.7;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 1rem;
+      color: var(--ksl-secondary);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-column a {
+      text-decoration: none;
+    }
+
+    .footer-column a:hover,
+    .footer-column a:focus {
+      color: var(--ksl-accent);
+    }
+
+    .footer-email {
+      display: inline-block;
+      margin-bottom: 4rem;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: 991.98px) {
+      .homepage-hero {
+        min-height: auto;
+        background:
+          linear-gradient(180deg, rgba(248, 245, 239, 0.99) 0%, rgba(248, 245, 239, 0.94) 42%, rgba(248, 245, 239, 0.64) 72%, rgba(248, 245, 239, 0.22) 100%),
+          url("Images/Homepage photo.png") 62% top / cover no-repeat,
+          var(--ksl-secondary);
+      }
+
+      .nav-frame {
+        padding: 0.25rem 1rem 0.5rem 72px;
+        width: 100%;
+      }
+
+      .brand-ribbon {
+        left: 1rem;
+      }
+
+      .navbar-collapse {
+        margin-top: 0.7rem;
+        padding: 0.75rem 1rem;
+        background: rgba(248, 245, 239, 0.96);
+        border: 1px solid rgba(15, 31, 61, 0.1);
+      }
+
+      .hero-copy {
+        padding: 3rem 1rem 19rem;
+      }
+
+      .hero-content {
+        max-width: 520px;
+        margin-left: 0;
+      }
+
+      .hero-actions {
+        grid-template-columns: repeat(2, minmax(168px, 1fr));
+        gap: 1.4rem;
+        max-width: 410px;
+      }
+
+      .gold-rule {
+        width: 82px;
+        margin-left: 3px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+      }
+
+      .process-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem 2rem;
+      }
+
+      .process-timeline::before {
+        display: none;
+      }
+
+      .process-anchor h2 {
+        margin-bottom: 3rem;
+      }
+
+      .footer-cta,
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-cta {
+        text-align: center;
+      }
+
+      .footer-logo-large {
+        margin: 0 auto;
+      }
+
+      .footer-cta p,
+      .footer-brand p {
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-copy {
+        padding-bottom: 16rem;
+      }
+
+      .hero-actions {
+        grid-template-columns: 1fr;
+        max-width: 260px;
+        gap: 0.8rem;
+      }
+
+      .intro-band {
+        padding-block: 2rem;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-process {
+        min-width: 100%;
+      }
+
+      .section-kicker::after {
+        width: 56px;
+      }
+
+      .process-timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .process-anchor {
+        padding-bottom: 3.5rem;
+      }
+
+      .footer-cta .btn {
+        min-height: 64px;
+        width: 100%;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="homepage-hero" aria-label="KSL Web Design introduction">
+      <header class="site-header">
+        <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+          <div class="nav-frame">
+            <a class="brand-ribbon" href="index.html" aria-label="KSL Web Design home">
+              <img src="Images/KSL Web Design Laurel Wreath Logo.png" alt="KSL Web Design Laurel Wreath Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="primaryNavbar">
+              <ul class="navbar-nav align-items-lg-center justify-content-between w-100">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="commissions.html">Recent Commissions</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="hero-copy">
+        <div class="hero-content">
+          <h1>Digital craftsmanship for modern organizations.</h1>
+          <h2 class="script-line">Built to endure.</h2>
+          <div class="gold-rule" aria-hidden="true"></div>
+          <p>Custom websites and search optimization built with care, clarity, and attention to detail.</p>
+          <div class="hero-actions" aria-label="Audience paths">
+            <a class="btn btn-audience-primary" href="services.html">Nonprofits</a>
+            <a class="btn btn-audience-outline" href="services.html">Small Businesses</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="intro-band" aria-label="Design philosophy">
+      <p>We design websites that balance beauty, usability, and strategy&mdash;helping businesses and nonprofits present their work with confidence.</p>
+      <div class="star-divider" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <section class="services-overview" aria-label="What we build">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <p class="section-kicker">What We Build</p>
+            <div class="section-kicker-rule" aria-hidden="true"></div>
+            <h3 class="section-title">Let's Create<br>Something Meaningful</h3>
+            <p class="section-copy">Whether you're launching a business, leading a nonprofit, or refining an established organization, we'd be honored to help bring your vision online.</p>
+            <a class="btn btn-process" href="#our-process">Our Processes</a>
+          </div>
+          <div class="col-lg-7">
+            <div class="service-grid">
+              <article class="service-item">
+                <div class="service-icon" aria-hidden="true"><i data-lucide="monitor"></i></div>
+                <h3>Custom Web Design</h3>
+                <p>Beautiful, responsive websites designed around your brand and your goals.</p>
+              </article>
+              <article class="service-item">
+                <div class="service-icon" aria-hidden="true"><i data-lucide="arrow-left-right"></i></div>
+                <h3>Website Migration</h3>
+                <p>Seamless migration from Wix, Squarespace, WordPress, Shopify, and more.</p>
+              </article>
+              <article class="service-item">
+                <div class="service-icon" aria-hidden="true"><i data-lucide="search"></i></div>
+                <h3>SEO Foundations</h3>
+                <p>Technical SEO that improves your visibility and sets your site up for long-term growth.</p>
+              </article>
+              <article class="service-item">
+                <div class="service-icon" aria-hidden="true"><img src="Images/Accessibility Icon.png" alt=""></div>
+                <h3>Accessibility</h3>
+                <p>Websites built to be inclusive, usable, and WCAG-aligned for all visitors.</p>
+              </article>
+              <article class="service-item">
+                <div class="service-icon" aria-hidden="true"><i data-lucide="wrench"></i></div>
+                <h3>Website Care</h3>
+                <p>Ongoing updates, security, backups, and support so you can focus on what's important.</p>
+              </article>
+              <article class="service-item">
+                <div class="service-icon" aria-hidden="true"><i data-lucide="message-square"></i></div>
+                <h3>Strategy &amp; Guidance</h3>
+                <p>Honest advice and strategy to help you make confident decisions online.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-work" aria-label="Featured work">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-4">
+            <p class="section-kicker">Featured Work</p>
+            <div class="section-kicker-rule" aria-hidden="true"></div>
+            <h3 class="section-title">Real organizations.<br>Real results.</h3>
+            <p class="section-copy">Every custom project we build is for the people behind it. Take a look at some of our recent commissions!</p>
+            <a class="portfolio-link" href="commissions.html">View Portfolio <i data-lucide="arrow-right"></i></a>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-5 justify-content-center">
+              <div class="col-md-6">
+                <article class="work-card">
+                  <img src="Images/LA Website.png" alt="Lightning Auto Service website preview">
+                  <h3>Lightning Auto Service</h3>
+                  <p>Website Migration</p>
+                </article>
+              </div>
+              <div class="col-md-6">
+                <article class="work-card">
+                  <img src="Images/ML WEBSITE.png" alt="Maison Lancon Jewelry website preview">
+                  <h3>Maison Lancon Jewelry</h3>
+                  <p>Website Design</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-anchor" id="our-process" aria-label="Our process">
+      <div class="container">
+        <p class="center-kicker">Our Process</p>
+        <div class="center-star-divider" aria-hidden="true">
+          <span></span>
+        </div>
+        <h2>Clear processes + pricing, from start to finish.</h2>
+        <div class="process-timeline">
+          <article class="process-step">
+            <div class="process-icon" aria-hidden="true"><i data-lucide="message-square"></i></div>
+            <h3>Discovery</h3>
+            <p>We'll set up a call to learn about your goals, audience, and what success looks like.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-icon" aria-hidden="true"><i data-lucide="clipboard-list"></i></div>
+            <h3>Research + Planning</h3>
+            <p>We map out the structure, content, and SEO strategy for your site, for your approval</p>
+          </article>
+          <article class="process-step">
+            <div class="process-icon" aria-hidden="true"><i data-lucide="pencil"></i></div>
+            <h3>Design</h3>
+            <p>We design a custom website that reflects your brand and vision.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-icon" aria-hidden="true"><i data-lucide="code-2"></i></div>
+            <h3>Development</h3>
+            <p>We build a fast, secure, and responsive website that works everywhere.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-icon" aria-hidden="true"><i data-lucide="file-search"></i></div>
+            <h3>Refinement</h3>
+            <p>Initial tests, design tweaks, and reviewing all the details, to ensure your vision is perfect.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-icon" aria-hidden="true"><i data-lucide="rocket"></i></div>
+            <h3>Launch</h3>
+            <p>We test everything, optimize performance, and launch your site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <img class="footer-logo-large" src="Images/KSL Laurel Wreath Logo.png" alt="KSL Laurel Wreath Logo">
+        <div>
+          <h2>Let's build something classically <em>you.</em></h2>
+          <p>Whether you're a growing business or a mission-driven nonprofit, we're here to help you create a website that makes an impact.</p>
+        </div>
+        <a class="btn" href="contact.html">Let's Build Your<br>Website</a>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-brand-mark">
+            <img src="Images/KSL Standalone Logo.png" alt="">
+            <span>Web<br>Design</span>
+          </div>
+          <p>Thoughtfully designed websites for small businesses and nonprofits.</p>
+          <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:info@kslwebdesign.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+
+        <nav class="footer-column" aria-label="Footer quick links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">What We Build</a></li>
+            <li><a href="#our-process">Our Process</a></li>
+            <li><a href="commissions.html">Recent Commissions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-column" aria-label="Footer services">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Custom Web Design</a></li>
+            <li><a href="services.html">Website Migration</a></li>
+            <li><a href="services.html">SEO Foundations</a></li>
+            <li><a href="services.html">Accessibility</a></li>
+            <li><a href="services.html">Website Care</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-column">
+          <h3>Let's Connect!</h3>
+          <a class="footer-email" href="mailto:info@kslwebdesign.com">info@kslwebdesign.com</a>
+          <p>Romans 8:28</p>
+        </div>
+      </div>
+
+      <p class="footer-bottom">&copy; 2026 KSL Web Design. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
