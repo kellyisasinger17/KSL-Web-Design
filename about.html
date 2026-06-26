@@ -99,7 +99,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1.45fr) minmax(360px, 0.65fr);
       gap: 4rem;
-      align-items: end;
+      align-items: center;
       margin: 0 auto;
       padding: 0 5.5rem;
     }
@@ -168,7 +168,7 @@
       width: min(100%, 408px);
       display: block;
       justify-self: center;
-      align-self: end;
+      align-self: center;
     }
 
     .about-details {
@@ -289,6 +289,93 @@
     .btn-gold:focus {
       color: var(--ksl-primary);
       background: var(--ksl-secondary);
+    }
+
+    .credentials-anchor {
+      padding: 2.1rem 0 2.45rem;
+      overflow: visible;
+      background: #fff;
+      border-top: 1px solid rgba(201, 165, 88, 0.25);
+    }
+
+    .credentials-heading {
+      margin: 0 0 1.5rem;
+      color: var(--ksl-primary);
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .credentials-grid {
+      width: min(100%, 1500px);
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) minmax(260px, 1fr) minmax(260px, 1fr);
+      gap: 4rem;
+      align-items: end;
+      margin: 0 auto;
+      padding: 0 5.5rem;
+    }
+
+    .education-list {
+      display: grid;
+      gap: 1.15rem;
+      margin: 0;
+    }
+
+    .education-list dt {
+      margin: 0;
+      color: var(--ksl-primary);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .education-list dd {
+      margin: 0;
+      color: var(--ksl-primary);
+      font-style: italic;
+      font-size: 0.9rem;
+      line-height: 1.15;
+    }
+
+    .credential-card {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      text-align: center;
+    }
+
+    .credential-card h2 {
+      margin: 0 0 1rem;
+      color: var(--ksl-primary);
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: none;
+    }
+
+    .credential-card img {
+      width: min(100%, 300px);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      background: #fff;
+      transition: transform 250ms ease, box-shadow 250ms ease;
+      transform-origin: center center;
+    }
+
+    .credential-card:hover,
+    .credential-card:focus-within {
+      z-index: 10;
+    }
+
+    .credential-card img:hover,
+    .credential-card img:focus {
+      transform: scale(2);
+      box-shadow: 0 22px 42px rgba(35, 38, 43, 0.2);
     }
 
     .site-footer {
@@ -452,7 +539,8 @@
       }
 
       .about-hero-grid,
-      .details-grid {
+      .details-grid,
+      .credentials-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
         padding: 0 1.5rem;
@@ -493,6 +581,17 @@
       .footer-cta p,
       .footer-brand p {
         margin-inline: auto;
+      }
+
+      .education-list,
+      .credential-card {
+        max-width: 520px;
+        margin-inline: auto;
+      }
+
+      .credential-card img:hover,
+      .credential-card img:focus {
+        transform: scale(1.35);
       }
     }
 
@@ -549,12 +648,13 @@
             <span></span>
           </div>
           <h2 class="script-heading">Good design is timeless.</h2>
-          <p>At KSL Web Design, we believe a website should be more than a digital placeholder.</p>
-          <p>It should communicate your purpose with <em>clarity</em>, reflect your values with <em>integrity</em>, and help visitors understand why your work matters.</p>
-          <p>As a <em>small business</em> built for small businesses and nonprofits, we understand the importance of earning trust, telling your story well, and creating meaningful connections with the people you serve.</p>
-          <p>By combining thoughtful design, modern development, and sound SEO foundations, we create websites that are elegant, functional, and built to endure&mdash;serving your organization not only today, but for years to come.</p>
+          <p>I believe a website should be more than a virtual placeholder.</p>
+          <p>It should communicate your purpose with clarity, reflect your values with integrity, and help visitors understand why your work matters. Every organization has a story worth telling, and I enjoy discovering what makes each business or nonprofit unique before bringing that story to life online.</p>
+          <p>As a small business owner myself, I understand the importance of earning trust, building meaningful relationships, and creating something that will continue serving your organization long after launch. That's why every website I design is built with intention&mdash;from its visual identity and user experience to its technical foundation and search engine optimization.</p>
+          <p>Before transitioning into tech, I trained as a classical opera singer, an experience that shaped my creativity, attention to detail, and appreciation for thoughtful craftsmanship. It also taught me that every audience is different, and that meaningful communication begins by listening first.</p>
+          <p>My background in education, customer-facing roles, and relationship building has given me a deep appreciation for understanding people before solving problems. I bring that same philosophy to every project: listening carefully, asking thoughtful questions, and designing websites that not only look beautiful, but genuinely reflect the people and purpose behind the organization.</p>
         </div>
-        <img class="about-portrait" src="Images/KSL Web Design LOGOs.png" alt="Kelly Lancon of KSL Web Design">
+        <img class="about-portrait" src="Images/Circle headshot frame.png" alt="Kelly Lancon of KSL Web Design">
       </div>
     </section>
 
@@ -586,6 +686,40 @@
           <img class="about-cta-logo" src="Images/KSL Laurel Wreath Logo.png" alt="KSL Laurel Wreath Logo">
           <a class="btn btn-gold" href="contact.html">Let's Build Your<br>Website</a>
         </div>
+      </div>
+    </section>
+
+    <section class="credentials-anchor" aria-label="Credentials">
+      <h2 class="credentials-heading">Credentials</h2>
+      <div class="credentials-grid">
+        <dl class="education-list">
+          <div>
+            <dt>Master of Music</dt>
+            <dd>Manhattan School of Music</dd>
+          </div>
+          <div>
+            <dt>Bachelor of Arts, English Linguistics</dt>
+            <dd>University of Arkansas at Little Rock</dd>
+          </div>
+          <div>
+            <dt>Bachelor of Arts, French Language and Literature</dt>
+            <dd>University of Arkansas at Little Rock</dd>
+          </div>
+          <div>
+            <dt>Diplome d'Etudes de la Langue Francaise</dt>
+            <dd>L'universite d'Orleans, France</dd>
+          </div>
+        </dl>
+
+        <figure class="credential-card">
+          <h2>SheCodes Diploma</h2>
+          <img src="Images/SheCodes Front-End Diploma.png" alt="SheCodes Front-End Developer Diploma" tabindex="0">
+        </figure>
+
+        <figure class="credential-card">
+          <h2>HubSpot Diploma</h2>
+          <img src="Images/Hubspot SEO Certificate.png" alt="HubSpot SEO Certification" tabindex="0">
+        </figure>
       </div>
     </section>
   </main>
