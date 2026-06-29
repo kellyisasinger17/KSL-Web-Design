@@ -87,6 +87,51 @@
       color: var(--ksl-accent) !important;
     }
 
+    .navbar .dropdown-menu {
+      min-width: 310px;
+      padding: 0.75rem;
+      border: 1px solid rgba(201, 165, 88, 0.45);
+      border-radius: 8px;
+      background: var(--ksl-secondary);
+      box-shadow: 0 16px 28px rgba(35, 38, 43, 0.14);
+    }
+
+    .navbar .dropdown-item {
+      white-space: normal;
+      padding: 0.65rem 0.75rem;
+      border-radius: 6px;
+      color: var(--ksl-primary);
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    .navbar .dropdown-item:hover,
+    .navbar .dropdown-item:focus {
+      color: var(--ksl-primary);
+      background: rgba(201, 165, 88, 0.16);
+    }
+
+    .dropdown-item-title {
+      display: block;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.82rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .dropdown-item-text {
+      display: block;
+      margin-top: 0.25rem;
+      color: #6F7683;
+      font-size: 0.83rem;
+      line-height: 1.28;
+    }
+
+    @media (min-width: 992px) {
+      .navbar .dropdown:hover > .dropdown-menu {
+        display: block;
+      }
+    }
+
     .commissions-hero {
       padding: 3.1rem 0 2.55rem;
       background: var(--ksl-panel);
@@ -273,7 +318,7 @@
     .commissions-anchor {
       padding: 2.35rem 0 2.7rem;
       border-bottom: 1px solid var(--ksl-accent);
-      background: #e5ded4;
+      background: #fff;
       color: var(--ksl-primary);
     }
 
@@ -396,7 +441,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 0;
+      border-radius: 8px;
       color: #fff;
       background: rgba(201, 165, 88, 0.92);
       box-shadow: 0 14px 24px rgba(0, 0, 0, 0.14);
@@ -600,9 +645,29 @@
         <div class="collapse navbar-collapse" id="primaryNavbar">
           <ul class="navbar-nav align-items-lg-center">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="commissions.html">Recent Commissions</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="about.html"><span class="dropdown-item-title">About Me</span></a></li>
+                <li><a class="dropdown-item" href="about.html#credentials"><span class="dropdown-item-title">Credentials</span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Design</span><span class="dropdown-item-text">Custom websites designed around your mission, audience, and goals.</span></a></li>
+                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Migration</span><span class="dropdown-item-text">Guiding organizations from outdated platforms to modern, maintainable websites.</span></a></li>
+                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Technical SEO</span><span class="dropdown-item-text">Helping search engines understand your website so the right people can find it.</span></a></li>
+                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Stewardship</span><span class="dropdown-item-text">Ongoing care, updates, and maintenance to keep your website secure and effective.</span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="commissionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recent Commissions</a>
+              <ul class="dropdown-menu" aria-labelledby="commissionsDropdown">
+                <li><a class="dropdown-item" href="commissions.html"><span class="dropdown-item-title">Portfolio</span></a></li>
+                <li><a class="dropdown-item" href="commissions.html"><span class="dropdown-item-title">Sample Websites</span></a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -716,6 +781,10 @@
             <li><a href="services.html">What We Build</a></li>
             <li><a href="index.html#our-process">Our Process</a></li>
             <li><a href="commissions.html">Recent Commissions</a></li>
+            <li><a href="faqs.html">FAQ</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>

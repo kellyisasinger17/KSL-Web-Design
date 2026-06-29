@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KSL Web Design | About</title>
+  <title>KSL Web Design | Accessibility Statement</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU+Guides&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
       --ksl-primary: #0F1F3D;
       --ksl-secondary: #F8F5EF;
       --ksl-accent: #C9A558;
-      --ksl-ink: #23262B;
       --ksl-panel: #f1ece7;
     }
 
@@ -133,43 +132,35 @@
       }
     }
 
-    .about-hero {
-      padding: 2rem 0 0;
+    .accessibility-hero {
       background: var(--ksl-panel);
       border-bottom: 1px solid var(--ksl-accent);
     }
 
-    .about-hero-grid {
-      width: min(100%, 1500px);
-      display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(360px, 0.65fr);
-      gap: 4rem;
+    .accessibility-copy {
+      min-height: 337px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      margin: 0 auto;
-      padding: 0 5.5rem;
+      justify-content: center;
+      padding: 3.4rem 5rem 2.75rem;
+      text-align: center;
     }
 
-    .about-copy {
-      align-self: center;
-      max-width: 980px;
-      padding: 2.2rem 0 3.8rem;
-    }
-
-    .about-copy h1 {
-      margin: 0 0 0.8rem 0.6rem;
-      font-size: clamp(2.2rem, 3.1vw, 3.1rem);
+    .accessibility-copy h1 {
+      margin: 0 0 1.35rem;
+      font-size: clamp(2.2rem, 3vw, 3rem);
       font-weight: 400;
       line-height: 1.1;
       text-transform: uppercase;
     }
 
     .gold-star-divider {
-      width: 255px;
+      width: 215px;
       display: flex;
       align-items: center;
       gap: 0.85rem;
-      margin: 0 0 1.55rem 2.35rem;
-      color: #f3c22f;
+      margin: 0 0 1.25rem;
     }
 
     .gold-star-divider::before,
@@ -189,7 +180,7 @@
     }
 
     .script-heading {
-      margin: 0 0 3rem;
+      margin: 0 0 2.15rem;
       color: #dfad22;
       font-family: "Allura", cursive;
       font-size: clamp(2rem, 3vw, 3rem);
@@ -197,230 +188,54 @@
       line-height: 1;
     }
 
-    .about-copy p {
-      max-width: 930px;
-      margin: 0 0 1.65rem;
+    .accessibility-copy p {
+      max-width: 720px;
+      margin: 0;
       color: var(--ksl-primary);
       font-size: 1.08rem;
       line-height: 1.38;
     }
 
-    .about-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .about-portrait {
-      width: min(100%, 408px);
-      display: block;
-      justify-self: center;
-      align-self: center;
-    }
-
-    .about-details {
-      padding: 3.75rem 0 4.55rem;
-      background: var(--ksl-panel);
-    }
-
-    .details-grid {
-      width: min(100%, 1500px);
-      display: grid;
-      grid-template-columns: 1fr 1.55fr 1fr;
-      gap: 3.5rem;
-      align-items: center;
-      margin: 0 auto;
-      padding: 0 5.5rem;
-    }
-
-    .detail-panel {
-      min-height: 306px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .detail-panel + .detail-panel {
-      border-left: 1px solid var(--ksl-accent);
-      padding-left: 4rem;
-    }
-
-    .detail-panel h2 {
-      margin: 0 0 2rem;
-      font-size: clamp(1.35rem, 1.7vw, 1.8rem);
-      font-weight: 400;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
-
-    .location-row {
-      display: grid;
-      grid-template-columns: 135px 1fr;
-      gap: 1.65rem;
-      align-items: center;
-    }
-
-    .ny-mark {
-      width: 132px;
-      height: 132px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ksl-accent);
-    }
-
-    .ny-mark img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .location-row p,
-    .trait-list span {
-      margin: 0;
-      color: var(--ksl-primary);
-      font-size: 1.02rem;
-      line-height: 1.26;
-    }
-
-    .trait-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.8rem 3.5rem;
-    }
-
-    .trait {
-      display: grid;
-      grid-template-columns: 42px 1fr;
-      align-items: center;
-      gap: 0.9rem;
-      text-transform: uppercase;
-    }
-
-    .trait svg {
-      width: 34px;
-      height: 34px;
-      color: var(--ksl-accent);
-      stroke-width: 1.25;
-    }
-
-    .about-cta {
-      align-items: center;
-      text-align: center;
-    }
-
-    .about-cta-logo {
-      width: 185px;
-      height: auto;
-      margin: 0 auto 1.85rem;
-    }
-
-    .btn-gold {
-      min-width: 305px;
-      min-height: 80px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--ksl-accent);
-      border-radius: 8px;
-      color: #fff;
-      background: rgba(201, 165, 88, 0.9);
-      box-shadow: 18px 18px 28px rgba(35, 38, 43, 0.13);
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
-
-    .btn-gold:hover,
-    .btn-gold:focus {
-      color: var(--ksl-primary);
+    .accessibility-section {
+      padding: 4.5rem 0 5rem;
       background: var(--ksl-secondary);
     }
 
-    .credentials-anchor {
-      padding: 2.1rem 0 2.45rem;
-      overflow: visible;
-      background: #fff;
-      border-top: 1px solid rgba(201, 165, 88, 0.25);
-    }
-
-    .credentials-heading {
-      margin: 0 0 1.5rem;
-      color: var(--ksl-primary);
-      font-size: 1.05rem;
-      font-weight: 400;
-      line-height: 1.2;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .credentials-grid {
-      width: min(100%, 1500px);
-      display: grid;
-      grid-template-columns: minmax(280px, 1fr) minmax(260px, 1fr) minmax(260px, 1fr);
-      gap: 4rem;
-      align-items: end;
+    .accessibility-container {
+      width: min(100%, 1120px);
       margin: 0 auto;
-      padding: 0 5.5rem;
+      padding: 0 2rem;
     }
 
-    .education-list {
-      display: grid;
-      gap: 1.15rem;
-      margin: 0;
+    .accessibility-content {
+      padding: 3rem;
+      border: 1px solid var(--ksl-accent);
+      background: var(--ksl-panel);
+      box-shadow: 0 10px 24px rgba(35, 38, 43, 0.06);
     }
 
-    .education-list dt {
-      margin: 0;
+    .accessibility-content h2 {
+      margin: 2.35rem 0 1rem;
       color: var(--ksl-primary);
-      font-family: "Libre Baskerville", Georgia, serif;
-      font-size: 0.92rem;
-      font-weight: 700;
-      line-height: 1.15;
+      font-size: 1.28rem;
+      font-weight: 400;
+      line-height: 1.25;
     }
 
-    .education-list dd {
-      margin: 0;
-      color: var(--ksl-primary);
-      font-style: italic;
-      font-size: 0.9rem;
-      line-height: 1.15;
+    .accessibility-content h2:first-child {
+      margin-top: 0;
     }
 
-    .credential-card {
-      position: relative;
-      z-index: 1;
-      margin: 0;
-      text-align: center;
-    }
-
-    .credential-card h2 {
+    .accessibility-content p {
       margin: 0 0 1rem;
       color: var(--ksl-primary);
-      font-size: 1.15rem;
-      font-weight: 400;
-      line-height: 1.2;
-      text-transform: none;
+      font-size: 1rem;
+      line-height: 1.48;
     }
 
-    .credential-card img {
-      width: min(100%, 300px);
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      background: #fff;
-      transition: transform 250ms ease, box-shadow 250ms ease;
-      transform-origin: center center;
-    }
-
-    .credential-card:hover,
-    .credential-card:focus-within {
-      z-index: 10;
-    }
-
-    .credential-card img:hover,
-    .credential-card img:focus {
-      transform: scale(2);
-      box-shadow: 0 22px 42px rgba(35, 38, 43, 0.2);
+    .accessibility-content a {
+      color: var(--ksl-primary);
+      text-decoration: underline;
     }
 
     .site-footer {
@@ -445,7 +260,6 @@
     .footer-cta h2 {
       margin: 0 0 0.8rem;
       color: var(--ksl-secondary);
-      font-family: "Libre Baskerville", Georgia, serif;
       font-size: clamp(2rem, 3vw, 2.8rem);
       font-weight: 400;
       line-height: 1.2;
@@ -497,7 +311,6 @@
       gap: 1rem;
       margin-bottom: 1.35rem;
       color: var(--ksl-accent);
-      font-family: "Libre Baskerville", Georgia, serif;
       font-size: 1.2rem;
       line-height: 1.25;
       text-transform: uppercase;
@@ -583,39 +396,13 @@
         padding: 1rem 0;
       }
 
-      .about-hero-grid,
-      .details-grid,
-      .credentials-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        padding: 0 1.5rem;
-      }
-
-      .about-copy {
-        padding-bottom: 0;
-      }
-
-      .about-portrait {
-        max-width: 420px;
-      }
-
-      .detail-panel {
-        min-height: auto;
-      }
-
-      .detail-panel + .detail-panel {
-        border-left: 0;
-        border-top: 1px solid var(--ksl-accent);
-        padding: 2.5rem 0 0;
-      }
-
       .footer-cta,
       .footer-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
       }
 
       .footer-cta {
+        gap: 2rem;
         text-align: center;
       }
 
@@ -627,27 +414,19 @@
       .footer-brand p {
         margin-inline: auto;
       }
-
-      .education-list,
-      .credential-card {
-        max-width: 520px;
-        margin-inline: auto;
-      }
-
-      .credential-card img:hover,
-      .credential-card img:focus {
-        transform: scale(1.35);
-      }
     }
 
     @media (max-width: 575.98px) {
-      .trait-list,
-      .location-row {
-        grid-template-columns: 1fr;
+      .accessibility-copy {
+        padding: 2.6rem 1.5rem;
       }
 
-      .btn-gold {
-        min-width: 100%;
+      .accessibility-container {
+        padding: 0 1rem;
+      }
+
+      .accessibility-content {
+        padding: 1.5rem;
       }
 
       .footer-cta .btn {
@@ -675,7 +454,7 @@
           <ul class="navbar-nav align-items-lg-center">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
               <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                 <li><a class="dropdown-item" href="about.html"><span class="dropdown-item-title">About Me</span></a></li>
                 <li><a class="dropdown-item" href="about.html#credentials"><span class="dropdown-item-title">Credentials</span></a></li>
@@ -705,86 +484,30 @@
   </header>
 
   <main>
-    <section class="about-hero" aria-label="About Kelly">
-      <div class="about-hero-grid">
-        <div class="about-copy">
-          <h1>About Kelly</h1>
-          <div class="gold-star-divider" aria-hidden="true">
-            <span></span>
-          </div>
-          <h2 class="script-heading">Good design is timeless.</h2>
-          <p>I believe a website should be more than a virtual placeholder.</p>
-          <p>It should communicate your purpose with clarity, reflect your values with integrity, and help visitors understand why your work matters. Every organization has a story worth telling, and I enjoy discovering what makes each business or nonprofit unique before bringing that story to life online.</p>
-          <p>As a small business owner myself, I understand the importance of earning trust, building meaningful relationships, and creating something that will continue serving your organization long after launch. That's why every website I design is built with intention&mdash;from its visual identity and user experience to its technical foundation and search engine optimization.</p>
-          <p>Before transitioning into tech, I trained as a classical opera singer, an experience that shaped my creativity, attention to detail, and appreciation for thoughtful craftsmanship. It also taught me that every audience is different, and that meaningful communication begins by listening first.</p>
-          <p>My background in education, customer-facing roles, and relationship building has given me a deep appreciation for understanding people before solving problems. I bring that same philosophy to every project: listening carefully, asking thoughtful questions, and designing websites that not only look beautiful, but genuinely reflect the people and purpose behind the organization.</p>
-        </div>
-        <img class="about-portrait" src="Images/Circle headshot frame.png" alt="Kelly Lancon of KSL Web Design">
+    <section class="accessibility-hero" aria-label="Accessibility statement">
+      <div class="accessibility-copy">
+        <h1>Accessibility Statement</h1>
+        <div class="gold-star-divider" aria-hidden="true"><span></span></div>
+        <h2 class="script-heading">Built to welcome every visitor.</h2>
+        <p>KSL Web Design is committed to providing a website that is accessible to all visitors, regardless of ability or the technology they use to access it.</p>
       </div>
     </section>
 
-    <section class="about-details" aria-label="About details">
-      <div class="details-grid">
-        <div class="detail-panel">
-          <h2>Based in New York</h2>
-          <div class="location-row">
-            <div class="ny-mark" aria-hidden="true">
-              <img src="Images/New York.png" alt="">
-            </div>
-            <p>Proudly serving small businesses and nonprofits in the city and beyond.</p>
-          </div>
-        </div>
+    <section class="accessibility-section" aria-label="Accessibility statement text">
+      <div class="accessibility-container">
+        <article class="accessibility-content">
+          <h2>Effective Date</h2>
+          <p>June 26, 2026</p>
+          <p>KSL Web Design is committed to providing a website that is accessible to all visitors, regardless of ability or the technology they use to access it.</p>
+          <p>This website has been designed and developed in accordance with the <strong>Web Content Accessibility Guidelines (WCAG) 2.2 Level AA</strong>, with the goal of providing an inclusive, accessible, and user-friendly experience.</p>
+          <p>Accessibility is an ongoing process. As technologies and accessibility standards continue to evolve, we are committed to reviewing and improving this website to maintain compliance and enhance usability.</p>
+          <p>If you experience difficulty accessing any content on this website or encounter an accessibility barrier, we encourage you to contact us. We value your feedback and will make every reasonable effort to address accessibility concerns promptly.</p>
 
-        <div class="detail-panel">
-          <h2>More Than a Web Developer</h2>
-          <div class="trait-list">
-            <div class="trait"><i data-lucide="music"></i><span>Classical Musician</span></div>
-            <div class="trait"><i data-lucide="feather"></i><span>Storyteller</span></div>
-            <div class="trait"><i data-lucide="book-open"></i><span>Educator</span></div>
-            <div class="trait"><i data-lucide="puzzle"></i><span>Problem Solver</span></div>
-            <div class="trait"><i data-lucide="library"></i><span>Avid Reader</span></div>
-            <div class="trait"><i data-lucide="sprout"></i><span>Lifelong Learner</span></div>
-          </div>
-        </div>
-
-        <div class="detail-panel about-cta">
-          <img class="about-cta-logo" src="Images/KSL Laurel Wreath Logo.png" alt="KSL Laurel Wreath Logo">
-          <a class="btn btn-gold" href="contact.html">Let's Build Your<br>Website</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="credentials-anchor" id="credentials" aria-label="Credentials">
-      <h2 class="credentials-heading">Credentials</h2>
-      <div class="credentials-grid">
-        <dl class="education-list">
-          <div>
-            <dt>Master of Music</dt>
-            <dd>Manhattan School of Music</dd>
-          </div>
-          <div>
-            <dt>Bachelor of Arts, English Linguistics</dt>
-            <dd>University of Arkansas at Little Rock</dd>
-          </div>
-          <div>
-            <dt>Bachelor of Arts, French Language and Literature</dt>
-            <dd>University of Arkansas at Little Rock</dd>
-          </div>
-          <div>
-            <dt>Diplome d'Etudes de la Langue Francaise</dt>
-            <dd>L'universite d'Orleans, France</dd>
-          </div>
-        </dl>
-
-        <figure class="credential-card">
-          <h2>SheCodes Diploma</h2>
-          <img src="Images/SheCodes Front-End Diploma.png" alt="SheCodes Front-End Developer Diploma" tabindex="0">
-        </figure>
-
-        <figure class="credential-card">
-          <h2>HubSpot Diploma</h2>
-          <img src="Images/Hubspot SEO Certificate.png" alt="HubSpot SEO Certification" tabindex="0">
-        </figure>
+          <h2>Contact</h2>
+          <p><strong>KSL Web Design</strong></p>
+          <p>Email: <a href="mailto:hello@kslwebdesign.com">hello@kslwebdesign.com</a></p>
+          <p>New York, USA</p>
+        </article>
       </div>
     </section>
   </main>
