@@ -239,105 +239,85 @@
     }
 
     .site-footer {
-      padding: 5rem 0 0.75rem;
+      padding: 4rem 0 1.5rem;
       background: var(--ksl-primary);
       color: var(--ksl-secondary);
     }
 
     .footer-cta {
       display: grid;
-      grid-template-columns: 200px minmax(0, 1fr) 320px;
-      gap: 3rem;
-      align-items: center;
-      margin-bottom: 3.6rem;
+      grid-template-columns: 150px 1fr auto;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 2.75rem;
     }
 
     .footer-logo-large {
-      width: 170px;
+      width: 130px;
       height: auto;
     }
 
-    .footer-cta h2 {
-      margin: 0 0 0.8rem;
+    .footer-cta-text h2 {
+      margin: 0 0 0.4rem;
       color: var(--ksl-secondary);
-      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(1.5rem, 2.2vw, 2rem);
       font-weight: 400;
-      line-height: 1.2;
+      line-height: 1.25;
     }
 
-    .footer-cta h2 em {
+    .footer-cta-text h2 em {
       font-style: italic;
     }
 
-    .footer-cta p {
-      max-width: 720px;
+    .footer-cta-text p {
+      max-width: 480px;
       margin: 0;
       color: var(--ksl-secondary);
-      font-size: 1.15rem;
+      font-size: 0.95rem;
+      font-style: italic;
       line-height: 1.35;
     }
 
-    .footer-cta .btn {
-      min-height: 80px;
+    .footer-talk-btn {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.7rem;
       border-radius: 8px;
       color: #fff;
       background: rgba(201, 165, 88, 0.92);
       box-shadow: 0 14px 24px rgba(0, 0, 0, 0.14);
-      font-size: 1rem;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.85rem;
       font-weight: 700;
       line-height: 1.2;
       text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    .footer-cta .btn:hover,
-    .footer-cta .btn:focus {
+    .footer-talk-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .footer-talk-btn:hover,
+    .footer-talk-btn:focus {
       color: var(--ksl-primary);
       background: var(--ksl-secondary);
     }
 
     .footer-content {
       display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1.25fr;
-      gap: 4rem;
+      grid-template-columns: 150px 1fr 1fr 1fr;
+      gap: 2rem;
       align-items: start;
-    }
-
-    .footer-brand-mark {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.35rem;
-      color: var(--ksl-accent);
-      font-size: 1.2rem;
-      line-height: 1.25;
-      text-transform: uppercase;
-    }
-
-    .footer-brand-mark img {
-      width: 42px;
-      height: auto;
-    }
-
-    .footer-brand p,
-    .footer-column p,
-    .footer-column a,
-    .footer-bottom {
-      color: var(--ksl-secondary);
-      font-size: 0.96rem;
-      line-height: 1.35;
-    }
-
-    .footer-brand p {
-      max-width: 260px;
     }
 
     .social-links {
       display: flex;
       gap: 0.9rem;
-      margin-top: 1.9rem;
     }
 
     .social-links a {
@@ -346,8 +326,8 @@
     }
 
     .social-links svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       stroke-width: 1.7;
     }
 
@@ -365,7 +345,14 @@
       list-style: none;
     }
 
+    .footer-column li {
+      margin-bottom: 0.55rem;
+    }
+
     .footer-column a {
+      color: var(--ksl-secondary);
+      font-size: 0.96rem;
+      line-height: 1.35;
       text-decoration: none;
     }
 
@@ -374,14 +361,10 @@
       color: var(--ksl-accent);
     }
 
-    .footer-email {
-      display: inline-block;
-      margin-bottom: 4rem;
-      text-decoration: underline;
-    }
-
     .footer-bottom {
-      margin-top: 3.5rem;
+      margin-top: 3rem;
+      color: var(--ksl-secondary);
+      font-size: 0.85rem;
       text-align: center;
     }
 
@@ -515,40 +498,27 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-cta">
-        <img class="footer-logo-large" src="Images/KSL Laurel Wreath Logo.png" alt="KSL Laurel Wreath Logo">
-        <div>
+        <img class="footer-logo-large" src="Images/KSL Laurel Wreath Logo.png" alt="KSL Web Design Laurel Wreath Logo">
+        <div class="footer-cta-text">
           <h2>Let's build something classically <em>you.</em></h2>
-          <p>Whether you're a growing business or a mission-driven nonprofit, we're here to help you create a website that makes an impact.</p>
+          <p>Thoughtfully crafted websites for people who have mastered their craft.</p>
         </div>
-        <a class="btn" href="contact.html">Let's Build Your<br>Website</a>
+        <a class="footer-talk-btn" href="contact.html">Let's Talk <i data-lucide="plus"></i></a>
       </div>
 
       <div class="footer-content">
-        <div class="footer-brand">
-          <div class="footer-brand-mark">
-            <img src="Images/KSL Standalone Logo.png" alt="">
-            <span>Web<br>Design</span>
-          </div>
-          <p>Thoughtfully designed websites for small businesses and nonprofits.</p>
-          <div class="social-links" aria-label="Social links">
-            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-            <a href="mailto:info@kslwebdesign.com" aria-label="Email"><i data-lucide="mail"></i></a>
-          </div>
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
         </div>
 
         <nav class="footer-column" aria-label="Footer quick links">
           <h3>Quick Links</h3>
           <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">What We Build</a></li>
-            <li><a href="index.html#our-process">Our Process</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="commissions.html">Recent Commissions</a></li>
-            <li><a href="faqs.html">FAQ</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -564,11 +534,14 @@
           </ul>
         </nav>
 
-        <div class="footer-column">
-          <h3>Let's Connect!</h3>
-          <a class="footer-email" href="mailto:info@kslwebdesign.com">info@kslwebdesign.com</a>
-          <p>Romans 8:28</p>
-        </div>
+        <nav class="footer-column" aria-label="Footer account and legal">
+          <h3>Account &amp; Legal</h3>
+          <ul>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="accessibility.html">Accessibility Statement</a></li>
+          </ul>
+        </nav>
       </div>
 
       <p class="footer-bottom">&copy; 2026 KSL Web Design. All rights reserved.</p>
