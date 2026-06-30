@@ -146,7 +146,7 @@
     }
 
     .contact-inner {
-      width: min(100% - 3rem, 1558px);
+      width: min(100% - 3rem, 1762px);
       margin: 0 auto;
     }
 
@@ -160,10 +160,12 @@
 
     .contact-title h1 {
       margin: 0 0 1.3rem;
-      font-size: clamp(2.25rem, 2.75vw, 3.15rem);
+      max-width: 480px;
+      font-size: clamp(1.85rem, 2.3vw, 2.5rem);
       font-weight: 400;
       line-height: 1.28;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .contact-title h1 span {
@@ -244,7 +246,7 @@
 
     .contact-layout {
       display: grid;
-      grid-template-columns: minmax(540px, 804px) minmax(440px, 600px);
+      grid-template-columns: minmax(540px, 804px) minmax(660px, 900px);
       gap: 3.6rem;
       align-items: start;
     }
@@ -253,6 +255,7 @@
       width: 100%;
       padding: 1.85rem 8rem 1.35rem;
       border: 1px solid var(--ksl-accent);
+      border-radius: 8px;
       background: #fff;
     }
 
@@ -302,7 +305,7 @@
     textarea {
       width: 100%;
       border: 1px solid var(--ksl-accent);
-      border-radius: 0;
+      border-radius: 8px;
       background: transparent;
       color: var(--ksl-primary);
       font-family: "Playfair Display", Georgia, serif;
@@ -360,15 +363,14 @@
     .contact-photo-frame {
       margin: 5.8rem 0 0;
       overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 8px 18px rgba(35, 38, 43, 0.16);
+      border-radius: 18px;
     }
 
     .contact-photo-frame img {
       display: block;
       width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 18px;
     }
 
     .site-footer {
@@ -379,10 +381,14 @@
 
     .footer-cta {
       display: grid;
-      grid-template-columns: 150px 1fr auto;
+      grid-template-columns: 150px 1fr 1fr 1fr;
       gap: 2rem;
       align-items: start;
       margin-bottom: 2.75rem;
+    }
+
+    .footer-cta-text {
+      grid-column: span 2;
     }
 
     .footer-logo-large {
@@ -415,6 +421,7 @@
     .footer-talk-btn {
       display: inline-flex;
       align-items: center;
+      justify-self: center;
       gap: 0.5rem;
       padding: 0.95rem 1.7rem;
       border-radius: 8px;
@@ -524,7 +531,7 @@
       }
 
       .contact-photo-frame {
-        max-width: 680px;
+        max-width: 1020px;
         margin: 0 auto;
       }
     }
@@ -556,7 +563,9 @@
       }
 
       .contact-title h1 {
+        max-width: none;
         font-size: 2rem;
+        white-space: normal;
       }
 
       .form-shell {
@@ -577,16 +586,15 @@
         margin: 0 auto;
       }
 
-      .footer-cta p,
-      .footer-brand p {
+      .footer-cta-text p {
         margin-inline: auto;
       }
     }
 
     @media (max-width: 575.98px) {
-      .footer-cta .btn {
-        min-height: 64px;
+      .footer-talk-btn {
         width: 100%;
+        justify-content: center;
       }
 
       .social-links {

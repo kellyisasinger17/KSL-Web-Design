@@ -263,10 +263,14 @@
 
     .footer-cta {
       display: grid;
-      grid-template-columns: 150px 1fr auto;
+      grid-template-columns: 150px 1fr 1fr 1fr;
       gap: 2rem;
       align-items: start;
       margin-bottom: 2.75rem;
+    }
+
+    .footer-cta-text {
+      grid-column: span 2;
     }
 
     .footer-logo-large {
@@ -299,6 +303,7 @@
     .footer-talk-btn {
       display: inline-flex;
       align-items: center;
+      justify-self: center;
       gap: 0.5rem;
       padding: 0.95rem 1.7rem;
       border-radius: 8px;

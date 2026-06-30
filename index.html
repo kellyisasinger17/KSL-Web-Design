@@ -168,17 +168,18 @@
     }
 
     .hero-content {
-      max-width: 620px;
+      max-width: 720px;
       margin-left: 0;
     }
 
     .hero-content h1 {
-      max-width: 640px;
+      max-width: 720px;
       margin: 0 0 0.75rem;
       color: var(--ksl-primary);
-      font-size: clamp(2rem, 2.85vw, 2.75rem);
+      font-size: clamp(2rem, 2.7vw, 2.6rem);
       font-weight: 400;
       line-height: 1.16;
+      white-space: nowrap;
     }
 
     .script-line {
@@ -588,10 +589,14 @@
 
     .footer-cta {
       display: grid;
-      grid-template-columns: 150px 1fr auto;
+      grid-template-columns: 150px 1fr 1fr 1fr;
       gap: 2rem;
       align-items: start;
       margin-bottom: 2.75rem;
+    }
+
+    .footer-cta-text {
+      grid-column: span 2;
     }
 
     .footer-logo-large {
@@ -624,6 +629,7 @@
     .footer-talk-btn {
       display: inline-flex;
       align-items: center;
+      justify-self: center;
       gap: 0.5rem;
       padding: 0.95rem 1.7rem;
       border-radius: 8px;
@@ -720,6 +726,10 @@
       }
 
       .nav-frame {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
         padding: 0.25rem 1rem 0.5rem 72px;
         width: 100%;
       }
@@ -729,6 +739,7 @@
       }
 
       .navbar-collapse {
+        flex-basis: 100%;
         margin-top: 0.7rem;
         padding: 0.75rem 1rem;
         background: rgba(248, 245, 239, 0.96);
@@ -742,6 +753,10 @@
       .hero-content {
         max-width: 520px;
         margin-left: 0;
+      }
+
+      .hero-content h1 {
+        white-space: normal;
       }
 
       .hero-actions {
@@ -890,8 +905,8 @@
           <div class="gold-rule" aria-hidden="true"></div>
           <p>Custom website design and development for artisans, professionals, and small businesses, built with purpose.</p>
           <div class="hero-actions" aria-label="Audience paths">
-            <a class="btn btn-audience-primary" href="services.html">Nonprofits</a>
-            <a class="btn btn-audience-outline" href="services.html">Small Businesses</a>
+            <a class="btn btn-audience-primary" href="services.html">Learn More</a>
+            <a class="btn btn-audience-outline" href="contact.html">Schedule Consultation</a>
           </div>
         </div>
       </div>
