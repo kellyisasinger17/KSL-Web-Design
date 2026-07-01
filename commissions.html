@@ -248,6 +248,12 @@
       stroke-width: 1.25;
     }
 
+    .project-icon img {
+      width: 33px;
+      height: 33px;
+      object-fit: contain;
+    }
+
     .project-copy h2 {
       margin: 0 0 0.55rem;
       font-size: clamp(2rem, 2.55vw, 2.8rem);
@@ -351,20 +357,13 @@
       align-items: center;
     }
 
-    .anchor-statement::before,
-    .anchor-statement::after {
-      color: var(--ksl-accent);
-      font-family: "Libre Baskerville", Georgia, serif;
-      font-size: 3rem;
-      line-height: 1;
+    .bracket-img {
+      width: 56px;
+      height: auto;
     }
 
-    .anchor-statement::before {
-      content: "{";
-    }
-
-    .anchor-statement::after {
-      content: "}";
+    .bracket-right {
+      transform: scaleX(-1);
     }
 
     .anchor-statement p {
@@ -604,8 +603,7 @@
         gap: 0.75rem;
       }
 
-      .anchor-statement::before,
-      .anchor-statement::after {
+      .bracket-img {
         display: none;
       }
 
@@ -681,7 +679,7 @@
     <section class="project-row" aria-label="Maison Lancon commission">
       <div class="project-grid">
         <div class="project-copy">
-          <div class="project-icon" aria-hidden="true"><i data-lucide="gem"></i></div>
+          <div class="project-icon" aria-hidden="true"><img src="Images/maison Lançon.png" alt=""></div>
           <div>
             <h2>Maison Lançon</h2>
             <p class="project-kicker">Luxury Brand Website &amp; Digital Foundation</p>
@@ -707,7 +705,7 @@
           <img src="Images/LIghtning Macbooks.png" alt="Lightning Auto Service website displayed on a MacBook">
         </a>
         <div class="project-copy">
-          <div class="project-icon" aria-hidden="true"><i data-lucide="car-front"></i></div>
+          <div class="project-icon" aria-hidden="true"><img src="Images/Lightning auto service.png" alt=""></div>
           <div>
             <h2>Lightning Auto Service</h2>
             <p class="project-kicker">Website Redesign &amp; Business Growth Strategy</p>
@@ -728,7 +726,9 @@
         <div class="anchor-copy">
           <h2>Your Organization Has a Story Worth Telling.</h2>
           <div class="anchor-statement">
+            <img class="bracket-img" src="Images/Your organization.png" alt="" aria-hidden="true">
             <p>Whether you're launching a new venture, serving your community, or reimagining an established brand, I'd be honored to help bring your vision online.</p>
+            <img class="bracket-img bracket-right" src="Images/Your organization.png" alt="" aria-hidden="true">
           </div>
         </div>
         <a class="anchor-button" href="contact.html">Let's Create Something Meaningful</a>
