@@ -285,6 +285,11 @@
       color: var(--ksl-primary);
     }
 
+    .project-card > p a:hover,
+    .project-card > p a:focus {
+      color: var(--ksl-accent);
+    }
+
     .check-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -308,6 +313,82 @@
       left: 0;
       color: var(--ksl-accent);
       font-weight: 700;
+    }
+
+    /* ── Anchor ── */
+
+    .commissions-anchor {
+      padding: 2.35rem 0 2.7rem;
+      background: #fff;
+      color: var(--ksl-primary);
+    }
+
+    .anchor-grid {
+      width: min(100%, 1500px);
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 5.5rem;
+    }
+
+    .anchor-copy {
+      text-align: center;
+    }
+
+    .anchor-copy h2 {
+      margin: 0 0 2rem;
+      font-size: clamp(1.8rem, 2.25vw, 2.35rem);
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .anchor-statement {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr) 56px;
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .anchor-statement p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+
+    .bracket-img {
+      width: 56px;
+      height: auto;
+    }
+
+    .bracket-right {
+      transform: scaleX(-1);
+    }
+
+    .anchor-button {
+      min-height: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: min(100%, 530px);
+      border-radius: 8px;
+      color: var(--ksl-accent);
+      background: #273653;
+      box-shadow: 18px 18px 28px rgba(35, 38, 43, 0.16);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .anchor-button:hover,
+    .anchor-button:focus {
+      color: var(--ksl-secondary);
+      background: var(--ksl-primary);
     }
 
     /* ── View Sample ── */
@@ -525,6 +606,21 @@
         grid-template-columns: 1fr;
       }
 
+      .anchor-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-inline: 1.5rem;
+        text-align: center;
+      }
+
+      .bracket-img {
+        display: none;
+      }
+
+      .anchor-statement {
+        grid-template-columns: 1fr;
+      }
+
       .footer-cta,
       .footer-content {
         grid-template-columns: 1fr;
@@ -659,6 +755,20 @@
 
     <section class="view-sample-section" aria-label="View sample website">
       <a class="btn-view-sample" href="#">View Sample Website</a>
+    </section>
+
+    <section class="commissions-anchor" aria-label="Start your commission">
+      <div class="anchor-grid">
+        <div class="anchor-copy">
+          <h2>Your Organization Has a Story Worth Telling.</h2>
+          <div class="anchor-statement">
+            <img class="bracket-img" src="Images/Your organization.png" alt="" aria-hidden="true">
+            <p>Whether you're launching a new venture, serving your community, or reimagining an established brand, I'd be honored to help bring your vision online.</p>
+            <img class="bracket-img bracket-right" src="Images/Your organization.png" alt="" aria-hidden="true">
+          </div>
+        </div>
+        <a class="anchor-button" href="contact.html">Schedule a Consultation</a>
+      </div>
     </section>
   </main>
 
