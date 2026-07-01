@@ -260,7 +260,7 @@
 
     .form-shell {
       width: 100%;
-      padding: 1.85rem 8rem 1.35rem;
+      padding: 1.85rem clamp(1.5rem, 7vw, 8rem) 1.35rem;
       border: 1px solid var(--ksl-accent);
       border-radius: 8px;
       background: #fff;
@@ -288,7 +288,7 @@
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.8rem 4.6rem;
+      gap: 1.8rem clamp(1.25rem, 3.5vw, 4.6rem);
     }
 
     .form-field {
@@ -303,7 +303,7 @@
     label {
       margin: 0;
       font-size: 0.95rem;
-      line-height: 1;
+      line-height: 1.25;
       text-transform: uppercase;
     }
 
@@ -555,6 +555,13 @@
       }
     }
 
+    @media (max-width: 900px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
     @media (max-width: 767.98px) {
       .footer-cta,
       .footer-content {
@@ -577,11 +584,6 @@
 
       .form-shell {
         padding: 1.5rem;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
       }
 
       .footer-cta {
