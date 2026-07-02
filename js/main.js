@@ -2,6 +2,18 @@ if (window.lucide) {
   lucide.createIcons();
 }
 
+// On desktop (≥992px) Bootstrap intercepts clicks on dropdown toggles and
+// prevents navigation. Since hover already opens the dropdown via CSS,
+// we capture the click first and navigate to the href instead.
+document.querySelectorAll('.nav-link.dropdown-toggle').forEach(link => {
+  link.addEventListener('click', e => {
+    if (window.innerWidth >= 992) {
+      e.stopImmediatePropagation();
+      window.location.href = link.getAttribute('href');
+    }
+  }, true); // capture phase fires before Bootstrap's bubble-phase handler
+});
+
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (!reduceMotion) {
