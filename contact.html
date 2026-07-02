@@ -146,42 +146,43 @@
     }
 
     .contact-inner {
-      width: min(100% - 3rem, 1762px);
+      width: min(100% - 3rem, 1100px);
       margin: 0 auto;
     }
 
-    .contact-hero {
-      display: grid;
-      grid-template-columns: minmax(520px, 1.14fr) minmax(360px, 0.84fr) minmax(320px, 0.84fr);
-      gap: 3.8rem;
-      align-items: start;
-      margin-bottom: 2.3rem;
+    .contact-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
     }
 
     .contact-title h1 {
       margin: 0 0 1.3rem;
-      max-width: 480px;
       font-size: clamp(1.85rem, 2.3vw, 2.5rem);
       font-weight: 400;
       line-height: 1.28;
       text-transform: uppercase;
-      white-space: nowrap;
     }
 
     .contact-title h1 span {
       color: var(--ksl-accent);
     }
 
+    .contact-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 2.5rem;
+    }
+
     .contact-copy {
-      padding-top: 0.35rem;
-      text-align: center;
+      padding-top: 0.2rem;
     }
 
     .contact-copy p {
-      max-width: 405px;
-      margin: 0 auto 1.25rem;
+      margin: 0 0 1.25rem;
       font-size: 1.05rem;
-      line-height: 1.35;
+      line-height: 1.45;
     }
 
 
@@ -252,14 +253,13 @@
     }
 
     .contact-layout {
-      display: grid;
-      grid-template-columns: minmax(540px, 804px) minmax(660px, 900px);
-      gap: 3.6rem;
-      align-items: start;
+      display: flex;
+      justify-content: center;
     }
 
     .form-shell {
       width: 100%;
+      max-width: 720px;
       padding: 2rem clamp(1.5rem, 4vw, 3.5rem) 2.25rem;
       border: 1px solid var(--ksl-accent);
       border-radius: 8px;
@@ -368,19 +368,6 @@
     .form-submit button:focus {
       color: var(--ksl-secondary);
       background: var(--ksl-primary);
-    }
-
-    .contact-photo-frame {
-      margin: 5.8rem 0 0;
-      overflow: hidden;
-      border-radius: 18px;
-    }
-
-    .contact-photo-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 18px;
     }
 
     .site-footer {
@@ -522,28 +509,6 @@
       .nav-inner {
         padding: 0 3rem;
       }
-
-      .contact-hero,
-      .contact-layout {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .contact-title,
-      .contact-copy,
-      .contact-info {
-        max-width: 760px;
-        margin-inline: auto;
-      }
-
-      .contact-title {
-        text-align: center;
-      }
-
-      .contact-photo-frame {
-        max-width: 1020px;
-        margin: 0 auto;
-      }
     }
 
     @media (max-width: 991.98px) {
@@ -580,9 +545,12 @@
       }
 
       .contact-title h1 {
-        max-width: none;
-        font-size: 2rem;
-        white-space: normal;
+        font-size: 1.85rem;
+      }
+
+      .contact-hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
 
       .form-shell {
@@ -661,10 +629,12 @@
   <main>
     <section class="contact-page" aria-label="Contact KSL Web Design">
       <div class="contact-inner">
+        <div class="contact-title">
+          <h1>Let's Craft Something<br><span>Meaningful</span> Together.</h1>
+          <div class="gold-star-divider" aria-hidden="true"><span></span></div>
+        </div>
+
         <div class="contact-hero">
-          <div class="contact-title">
-            <h1>Let's Craft Something<br><span>Meaningful</span> Together.</h1>
-          </div>
           <div class="contact-copy">
             <p>Launching a new website? Refreshing your existing one? I'd love to hear about your project.</p>
             <p>Please fill out the form here, and I'll be in touch within 1-2 business days.</p>
@@ -740,10 +710,6 @@
               </div>
             </form>
           </div>
-
-          <figure class="contact-photo-frame">
-            <img src="Images/Desk Web Design.png" alt="Desk with KSL homepage displayed on a desktop computer">
-          </figure>
         </div>
       </div>
     </section>
