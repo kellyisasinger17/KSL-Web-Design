@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i '' 's|href=\"#\" id=\"aboutDropdown\"|href=\"about.html\" id=\"aboutDropdown\"|g' index.html about.html accessibility.html commissions.html contact.html faqs.html privacy.html services.html terms.html)",
+      "Bash(sed -i '' 's|href=\"#\" id=\"servicesDropdown\"|href=\"services.html\" id=\"servicesDropdown\"|g' index.html about.html accessibility.html commissions.html contact.html faqs.html privacy.html services.html terms.html)",
+      "Bash(sed -i '' 's|href=\"#\" id=\"commissionsDropdown\"|href=\"commissions.html\" id=\"commissionsDropdown\"|g' index.html about.html accessibility.html commissions.html contact.html faqs.html privacy.html services.html terms.html)"
+    ]
+  }
+}
