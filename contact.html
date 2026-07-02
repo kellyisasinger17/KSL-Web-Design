@@ -168,15 +168,12 @@
     }
 
     .contact-hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
       margin-bottom: 2.5rem;
-    }
-
-    .contact-copy {
-      padding-top: 0.2rem;
+      text-align: center;
     }
 
     .contact-copy p {
@@ -211,16 +208,16 @@
     }
 
     .contact-info {
-      display: grid;
-      gap: 1.45rem;
-      padding-top: 0.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem 3rem;
     }
 
     .contact-info-item {
-      display: grid;
-      grid-template-columns: 52px 1fr;
-      gap: 1.25rem;
+      display: flex;
       align-items: center;
+      gap: 1rem;
     }
 
     .contact-info-item i {
@@ -548,9 +545,10 @@
         font-size: 1.85rem;
       }
 
-      .contact-hero {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
       }
 
       .form-shell {
