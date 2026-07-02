@@ -260,7 +260,7 @@
 
     .form-shell {
       width: 100%;
-      padding: 1.85rem clamp(1.5rem, 7vw, 8rem) 1.35rem;
+      padding: 2rem clamp(1.5rem, 4vw, 3.5rem) 2.25rem;
       border: 1px solid var(--ksl-accent);
       border-radius: 8px;
       background: #fff;
@@ -282,18 +282,18 @@
 
     .contact-form {
       display: grid;
-      gap: 1.3rem;
+      gap: 0;
     }
 
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.8rem clamp(1.25rem, 3.5vw, 4.6rem);
+      gap: 1.5rem clamp(1.25rem, 2.5vw, 2.5rem);
     }
 
     .form-field {
       display: grid;
-      gap: 0.7rem;
+      gap: 0.55rem;
     }
 
     .form-field-full {
@@ -305,6 +305,11 @@
       font-size: 0.95rem;
       line-height: 1.25;
       text-transform: uppercase;
+    }
+
+    label .req {
+      color: var(--ksl-accent);
+      font-style: normal;
     }
 
     input,
@@ -322,18 +327,14 @@
 
     input,
     select {
-      min-height: 36px;
-      padding: 0.25rem 0.6rem;
+      min-height: 44px;
+      padding: 0.55rem 0.75rem;
     }
 
     textarea {
-      min-height: 55px;
-      padding: 0.45rem;
+      min-height: 88px;
+      padding: 0.6rem 0.75rem;
       resize: vertical;
-    }
-
-    .textarea-short {
-      min-height: 55px;
     }
 
     input:focus,
@@ -346,19 +347,21 @@
     .form-submit {
       display: flex;
       justify-content: center;
-      margin-top: 0.6rem;
+      margin-top: 1rem;
     }
 
     .form-submit button {
-      min-width: 146px;
-      min-height: 38px;
+      min-width: 160px;
+      min-height: 44px;
+      padding: 0 2rem;
       border: 1px solid #273653;
       border-radius: 8px;
       color: var(--ksl-accent);
       background: #273653;
       box-shadow: 15px 15px 22px rgba(35, 38, 43, 0.17);
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
+      cursor: pointer;
     }
 
     .form-submit button:hover,
@@ -684,48 +687,51 @@
             <div class="gold-star-divider" aria-hidden="true"><span></span></div>
             <form class="contact-form" action="https://formspree.io/f/mlgybnjl" method="POST">
               <input type="hidden" name="_subject" value="New KSL Web Design consultation request">
+              <input type="hidden" name="_next" value="thanks.html">
               <div class="form-grid">
                 <div class="form-field">
-                  <label for="name">Your Name</label>
+                  <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
                   <input id="name" name="name" type="text" required autocomplete="name">
                 </div>
                 <div class="form-field">
-                  <label for="email">Email Address</label>
+                  <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
                   <input id="email" name="email" type="email" required autocomplete="email">
                 </div>
                 <div class="form-field">
-                  <label for="organization">Business/Organization</label>
-                  <input id="organization" name="organization" type="text" autocomplete="organization">
+                  <label for="phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                  <input id="phone" name="phone" type="tel" required autocomplete="tel">
                 </div>
                 <div class="form-field">
-                  <label for="website">Website (If Applicable)</label>
+                  <label for="website">Website (if applicable)</label>
                   <input id="website" name="website" type="url" autocomplete="url">
                 </div>
-                <div class="form-field form-field-full">
-                  <label for="message">Details About Your Project</label>
-                  <textarea class="textarea-short" id="message" name="message" required></textarea>
-                </div>
-                <div class="form-field form-field-full">
-                  <label for="inspiration">Inspiration Websites</label>
-                  <textarea class="textarea-short" id="inspiration" name="inspiration_websites"></textarea>
+                <div class="form-field">
+                  <label for="contact-preference">Contact Preference</label>
+                  <select id="contact-preference" name="contact_preference">
+                    <option value="" selected disabled></option>
+                    <option value="Email">Email</option>
+                    <option value="Phone">Phone</option>
+                    <option value="No Preference">No Preference</option>
+                  </select>
                 </div>
                 <div class="form-field">
-                  <label for="referral">How Did You Hear About Us?</label>
+                  <label for="timeline">Timeline</label>
+                  <select id="timeline" name="timeline">
+                    <option value="" selected disabled></option>
+                    <option value="ASAP (1 week)">ASAP (1 week)</option>
+                    <option value="Flexible (2-4 weeks)">Flexible (2-4 weeks)</option>
+                    <option value="Still Exploring">Still Exploring</option>
+                  </select>
+                </div>
+                <div class="form-field form-field-full">
+                  <label for="referral">How did you hear about KSL Web Design?</label>
                   <select id="referral" name="referral_source">
                     <option value="" selected disabled></option>
                     <option value="Google Search">Google Search</option>
                     <option value="Social Media">Social Media</option>
                     <option value="Friend Recommendation">Friend Recommendation</option>
+                    <option value="Flyer">Flyer</option>
                     <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div class="form-field">
-                  <label for="timeline">Timeline</label>
-                  <select id="timeline" name="timeline" required>
-                    <option value="" selected disabled></option>
-                    <option value="ASAP (1 week)">ASAP (1 week)</option>
-                    <option value="Flexible (2-4 weeks)">Flexible (2-4 weeks)</option>
-                    <option value="Still Exploring">Still Exploring</option>
                   </select>
                 </div>
               </div>
