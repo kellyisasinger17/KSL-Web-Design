@@ -261,8 +261,7 @@
       margin: 0 auto;
     }
 
-    .package-card,
-    .enhancement-card {
+    .package-card {
       display: flex;
       flex-direction: column;
       border: 1px solid var(--ksl-accent);
@@ -274,8 +273,7 @@
       text-align: center;
     }
 
-    .package-card h3,
-    .enhancement-card h3 {
+    .package-card h3 {
       margin: 0 0 0.9rem;
       font-size: calc(1.05rem + 1px);
       font-weight: 400;
@@ -296,26 +294,14 @@
       text-transform: uppercase;
     }
 
-    .package-card .price,
-    .enhancement-card .price {
+    .package-card .price {
       font-family: "Libre Baskerville", Georgia, serif;
       line-height: 1;
       text-align: center;
-    }
-
-    .package-card .price {
       margin: 0 0 1.5rem;
       font-size: calc(1.8rem + 1px);
       font-weight: 400;
       color: var(--ksl-primary);
-    }
-
-    .enhancement-card .price {
-      margin-top: auto;
-      color: var(--ksl-accent);
-      font-size: calc(1.35rem + 1px);
-      font-weight: 400;
-      text-transform: uppercase;
     }
 
     .package-everything {
@@ -356,33 +342,97 @@
       text-align: center;
     }
 
-    .enhancement-grid {
+    .enhancements-split {
       display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 2rem;
-      margin-top: 3.25rem;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3rem;
+      border: 1px solid var(--ksl-accent);
     }
 
-    .enhancement-card {
-      min-height: 200px;
-      align-items: center;
-      padding: 1.6rem 1rem 1.3rem;
+    .enhancement-col {
+      padding: 2rem 3rem 2.5rem;
     }
 
-    .enhancement-card svg {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 1.1rem;
+    .enhancement-col:first-child {
+      border-right: 1px solid var(--ksl-accent);
+    }
+
+    .enhancement-col-label {
+      margin: 0 0 1.5rem;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       color: var(--ksl-accent);
-      stroke-width: 1.25;
+      text-align: center;
     }
 
-    .enhancement-card img {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 1.1rem;
-      object-fit: contain;
+    .enhancement-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
+
+    .enhancement-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(201, 165, 88, 0.18);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--ksl-primary);
+    }
+
+    .enhancement-list li:last-child {
+      border-bottom: none;
+    }
+
+    .list-price {
+      color: var(--ksl-accent);
+      white-space: nowrap;
+      font-weight: 400;
+    }
+
+    .enhancements-cta {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .enhancements-cta p {
+      margin: 0 0 1.25rem;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .btn-enhancements-contact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
+      min-height: 48px;
+      padding: 0 2.5rem;
+      border-radius: 8px;
+      background: var(--ksl-accent);
+      color: var(--ksl-primary);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-enhancements-contact:hover,
+    .btn-enhancements-contact:focus {
+      background: var(--ksl-primary);
+      color: var(--ksl-secondary);
+    }
+
 
     .migration-banner {
       position: relative;
@@ -651,9 +701,13 @@
         padding: 2.5rem 1.5rem;
       }
 
-      .enhancement-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.5rem;
+      .enhancements-split {
+        grid-template-columns: 1fr;
+      }
+
+      .enhancement-col:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--ksl-accent);
       }
 
       .migration-banner {
@@ -709,10 +763,6 @@
 
       .social-links {
         justify-content: center;
-      }
-
-      .enhancement-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -778,36 +828,37 @@
       <h2>Website Packages</h2>
       <div class="package-row">
         <article class="package-card">
-          <h3>Basic</h3>
-          <p class="package-subtitle">The Foundations</p>
+          <h3>Portfolio</h3>
+          <p class="package-subtitle">Designed for artists</p>
           <p class="price">$450</p>
           <ul class="check-list">
-            <li>Up to 3 custom-designed pages (your choice)</li>
-            <li>Responsive design for mobile and desktop</li>
-            <li>Basic SEO foundation setup</li>
-            <li>Domain registration assistance (for new sites)</li>
+            <li>Custom homepage</li>
+            <li>Biography / Resume</li>
+            <li>Gallery</li>
+            <li>Contact page</li>
+            <li>Mobile responsive</li>
             <li>WCAG accessibility audit</li>
-            <li>Performance optimization</li>
+            <li>Basic SEO</li>
             <li>Secure SSL configuration</li>
             <li>2 rounds of revisions</li>
             <li>Launch support and quality assurance testing</li>
           </ul>
         </article>
         <article class="package-card">
-          <h3>Advanced</h3>
-          <p class="package-subtitle">The Atelier</p>
+          <h3>Atelier</h3>
+          <p class="package-subtitle">Designed for small businesses</p>
           <p class="price">$750</p>
-          <p class="package-everything">Everything in Basic, plus:</p>
           <ul class="check-list">
-            <li>Up to 6 custom-designed pages</li>
-            <li>SEO Foundations Plus package</li>
-            <li>Contact and lead generation forms</li>
-            <li>Blog or resource section setup</li>
-            <li>Gallery section setup</li>
-            <li>Google Analytics installation and Quarterly Reports</li>
-            <li>Google Search Console reporting</li>
-            <li>Instagram integration</li>
-            <li>3 rounds of revisions</li>
+            <li>Homepage</li>
+            <li>Services / Offerings</li>
+            <li>About + Contact</li>
+            <li>Scheduling or inquiry form</li>
+            <li>Mobile responsive</li>
+            <li>WCAG accessibility audit</li>
+            <li>Basic SEO</li>
+            <li>Secure SSL configuration</li>
+            <li>2 rounds of revisions</li>
+            <li>Launch support and quality assurance testing</li>
           </ul>
         </article>
       </div>
@@ -818,7 +869,7 @@
         <div class="migration-info">
           <img src="Images/Website migration (2).png" alt="" aria-hidden="true">
           <div>
-            <h2>Website Migration<br>&amp; Redesign</h2>
+            <h2>Custom Builds<br>or Site Migrations</h2>
             <p class="price">$950</p>
             <p>Migrate from a content management system to your custom-designed and professionally-managed website.</p>
           </div>
@@ -844,37 +895,29 @@
       <div class="enhancements">
         <h2>Enhancements and Add-ons</h2>
         <div class="mini-star-divider" aria-hidden="true"><span></span></div>
-        <div class="enhancement-grid">
-          <article class="enhancement-card">
-            <img src="Images/Custom Forms &  Workflow Automations.png" alt="" aria-hidden="true">
-            <h3>Custom Forms &amp;<br>Workflow Automations</h3>
-            <p class="price">$25/Month</p>
-          </article>
-          <article class="enhancement-card">
-            <img src="Images/Custom Blogs & Event Pages.png" alt="" aria-hidden="true">
-            <h3>Custom Blogs &amp;<br>Event Pages</h3>
-            <p class="price">$25/Month</p>
-          </article>
-          <article class="enhancement-card">
-            <img src="Images/custom gallery pages.png" alt="" aria-hidden="true">
-            <h3>Custom Gallery<br>Pages</h3>
-            <p class="price">$75</p>
-          </article>
-          <article class="enhancement-card">
-            <img src="Images/Additional Pages.png" alt="" aria-hidden="true">
-            <h3>Additional Pages</h3>
-            <p class="price">$50/Page</p>
-          </article>
-          <article class="enhancement-card">
-            <img src="Images/Brand Identity Refresh.png" alt="" aria-hidden="true">
-            <h3>Brand Identity Refresh</h3>
-            <p class="price">$175</p>
-          </article>
-          <article class="enhancement-card">
-            <img src="Images/SEO Foundations Plus.png" alt="" aria-hidden="true">
-            <h3>SEO Foundations Plus</h3>
-            <p class="price">$250</p>
-          </article>
+        <div class="enhancements-split">
+          <div class="enhancement-col">
+            <p class="enhancement-col-label">One-Time Enhancements</p>
+            <ul class="enhancement-list">
+              <li><span>Copywriting</span><span class="list-price">$100</span></li>
+              <li><span>Google Business Profile Setup</span><span class="list-price">$50</span></li>
+              <li><span>Additional Pages</span><span class="list-price">$50/Page</span></li>
+              <li><span>Additional Revisions</span><span class="list-price">$50</span></li>
+              <li><span>SEO Foundations Plus</span><span class="list-price">$250</span></li>
+            </ul>
+          </div>
+          <div class="enhancement-col">
+            <p class="enhancement-col-label">Monthly Services</p>
+            <ul class="enhancement-list">
+              <li><span>Custom Forms &amp; Workflow Automations</span><span class="list-price">$25/Month</span></li>
+              <li><span>Domain Registration &amp; DNS Setup</span><span class="list-price">$25/Month</span></li>
+              <li><span>Analytics Reports</span><span class="list-price">$25/Month</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="enhancements-cta">
+          <p>Questions about any of these offerings?</p>
+          <a class="btn-enhancements-contact" href="contact.html">Contact Us</a>
         </div>
       </div>
     </section>
