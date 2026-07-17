@@ -3,7 +3,10 @@
     "allow": [
       "Bash(sed -i '' 's|href=\"#\" id=\"aboutDropdown\"|href=\"about.html\" id=\"aboutDropdown\"|g' index.html about.html accessibility.html commissions.html contact.html faqs.html privacy.html services.html terms.html)",
       "Bash(sed -i '' 's|href=\"#\" id=\"servicesDropdown\"|href=\"services.html\" id=\"servicesDropdown\"|g' index.html about.html accessibility.html commissions.html contact.html faqs.html privacy.html services.html terms.html)",
-      "Bash(sed -i '' 's|href=\"#\" id=\"commissionsDropdown\"|href=\"commissions.html\" id=\"commissionsDropdown\"|g' index.html about.html accessibility.html commissions.html contact.html faqs.html privacy.html services.html terms.html)"
+      "Bash(sed -i '' 's|href=\"#\" id=\"commissionsDropdown\"|href=\"commissions.html\" id=\"commissionsDropdown\"|g' index.html about.html accessibility.html commissions.html contact.html faqs.html privacy.html services.html terms.html)",
+      "Bash(sed -i '' 's|Images/Cedille and Co Footer Logo\\\\.png|Images/Cedille and Co Logo.png|g' about.html accessibility.html commissions.html contact.html faqs.html index.html privacy.html services.html terms.html thanks.html)",
+      "Bash(sed -i '' 's|class=\"footer-logo-large\" src=\"Images/Cedille and Co Logo\\\\.png\"|class=\"footer-logo-large\" src=\"Images/Cedille and Co Footer Logo.png\"|g' about.html accessibility.html commissions.html contact.html faqs.html index.html privacy.html services.html terms.html thanks.html)",
+      "Bash(python3 -)"
     ]
   }
 }
