@@ -145,6 +145,10 @@ body.page-about  {
       text-transform: uppercase;
     }
 
+    body.page-about .about-copy h1:not(:first-child) {
+      margin-top: 3rem;
+    }
+
     body.page-about .gold-star-divider {
       width: 255px;
       display: flex;
@@ -3375,8 +3379,8 @@ body.page-index  {
       body.page-index .homepage-hero {
         min-height: auto;
         background:
-          linear-gradient(180deg, rgba(248, 245, 239, 0.99) 0%, rgba(248, 245, 239, 0.94) 42%, rgba(248, 245, 239, 0.64) 72%, rgba(248, 245, 239, 0.22) 100%),
-          url("Images/KSL HOMEPAGE LADY IMAGE.png") 62% top / cover no-repeat,
+          linear-gradient(90deg, rgba(232, 220, 200, 0.86) 0%, rgba(232, 220, 200, 0.62) 48%, rgba(232, 220, 200, 0.12) 100%),
+          url("Images/KSL HOMEPAGE LADY IMAGE.png") 88% top / auto 100% no-repeat,
           var(--ksl-secondary);
       }
 
@@ -5789,5 +5793,218 @@ body:not(.page-index)[class*="page-"] .nav-link {
   body:not(.page-index)[class*="page-"] .nav-inner {
     grid-template-columns: auto 1fr;
     padding: 0 1.5rem;
+  }
+}
+
+/* Shared responsive safeguards */
+body[class*="page-"] *,
+body[class*="page-"] *::before,
+body[class*="page-"] *::after {
+  box-sizing: border-box;
+}
+
+body[class*="page-"] img,
+body[class*="page-"] svg {
+  max-width: 100%;
+}
+
+body[class*="page-"] .btn,
+body[class*="page-"] button,
+body[class*="page-"] .footer-talk-btn,
+body[class*="page-"] .btn-enhancements-contact,
+body[class*="page-"] .anchor-button,
+body[class*="page-"] .btn-view-sample {
+  max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  body.page-index .homepage-hero {
+    background:
+      linear-gradient(90deg, rgba(232, 220, 200, 0.86) 0%, rgba(232, 220, 200, 0.62) 48%, rgba(232, 220, 200, 0.12) 100%),
+      url("Images/KSL HOMEPAGE LADY IMAGE.png") 92% top / auto 100% no-repeat,
+      var(--ksl-secondary);
+  }
+
+  body[class*="page-"] .navbar .dropdown-menu {
+    width: 100%;
+    min-width: 0;
+    max-width: calc(100vw - 3rem);
+  }
+
+  body[class*="page-"] .footer-card {
+    min-height: auto;
+    padding: 1.75rem 1.25rem;
+  }
+
+  body[class*="page-"] .footer-logo-card,
+  body[class*="page-"] .footer-action-card {
+    min-height: 150px;
+  }
+
+  body[class*="page-"] .footer-talk-btn {
+    width: min(100%, 280px);
+    min-width: 0;
+    padding-inline: 1.25rem;
+    white-space: normal;
+  }
+
+  body.page-index .hero-actions {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  body.page-index .hero-actions .btn {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 1rem;
+    white-space: normal;
+  }
+
+  body.page-index .gold-rule {
+    max-width: calc(100% - 0.5rem);
+  }
+
+  body.page-index .service-icon,
+  body.page-index .process-icon {
+    width: 74px;
+    height: 74px;
+  }
+
+  body.page-index .service-icon img,
+  body.page-index .process-icon img {
+    width: 46px;
+    height: 46px;
+  }
+
+  body.page-index .process-anchor .btn-process {
+    width: min(100%, 300px);
+    min-width: 0;
+    min-height: 54px;
+    padding-inline: 1.25rem;
+  }
+
+  body.page-about .about-copy h1 {
+    margin-left: 0;
+    font-size: clamp(1.9rem, 10vw, 2.45rem);
+  }
+
+  body.page-about .gold-star-divider {
+    width: min(100%, 255px);
+    margin-left: 0;
+  }
+
+  body.page-about .about-portrait {
+    width: min(100%, 340px);
+  }
+
+  body.page-about .ny-mark {
+    width: 104px;
+    height: 104px;
+    margin-inline: auto;
+  }
+
+  body.page-about .about-cta-logo {
+    width: min(58vw, 155px);
+  }
+
+  body.page-about .btn-gold {
+    width: min(100%, 280px);
+    min-width: 0;
+    min-height: 60px;
+    padding-inline: 1.25rem;
+    white-space: normal;
+  }
+
+  body.page-about .credential-card img:hover,
+  body.page-about .credential-card img:focus {
+    transform: none;
+  }
+
+  body.page-services .package-card {
+    padding: 2rem 1.25rem 2.25rem;
+  }
+
+  body.page-services .btn-enhancements-contact {
+    width: min(100%, 220px);
+    min-width: 0;
+    padding-inline: 1rem;
+    white-space: normal;
+  }
+
+  body.page-services .migration-info img {
+    width: min(100%, 120px);
+    margin-inline: auto;
+  }
+
+  body.page-contact .form-submit button {
+    width: min(100%, 220px);
+    min-width: 0;
+  }
+
+  body.page-commissions .project-card h2 {
+    white-space: normal;
+  }
+
+  body.page-thanks .thanks-page {
+    padding: 3rem 1rem 4rem;
+  }
+
+  body.page-thanks .thanks-card {
+    padding: 2.25rem 1.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body.page-index .hero-copy {
+    padding-inline: 1rem;
+  }
+
+  body.page-index .intro-band .example-item img {
+    width: 32px;
+    height: 32px;
+    padding: 0.45rem;
+  }
+
+  body.page-index .service-icon,
+  body.page-index .process-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  body.page-index .service-icon img,
+  body.page-index .process-icon img {
+    width: 42px;
+    height: 42px;
+  }
+
+  body.page-about .about-hero-grid,
+  body.page-about .details-grid,
+  body.page-about .credentials-grid {
+    padding-inline: 1rem;
+  }
+
+  body.page-about .trait-list {
+    gap: 1.35rem;
+  }
+
+  body.page-about .trait {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  body.page-about .trait img,
+  body.page-about .trait svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  body.page-services .enhancement-col,
+  body.page-services .enhancements,
+  body.page-services .migration-banner {
+    padding-inline: 1rem;
+  }
+
+  body.page-contact .form-shell {
+    padding-inline: 1rem;
   }
 }
