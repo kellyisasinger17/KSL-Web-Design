@@ -8,581 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU+Guides&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    :root {
-      --ksl-primary: #0F1F3D;
-      --ksl-secondary: #F8F5EF;
-      --ksl-accent: #C9A558;
-      --ksl-panel: #f1ece7;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ksl-primary);
-      background: var(--ksl-panel);
-      font-family: "Playfair Display", Georgia, serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    .navbar,
-    .btn,
-    label,
-    button {
-      font-family: "Libre Baskerville", Georgia, serif;
-    }
-
-    p {
-      font-family: "Playfair Display", Georgia, serif;
-    }
-
-    .site-header {
-      background: var(--ksl-primary);
-    }
-
-    .navbar {
-      min-height: 98px;
-      padding: 0;
-    }
-
-    .nav-inner {
-      width: min(100%, 1500px);
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      align-items: center;
-      margin: 0 auto;
-      padding: 0 7.35rem;
-    }
-
-    .navbar-brand img {
-      width: 66px;
-      height: auto;
-    }
-
-    .navbar-toggler {
-      border-color: rgba(248, 245, 239, 0.45);
-      margin-left: auto;
-    }
-
-    .navbar-toggler-icon {
-      filter: invert(1);
-    }
-
-    .navbar-nav {
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    .nav-link {
-      color: #fff;
-      font-size: 0.95rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
-    .navbar .nav-link:hover,
-    .navbar .nav-link:focus,
-    .navbar .nav-link.active {
-      color: var(--ksl-accent) !important;
-    }
-
-    .navbar .dropdown-menu {
-      min-width: 310px;
-      padding: 0.75rem;
-      border: 1px solid rgba(201, 165, 88, 0.45);
-      border-radius: 8px;
-      background: var(--ksl-secondary);
-      box-shadow: 0 16px 28px rgba(35, 38, 43, 0.14);
-    }
-
-    .navbar .dropdown-item {
-      white-space: normal;
-      padding: 0.65rem 0.75rem;
-      border-radius: 6px;
-      color: var(--ksl-primary);
-      font-family: "Playfair Display", Georgia, serif;
-    }
-
-    .navbar .dropdown-item:hover,
-    .navbar .dropdown-item:focus {
-      color: var(--ksl-primary);
-      background: rgba(201, 165, 88, 0.16);
-    }
-
-    .dropdown-item-title {
-      display: block;
-      font-family: "Libre Baskerville", Georgia, serif;
-      font-size: 0.82rem;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
-
-    .dropdown-item-text {
-      display: block;
-      margin-top: 0.25rem;
-      color: #6F7683;
-      font-size: 0.83rem;
-      line-height: 1.28;
-    }
-
-    @media (min-width: 992px) {
-      .navbar .dropdown:hover > .dropdown-menu {
-        display: block;
-      }
-    }
-
-    .contact-page {
-      padding: 3.1rem 0 3.4rem;
-      background: var(--ksl-panel);
-    }
-
-    .contact-inner {
-      width: min(100% - 3rem, 1100px);
-      margin: 0 auto;
-    }
-
-    .contact-title {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .contact-title h1 {
-      margin: 0 0 1.3rem;
-      font-size: clamp(1.85rem, 2.3vw, 2.5rem);
-      font-weight: 400;
-      line-height: 1.28;
-      text-transform: uppercase;
-    }
-
-    .contact-title h1 span {
-      color: var(--ksl-accent);
-    }
-
-    .contact-hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-      text-align: center;
-    }
-
-    .contact-copy p {
-      margin: 0 0 1.25rem;
-      font-size: 1.05rem;
-      line-height: 1.45;
-    }
-
-
-    .gold-star-divider {
-      width: 136px;
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      margin: 0 auto 1rem;
-    }
-
-    .gold-star-divider::before,
-    .gold-star-divider::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--ksl-accent);
-    }
-
-    .gold-star-divider span {
-      width: 18px;
-      height: 18px;
-      display: block;
-      background: #f3c22f;
-      clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
-    }
-
-    .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.25rem 3rem;
-    }
-
-    .contact-info-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .contact-info-item i {
-      width: 40px;
-      height: 40px;
-      color: var(--ksl-accent);
-      stroke-width: 1.15;
-    }
-
-    .contact-info-item img {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-    }
-
-    .contact-info-item p {
-      margin: 0;
-    }
-
-    .contact-info-label {
-      display: block;
-      font-family: "Libre Baskerville", Georgia, serif;
-      font-size: 1rem;
-      text-transform: uppercase;
-    }
-
-    .contact-info-item p {
-      font-size: 1rem;
-      line-height: 1.35;
-    }
-
-    .contact-layout {
-      display: flex;
-      justify-content: center;
-    }
-
-    .form-shell {
-      width: 100%;
-      max-width: 720px;
-      padding: 2rem clamp(1.5rem, 4vw, 3.5rem) 2.25rem;
-      border: 1px solid var(--ksl-accent);
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .form-shell h2 {
-      margin: 0 0 0.9rem;
-      font-size: 1.55rem;
-      font-weight: 400;
-      line-height: 1.2;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .form-shell .gold-star-divider {
-      width: 138px;
-      margin-bottom: 2rem;
-    }
-
-    .contact-form {
-      display: grid;
-      gap: 0;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem clamp(1.25rem, 2.5vw, 2.5rem);
-    }
-
-    .form-field {
-      display: grid;
-      gap: 0.55rem;
-    }
-
-    .form-field-full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.25;
-      text-transform: uppercase;
-    }
-
-    label .req {
-      color: var(--ksl-accent);
-      font-style: normal;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid var(--ksl-accent);
-      border-radius: 8px;
-      background: transparent;
-      color: var(--ksl-primary);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 0.95rem;
-      line-height: 1.3;
-    }
-
-    input,
-    select {
-      min-height: 44px;
-      padding: 0.55rem 0.75rem;
-    }
-
-    textarea {
-      min-height: 88px;
-      padding: 0.6rem 0.75rem;
-      resize: vertical;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      outline: 2px solid rgba(201, 165, 88, 0.25);
-      outline-offset: 2px;
-    }
-
-    .form-submit {
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-
-    .form-submit button {
-      min-width: 160px;
-      min-height: 44px;
-      padding: 0 2rem;
-      border: 1px solid #273653;
-      border-radius: 8px;
-      color: var(--ksl-accent);
-      background: #273653;
-      box-shadow: 15px 15px 22px rgba(35, 38, 43, 0.17);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    .form-submit button:hover,
-    .form-submit button:focus {
-      color: var(--ksl-secondary);
-      background: var(--ksl-primary);
-    }
-
-    .site-footer {
-      padding: 4rem 0 1.5rem;
-      background: var(--ksl-primary);
-      color: var(--ksl-secondary);
-    }
-
-    .footer-cta {
-      display: grid;
-      grid-template-columns: 200px 1fr 1fr 1fr;
-      gap: 2rem;
-      align-items: center;
-      margin-bottom: 2.75rem;
-    }
-
-    .footer-cta-text {
-      grid-column: span 2;
-    }
-
-    .footer-logo-large {
-      width: 255px;
-      height: auto;
-    }
-
-    .footer-cta-text h2 {
-      margin: 0 0 0.4rem;
-      color: var(--ksl-secondary);
-      font-family: "Libre Baskerville", Georgia, serif;
-      font-size: clamp(1.5rem, 2.2vw, 2rem);
-      font-weight: 400;
-      line-height: 1.25;
-    }
-
-    .footer-cta-text h2 em {
-      font-style: italic;
-    }
-
-    .footer-cta-text p {
-      max-width: 480px;
-      margin: 0;
-      color: var(--ksl-secondary);
-      font-size: 0.95rem;
-      font-style: italic;
-      line-height: 1.35;
-    }
-
-    .footer-talk-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-self: stretch;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1.35rem 2.75rem;
-      border-radius: 8px;
-      color: #fff;
-      background: rgba(201, 165, 88, 0.92);
-      box-shadow: 0 14px 24px rgba(0, 0, 0, 0.14);
-      font-family: "Libre Baskerville", Georgia, serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      line-height: 1.2;
-      text-transform: uppercase;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .footer-talk-btn svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .footer-talk-btn:hover,
-    .footer-talk-btn:focus {
-      color: var(--ksl-primary);
-      background: var(--ksl-secondary);
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: 200px 1fr 1fr 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 0.9rem;
-    }
-
-    .social-links a {
-      color: var(--ksl-secondary);
-      text-decoration: none;
-    }
-
-    .social-links svg {
-      width: 22px;
-      height: 22px;
-      stroke-width: 1.7;
-    }
-
-    .footer-column h3 {
-      margin-bottom: 1rem;
-      color: var(--ksl-secondary);
-      font-size: 1.05rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .footer-column ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .footer-column li {
-      margin-bottom: 0.55rem;
-    }
-
-    .footer-column a {
-      color: var(--ksl-secondary);
-      font-size: 0.96rem;
-      line-height: 1.35;
-      text-decoration: none;
-    }
-
-    .footer-column a:hover,
-    .footer-column a:focus {
-      color: var(--ksl-accent);
-    }
-
-    .footer-bottom {
-      margin-top: 3rem;
-      color: var(--ksl-secondary);
-      font-size: 0.85rem;
-      text-align: center;
-    }
-
-    @media (max-width: 1199.98px) {
-      .nav-inner {
-        padding: 0 3rem;
-      }
-    }
-
-    @media (max-width: 991.98px) {
-      .nav-inner {
-        grid-template-columns: auto 1fr;
-        padding: 0 1.5rem;
-      }
-
-      .navbar-collapse {
-        grid-column: 1 / -1;
-        padding: 1rem 0;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .form-grid {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-      }
-    }
-
-    @media (max-width: 767.98px) {
-      .footer-cta,
-      .footer-content {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-page {
-        padding: 2.5rem 0;
-      }
-
-      .contact-inner {
-        width: min(100% - 2rem, 720px);
-      }
-
-      .contact-title h1 {
-        font-size: 1.85rem;
-      }
-
-      .contact-info {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.25rem;
-      }
-
-      .form-shell {
-        padding: 1.5rem;
-      }
-
-      .footer-cta {
-        gap: 2rem;
-        text-align: center;
-      }
-
-      .footer-logo-large {
-        margin: 0 auto;
-      }
-
-      .footer-cta-text p {
-        margin-inline: auto;
-      }
-    }
-
-    @media (max-width: 575.98px) {
-      .footer-talk-btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .social-links {
-        justify-content: center;
-      }
-    }
-  </style>
 </head>
-<body>
+<body class="page-contact">
   <header class="site-header">
     <nav class="navbar navbar-expand-md" aria-label="Primary navigation">
       <div class="nav-inner">
@@ -611,9 +40,6 @@
                 <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Stewardship</span><span class="dropdown-item-text">Ongoing care, updates, and maintenance to keep your website secure and effective.</span></a></li>
               </ul>
             </li>
-            <li class="nav-item">
-                  <a class="nav-link" href="commissions.html">Recent Commissions</a>
-            </li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -641,7 +67,7 @@
             </div>
             <div class="contact-info-item">
               <img src="Images/Email.png" alt="" aria-hidden="true">
-              <p><span class="contact-info-label">Email</span>info@kslwebdesign.com</p>
+              <p><span class="contact-info-label">Email</span>cedille.co@gmail.com</p>
             </div>
           </div>
         </div>
@@ -671,11 +97,12 @@
                   <input id="website" name="website" type="url" autocomplete="url">
                 </div>
                 <div class="form-field">
-                  <label for="contact-preference">Contact Preference</label>
-                  <select id="contact-preference" name="contact_preference">
+                  <label for="contact-preference">Contact Preference <span class="req" aria-hidden="true">*</span></label>
+                  <select id="contact-preference" name="contact_preference" required>
                     <option value="" selected disabled></option>
                     <option value="Email">Email</option>
                     <option value="Phone">Phone</option>
+                     <option value="Text">Text</option>
                     <option value="No Preference">No Preference</option>
                   </select>
                 </div>
@@ -689,12 +116,20 @@
                   </select>
                 </div>
                 <div class="form-field form-field-full">
-                  <label for="business-description">Tell me a bit about your business.</label>
-                  <textarea id="business-description" name="business_description" rows="4"></textarea>
+                  <label for="business-description">Tell me a bit about your business. <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="business-description" name="business_description" rows="4" required></textarea>
                 </div>
                 <div class="form-field form-field-full">
                   <label for="pages-features">What pages or features do you think you'll need?</label>
                   <textarea id="pages-features" name="pages_features" rows="4"></textarea>
+                </div>
+                <div class="form-field">
+                  <label for="color-palette">What color palette(s) do you prefer?</label>
+                  <input id="color-palette" name="color_palette_preference" type="text">
+                </div>
+                <div class="form-field">
+                  <label for="font-preference">What font(s) do you prefer?</label>
+                  <input id="font-preference" name="font_preference" type="text">
                 </div>
                 <div class="form-field form-field-full">
                   <label for="referral">How did you hear about KSL Web Design?</label>
@@ -720,51 +155,54 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-cta">
-        <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo.png" alt="Cedille and Co Logo">
-        <div class="footer-cta-text">
-          <h2>Let's build something classically <em>you.</em></h2>
-          <p>Thoughtfully crafted websites for people who have mastered their craft.</p>
-        </div>
-        <a class="footer-talk-btn" href="contact.html">Let's Talk</a>
-      </div>
+      <div class="footer-cards">
+        <section class="footer-card footer-logo-card" aria-label="Cédille and Co">
+          <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo.png" alt="Cedille and Co Logo">
+        </section>
 
-      <div class="footer-content">
-        <div class="social-links" aria-label="Social links">
-          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-        </div>
+        <section class="footer-card footer-info-card" aria-label="Footer information and links">
+          <div class="footer-cta-text">
+            <h2>Let's build something classically <em>you.</em></h2>
+            <p>Crafting websites for people who have mastered their craft.</p>
+          </div>
 
-        <nav class="footer-column" aria-label="Footer quick links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="commissions.html">Recent Commissions</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+          <div class="footer-content">
+            <nav class="footer-column" aria-label="Footer quick links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="commissions.html">Recent Commissions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
 
-        <nav class="footer-column" aria-label="Footer services">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="services.html">Custom Web Design</a></li>
-            <li><a href="services.html">Website Migration</a></li>
-            <li><a href="services.html">SEO Foundations</a></li>
-            <li><a href="services.html">Accessibility</a></li>
-            <li><a href="services.html">Website Care</a></li>
-          </ul>
-        </nav>
+            <nav class="footer-column" aria-label="Footer services">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="services.html">Custom Web Design</a></li>
+                <li><a href="services.html">Website Migration</a></li>
+                <li><a href="services.html">SEO Foundations</a></li>
+                <li><a href="services.html">Accessibility</a></li>
+                <li><a href="services.html">Website Care</a></li>
+              </ul>
+            </nav>
 
-        <nav class="footer-column" aria-label="Footer account and legal">
-          <h3>Account &amp; Legal</h3>
-          <ul>
-            <li><a href="terms.html">Terms &amp; Conditions</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="accessibility.html">Accessibility Statement</a></li>
-          </ul>
-        </nav>
+            <nav class="footer-column" aria-label="Footer account and legal">
+              <h3>Account &amp; Legal</h3>
+              <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                <li><a href="accessibility.html">Accessibility Statement</a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <section class="footer-card footer-action-card" aria-label="Request a proposal">
+          <a class="footer-talk-btn" href="contact.html">Request Proposal</a>
+        </section>
       </div>
 
       <p class="footer-bottom">&copy; 2026 C&eacute;dille &amp; Co. Web Design. All rights reserved.</p>
