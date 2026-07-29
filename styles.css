@@ -304,17 +304,17 @@ body.page-about  {
     }
 
     body.page-about .btn-gold {
-      min-width: 305px;
-      min-height: 80px;
+      min-width: 229px;
+      min-height: 60px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       border: 1px solid var(--ksl-accent);
-      border-radius: 8px;
+      border-radius: 6px;
       color: #fff;
       background: rgba(201, 165, 88, 0.9);
-      box-shadow: 18px 18px 28px rgba(35, 38, 43, 0.13);
-      font-size: 1rem;
+      box-shadow: 14px 14px 21px rgba(35, 38, 43, 0.13);
+      font-size: 0.75rem;
       font-weight: 700;
       line-height: 1.2;
       text-transform: uppercase;
@@ -612,7 +612,7 @@ body.page-about  {
       }
 
       body.page-about .btn-gold {
-        min-width: 100%;
+        min-width: 75%;
       }
 
       body.page-about .footer-cta .btn {
@@ -4284,9 +4284,17 @@ body.page-services  {
 
     body.page-services .pricing-section {
       padding: 3.75rem 2rem 4.5rem;
-      background: var(--ksl-panel);
+      background: #FBFBFB;
       color: var(--ksl-primary);
       text-align: center;
+    }
+
+    body.page-services .services-pricing-divider {
+      height: 1px;
+      margin: 0;
+      border: 0;
+      background: var(--ksl-accent);
+      opacity: 1;
     }
 
     body.page-services .pricing-section h2,body.page-services .enhancements h2 {
@@ -4322,9 +4330,9 @@ body.page-services  {
 
     body.page-services .package-row {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 2.5rem;
-      max-width: 1100px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem;
+      max-width: 1320px;
       margin: 0 auto;
     }
 
@@ -4336,7 +4344,7 @@ body.page-services  {
     }
 
     body.page-services .package-card {
-      padding: 2.1rem 2.5rem 2.75rem;
+      padding: 2.1rem 2rem 2.75rem;
       text-align: center;
     }
 
@@ -5389,7 +5397,7 @@ body.page-thanks  {
 
     /* ── Thank You Page ── */
     body.page-thanks .thanks-page {
-      padding: 5rem 1.5rem 6rem;
+      padding: 1.5rem 1.75rem 2.25rem;
       background: var(--ksl-panel);
       display: flex;
       align-items: center;
@@ -5397,78 +5405,84 @@ body.page-thanks  {
     }
 
     body.page-thanks .thanks-card {
-      width: min(100%, 720px);
-      padding: 3.5rem 4rem;
+      width: min(100%, 1120px);
+      padding: 2.75rem 5rem 4.25rem;
       border: 1px solid var(--ksl-accent);
       border-radius: 12px;
-      background: #fff;
+      background: #fbfbfb;
       text-align: center;
+      zoom: 0.7;
     }
 
     body.page-thanks .thanks-headline {
-      margin: 0 0 2rem;
-      font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+      margin: 0 0 2.25rem;
+      font-size: clamp(1.85rem, 3vw, 2.5rem);
       font-weight: 400;
       font-style: italic;
       line-height: 1.2;
       color: var(--ksl-primary);
     }
 
-    body.page-thanks .thanks-what-next {
-      margin: 0 0 2rem;
-      font-size: 1.1rem;
+    body.page-thanks .thanks-intro {
+      margin: 0 auto 2.75rem;
+      font-size: clamp(1.1rem, 2vw, 1.55rem);
       font-weight: 400;
-      font-style: italic;
+      line-height: 1.35;
       color: var(--ksl-primary);
     }
 
-    body.page-thanks .thanks-steps {
+    body.page-thanks .thanks-scheduling {
       display: grid;
-      gap: 2.75rem;
-      text-align: center;
+      grid-template-columns: minmax(320px, 1.4fr) minmax(240px, 0.8fr);
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    body.page-thanks .thanks-contact {
-      margin-top: 2.75rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(198, 167, 94, 0.45);
+    body.page-thanks .thanks-calendly {
+      min-width: 0;
+      overflow: hidden;
+      background: #fff;
     }
 
-    body.page-thanks .thanks-contact p {
+    body.page-thanks .thanks-calendly .calendly-inline-widget {
+      width: 100%;
+    }
+
+    body.page-thanks .thanks-details {
+      display: grid;
+      gap: 3.5rem;
+    }
+
+    body.page-thanks .thanks-details p {
       margin: 0;
       color: var(--ksl-primary);
-      font-size: 0.95rem;
-      line-height: 1.4;
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      line-height: 1.42;
     }
 
-    body.page-thanks .thanks-contact a {
-      color: var(--ksl-primary);
+    body.page-thanks .thanks-email-button {
+      display: inline-block;
+      width: min(100%, 560px);
+      margin-top: 3.75rem;
+      padding: 1.35rem 2rem;
+      border: 0;
+      border-radius: 11px;
+      color: #fff;
+      background: #d2ad5d;
+      box-shadow: 14px 18px 24px rgba(31, 42, 68, 0.2);
+      font-size: 0.9rem;
       font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
     }
 
-    body.page-thanks .thanks-contact a:hover,
-    body.page-thanks .thanks-contact a:focus {
-      color: var(--ksl-accent);
-    }
-
-    body.page-thanks .thanks-step-heading {
-      margin: 0 0 0.55rem;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: var(--ksl-primary);
-    }
-
-    body.page-thanks .thanks-step-heading strong {
-      font-weight: 700;
-    }
-
-    body.page-thanks .thanks-step-body {
-      margin: 0;
-      font-size: calc(0.97rem - 2px);
-      font-weight: 400;
-      line-height: 1.6;
-      color: var(--ksl-primary);
+    body.page-thanks .thanks-email-button:focus-visible {
+      outline: 3px solid var(--ksl-primary);
+      outline-offset: 4px;
     }
 
     /* ── Footer ── */
@@ -5638,6 +5652,18 @@ body.page-thanks  {
 
       body.page-thanks .thanks-card {
         padding: 2.5rem 1.75rem;
+      }
+
+      body.page-thanks .thanks-scheduling {
+        grid-template-columns: 1fr;
+      }
+
+      body.page-thanks .thanks-details {
+        gap: 2rem;
+      }
+
+      body.page-thanks .thanks-email-button {
+        margin-top: 2.75rem;
       }
     }
 
@@ -6006,5 +6032,135 @@ body[class*="page-"] .btn-view-sample {
 
   body.page-contact .form-shell {
     padding-inline: 1rem;
+  }
+}
+
+/* Interior-page navbar sizing */
+body[class*="page-"]:not(.page-index) .nav-inner {
+  width: min(90%, 1350px);
+}
+
+body[class*="page-"]:not(.page-index) .nav-link {
+  font-size: calc(0.95rem - 1px);
+}
+
+/* discovery.html */
+body.page-discovery .discovery-card {
+  zoom: 1;
+  width: min(100%, 920px);
+  padding: clamp(2.25rem, 5vw, 4.5rem);
+}
+
+body.page-discovery .discovery-card > .thanks-headline {
+  margin-bottom: 3rem;
+}
+
+body.page-discovery .discovery-form {
+  display: grid;
+  gap: 2.5rem;
+  text-align: left;
+}
+
+body.page-discovery .discovery-part {
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  border: 1px solid rgba(198, 167, 94, 0.65);
+  border-radius: 10px;
+  background: #fff;
+}
+
+body.page-discovery .discovery-part h2 {
+  margin: 0;
+  color: var(--ksl-primary);
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body.page-discovery .discovery-subtitle {
+  max-width: 650px;
+  margin: 0.75rem auto 2.25rem;
+  color: var(--ksl-primary);
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.55;
+  text-align: center;
+}
+
+body.page-discovery .discovery-field + .discovery-field {
+  margin-top: 1.75rem;
+}
+
+body.page-discovery .discovery-field label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--ksl-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+body.page-discovery .discovery-field input,
+body.page-discovery .discovery-field select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(31, 42, 68, 0.35);
+  border-radius: 6px;
+  color: var(--ksl-primary);
+  background: #fbfbfb;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 0.9rem;
+}
+
+body.page-discovery .discovery-field input:focus,
+body.page-discovery .discovery-field select:focus {
+  border-color: var(--ksl-accent);
+  outline: 3px solid rgba(198, 167, 94, 0.2);
+}
+
+body.page-discovery .discovery-examples,
+body.page-discovery .discovery-hint {
+  margin: -0.2rem 0 0.7rem;
+  color: #6f7683;
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+body.page-discovery .discovery-submit {
+  width: min(100%, 480px);
+  justify-self: center;
+  padding: 1.25rem 2rem;
+  border: 0;
+  border-radius: 9px;
+  color: #fff;
+  background: #d2ad5d;
+  box-shadow: 10px 14px 22px rgba(31, 42, 68, 0.18);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+body.page-discovery .discovery-submit:hover,
+body.page-discovery .discovery-submit:focus {
+  color: #fff;
+  background: var(--ksl-primary);
+}
+
+body.page-discovery .discovery-submit:focus-visible {
+  outline: 3px solid var(--ksl-accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 575.98px) {
+  body.page-discovery .discovery-card {
+    padding: 1.5rem 1rem;
+  }
+
+  body.page-discovery .discovery-part {
+    padding: 1.5rem 1rem;
   }
 }
