@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cédille and Co. Design | Discovery</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU+Guides&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="page-thanks page-discovery">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="navbar-brand" href="index.html" aria-label="Cédille and Co. home">
+          <img src="Images/Cedille and Co Logo.png" alt="Cedille and Co Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="primaryNavbar">
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="about.html"><span class="dropdown-item-title">About Me</span></a></li>
+                <li><a class="dropdown-item" href="about.html#credentials"><span class="dropdown-item-title">Credentials</span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Design</span><span class="dropdown-item-text">Custom websites designed around your mission, audience, and goals.</span></a></li>
+                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Migration</span><span class="dropdown-item-text">Guiding organizations from outdated platforms to modern, maintainable websites.</span></a></li>
+                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Technical SEO</span><span class="dropdown-item-text">Helping search engines understand your website so the right people can find it.</span></a></li>
+                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Stewardship</span><span class="dropdown-item-text">Ongoing care, updates, and maintenance to keep your website secure and effective.</span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="thanks-page discovery-page" aria-label="Discovery questionnaire">
+      <div class="thanks-card discovery-card">
+        <h1 class="thanks-headline">Website Discovery</h1>
+        <form class="discovery-form" action="https://formspree.io/f/xykrvngy" method="POST">
+          <input type="hidden" name="_subject" value="New Website Discovery Questionnaire">
+
+          <section class="discovery-part" aria-labelledby="discovery-part-1">
+            <h2 id="discovery-part-1">Part I — About You</h2>
+            <p class="discovery-subtitle">Tell us about yourself and your business to help us understand your vision.</p>
+
+            <div class="discovery-field">
+              <label for="business-description">How would you describe what you do to someone you’ve just met?</label>
+              <input id="business-description" name="business_description" type="text" required>
+            </div>
+
+            <div class="discovery-field">
+              <label for="work-enjoyment">What do you enjoy most about your work?</label>
+              <input id="work-enjoyment" name="work_enjoyment" type="text" required>
+            </div>
+
+            <div class="discovery-field">
+              <label for="business-words">Choose 3–5 words that best describe your business.</label>
+              <p class="discovery-examples">Examples: Professional, Welcoming, Timeless, Creative, Modern, Traditional, Warm, Elegant, Bold, Trustworthy, Luxurious, Friendly, Refined, Playful, Sophisticated</p>
+              <input id="business-words" name="business_descriptive_words" type="text" required>
+            </div>
+          </section>
+
+          <section class="discovery-part" aria-labelledby="discovery-part-2">
+            <h2 id="discovery-part-2">Part II — Your Audience</h2>
+            <p class="discovery-subtitle">Help us get to know your ideal clients and website visitors.</p>
+
+            <div class="discovery-field">
+              <label for="website-audience">Who are you hoping will visit your website?</label>
+              <input id="website-audience" name="website_audience" type="text" required>
+            </div>
+
+            <div class="discovery-field">
+              <label for="visitor-action">After someone visits your website, what do you want them to do?</label>
+              <select id="visitor-action" name="desired_visitor_action" required>
+                <option value="" selected disabled>Select an option</option>
+                <option>Contact you</option>
+                <option>Schedule a consultation</option>
+                <option>Purchase artwork</option>
+                <option>Book lessons</option>
+                <option>Request a quote</option>
+                <option>Donate</option>
+                <option>Subscribe</option>
+                <option>Visit your store</option>
+              </select>
+            </div>
+
+            <div class="discovery-field">
+              <label for="customer-questions">What questions do customers ask you most often?</label>
+              <p class="discovery-hint">Hint: These answers belong in an FAQ.</p>
+              <input id="customer-questions" name="frequent_customer_questions" type="text" required>
+            </div>
+          </section>
+
+          <section class="discovery-part" aria-labelledby="discovery-part-3">
+            <h2 id="discovery-part-3">Part III — Brand &amp; Design</h2>
+            <p class="discovery-subtitle">Share details about your brand assets and your design preferences.</p>
+
+            <div class="discovery-field">
+              <label for="brand-assets">Which brand assets do you already have?</label>
+              <p class="discovery-examples">Examples: Logo, brand colors, fonts / typography, photography, brand guidelines, social media graphics</p>
+              <input id="brand-assets" name="existing_brand_assets" type="text">
+            </div>
+
+            <div class="discovery-field">
+              <label for="business-colors">What colors feel most like your business?</label>
+              <input id="business-colors" name="business_colors" type="text">
+            </div>
+
+            <div class="discovery-field">
+              <label for="visitor-feeling">What feeling should visitors have when they arrive on your website?</label>
+              <select id="visitor-feeling" name="desired_visitor_feeling" required>
+                <option value="" selected disabled>Select an option</option>
+                <option>Inspired</option>
+                <option>Comfortable</option>
+                <option>Confident</option>
+                <option>Curious</option>
+                <option>Excited</option>
+                <option>Calm</option>
+              </select>
+            </div>
+
+            <div class="discovery-field">
+              <label for="website-inspiration">Are there any websites you like?</label>
+              <p class="discovery-hint">What do you like about them?</p>
+              <input id="website-inspiration" name="website_inspiration" type="text">
+            </div>
+
+            <div class="discovery-field">
+              <label for="design-avoid">Is there anything you’ve seen that you definitely don’t want?</label>
+              <input id="design-avoid" name="design_elements_to_avoid" type="text">
+            </div>
+          </section>
+
+          <section class="discovery-part" aria-labelledby="discovery-part-4">
+            <h2 id="discovery-part-4">Part IV — Content</h2>
+            <p class="discovery-subtitle">Content is key—share what you have and what you’ll need.</p>
+
+            <div class="discovery-field">
+              <label for="written-content">Do you already have written content?</label>
+              <select id="written-content" name="has_written_content" required>
+                <option value="" selected disabled>Select an option</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="discovery-field">
+              <label for="content-help">Will you provide the content, or would you like help organizing it?</label>
+              <input id="content-help" name="content_support_needed" type="text" required>
+            </div>
+          </section>
+
+          <section class="discovery-part" aria-labelledby="discovery-part-5">
+            <h2 id="discovery-part-5">Part V — Website Goals</h2>
+            <p class="discovery-subtitle">Let’s clarify the goals and success criteria for your new website.</p>
+
+            <div class="discovery-field">
+              <label for="website-reason">Why are you building a new website?</label>
+              <select id="website-reason" name="reason_for_new_website" required>
+                <option value="" selected disabled>Select an option</option>
+                <option>Starting a business</option>
+                <option>Rebranding</option>
+                <option>Replacing an outdated website</option>
+                <option>Better SEO</option>
+                <option>Better mobile experience</option>
+                <option>Easier navigation</option>
+              </select>
+            </div>
+
+            <div class="discovery-field">
+              <label for="website-pages">What pages do you expect to need?</label>
+              <p class="discovery-examples">Examples: Home, About, Services, Portfolio, Gallery, Shop, Blog, Events, Contact, FAQ</p>
+              <input id="website-pages" name="expected_website_pages" type="text" required>
+            </div>
+
+            <div class="discovery-field">
+              <label for="special-functionality">Will your website need any special functionality?</label>
+              <p class="discovery-examples">Examples: Contact forms, ecommerce store, appointment scheduling, donations, event registration, blog, newsletter signup, professional email</p>
+              <input id="special-functionality" name="special_functionality" type="text">
+            </div>
+          </section>
+
+          <section class="discovery-part" aria-labelledby="discovery-part-6">
+            <h2 id="discovery-part-6">Part VI — Existing Website</h2>
+            <p class="discovery-subtitle">If you have a website or domain already, share the details here.</p>
+
+            <div class="discovery-field">
+              <label for="domain-owned">Do you already own a domain?</label>
+              <select id="domain-owned" name="owns_domain" required>
+                <option value="" selected disabled>Select an option</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="discovery-field">
+              <label for="domain-host">Where is it registered / hosted?</label>
+              <input id="domain-host" name="domain_registration_or_host" type="text">
+            </div>
+
+            <div class="discovery-field">
+              <label for="current-platform">Is your website built with:</label>
+              <p class="discovery-examples">Wix, Squarespace, WordPress, Shopify, Webflow, or another CMS provider?</p>
+              <input id="current-platform" name="current_website_platform" type="text">
+            </div>
+
+            <div class="discovery-field">
+              <label for="project-type">Will this be:</label>
+              <select id="project-type" name="project_type" required>
+                <option value="" selected disabled>Select an option</option>
+                <option>Brand new website</option>
+                <option>Website redesign</option>
+                <option>Website migration</option>
+              </select>
+            </div>
+
+            <div class="discovery-field">
+              <label for="transfer-help">Will you need help transferring your domain or email?</label>
+              <select id="transfer-help" name="needs_domain_or_email_transfer" required>
+                <option value="" selected disabled>Select an option</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="discovery-part" aria-labelledby="discovery-part-7">
+            <h2 id="discovery-part-7">Part VII — Timeline and Budget</h2>
+            <p class="discovery-subtitle">Share your ideal timeline, budget, and any important dates.</p>
+
+            <div class="discovery-field">
+              <label for="launch-date">Do you have a desired launch date?</label>
+              <input id="launch-date" name="desired_launch_date" type="text">
+            </div>
+
+            <div class="discovery-field">
+              <label for="budget-range">Do you have a budget range?</label>
+              <input id="budget-range" name="budget_range" type="text">
+            </div>
+
+            <div class="discovery-field">
+              <label for="milestone">Is there an upcoming event or milestone we should plan around?</label>
+              <p class="discovery-examples">Examples: Product launch, exhibition, concert, conference, grand opening</p>
+              <input id="milestone" name="upcoming_event_or_milestone" type="text">
+            </div>
+          </section>
+
+          <section class="discovery-part" aria-labelledby="discovery-part-8">
+            <h2 id="discovery-part-8">Part VIII — Final Thoughts</h2>
+
+            <div class="discovery-field">
+              <label for="final-thoughts">Is there anything else you’d like me to know before we begin?</label>
+              <input id="final-thoughts" name="final_thoughts" type="text">
+            </div>
+          </section>
+
+          <button class="discovery-submit" type="submit">Submit Discovery Questionnaire</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cards">
+        <section class="footer-card footer-logo-card" aria-label="Cédille and Co">
+          <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo.png" alt="Cedille and Co Logo">
+        </section>
+
+        <section class="footer-card footer-info-card" aria-label="Footer information and links">
+          <div class="footer-cta-text">
+            <h2>Let's build something classically <em>you.</em></h2>
+            <p>Crafting websites for people who have mastered their craft.</p>
+          </div>
+
+          <div class="footer-content">
+            <nav class="footer-column" aria-label="Footer quick links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="commissions.html">Recent Commissions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-column" aria-label="Footer services">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="services.html">Custom Web Design</a></li>
+                <li><a href="services.html">Website Migration</a></li>
+                <li><a href="services.html">SEO Foundations</a></li>
+                <li><a href="services.html">Accessibility</a></li>
+                <li><a href="services.html">Website Care</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-column" aria-label="Footer account and legal">
+              <h3>Account &amp; Legal</h3>
+              <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                <li><a href="accessibility.html">Accessibility Statement</a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <section class="footer-card footer-action-card" aria-label="Request a proposal">
+          <a class="footer-talk-btn" href="contact.html">Request Proposal</a>
+        </section>
+      </div>
+
+      <p class="footer-bottom">&copy; 2026 C&eacute;dille &amp; Co. Web Design. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
