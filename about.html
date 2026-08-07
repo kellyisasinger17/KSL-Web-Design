@@ -29,6 +29,7 @@
               <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                 <li><a class="dropdown-item" href="about.html"><span class="dropdown-item-title">About Me</span></a></li>
                 <li><a class="dropdown-item" href="about.html#credentials"><span class="dropdown-item-title">Credentials</span></a></li>
+                <li><a class="dropdown-item" href="about.html#faq"><span class="dropdown-item-title">FAQ</span></a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -48,89 +49,155 @@
   </header>
 
   <main>
-    <section class="about-hero" aria-label="About Kelly">
+    <section class="about-hero standard-hero" aria-label="About Kelly">
+      <div class="about-hero-heading">
+        <h1>About Me</h1>
+        <p class="script-heading">and my classical roots.</p>
+        <div class="gold-star-divider" aria-hidden="true">
+          <span></span>
+        </div>
+      </div>
       <div class="about-hero-grid">
         <div class="about-copy">
-          <h1>About Kelly</h1>
-          <div class="gold-star-divider" aria-hidden="true">
-            <span></span>
-          </div>
-          <p>Every business, artist, and creative professional has story worth telling. Whether you are launching creative business, teaching your craft, or growing small business you have poured your heart into, your website should reflect same care.</p>
-          <p>Before moving into web development, I trained as classical opera singer. That background taught me what it means to create something deeply personal and share it with world. My experience in education, client-facing work, and relationship building continues to shape every project. I design by listening first, then build each site with creativity, care, and long-term purpose.</p>
-
-          <h1>Why Cédille?</h1>
-          <div class="gold-star-divider" aria-hidden="true">
-            <span></span>
-          </div>
-          <p>Cédille (pronounced "say-DEE") comes from French word for cedilla, the small mark beneath Ç in my last name: Lançon.</p>
-          <p>The cedilla reflects the importance of my husband's French heritage. I also speak French, and French culture has very much shaped our lives and family values. Cédille became fitting symbol for my studio: distinctive, thoughtful, and rooted in heritage.</p>
+          <p>Every business, artist, and creative professional has a story worth telling. Whether you are launching a business, teaching your craft, or feeding a passion you have poured your heart into, your website should reflect that same care.</p>
+          <p>Before moving into web development, I trained as a classical opera singer, which taught me what it means to create something deeply personal and share it with the world. My experience in education and love for all things in classical literature continues to shape my design preferences. I design by listening first, then build with creativity, care, and long-term purpose.</p>
         </div>
-        <img class="about-portrait" src="Images/Circle headshot frame.png" alt="Kelly Lancon of KSL Web Design">
+        <img class="about-portrait" src="Images/Circle headshot frame.png" alt="Kelly Lancon of Cédille and Co. Web Design">
       </div>
     </section>
 
-    <section class="about-details" aria-label="About details">
+    <section class="about-details" aria-label="About details and credentials">
       <div class="details-grid">
-        <div class="detail-panel">
-          <h2>Based in New York</h2>
-          <div class="location-row">
-            <div class="ny-mark" aria-hidden="true">
-              <img src="Images/New York.png" alt="">
+        <article class="package-card about-profile-card">
+          <section aria-labelledby="location-heading">
+            <h2 id="location-heading">Based in New York</h2>
+            <div class="location-row">
+              <div class="ny-mark" aria-hidden="true">
+                <img src="Images/New York.png" alt="">
+              </div>
+              <p>Proudly serving small businesses and creatives in the city and beyond.</p>
             </div>
-            <p>Proudly serving small businesses and nonprofits in the city and beyond.</p>
-          </div>
-        </div>
+          </section>
 
-        <div class="detail-panel">
-          <h2>More Than a Web Developer</h2>
-          <div class="trait-list">
-            <div class="trait"><img src="Images/Classical Musician.png" alt=""><span>Classical Musician</span></div>
-            <div class="trait"><img src="Images/storyteller.png" alt=""><span>Storyteller</span></div>
-            <div class="trait"><img src="Images/educator.png" alt=""><span>Educator</span></div>
-            <div class="trait"><img src="Images/Problem solver.png" alt=""><span>Problem Solver</span></div>
-            <div class="trait"><img src="Images/avid reader.png" alt=""><span>Avid Reader</span></div>
-            <div class="trait"><img src="Images/Lifelong learner.png" alt=""><span>Lifelong Learner</span></div>
-          </div>
-        </div>
+          <section class="passions" aria-labelledby="passions-heading">
+            <h2 id="passions-heading">Passions and Hobbies</h2>
+            <div class="trait-list">
+              <div class="trait"><img src="Images/Piano.png" alt=""><span>Classical Musician</span></div>
+              <div class="trait"><img src="Images/Storytelling.png" alt=""><span>Storyteller</span></div>
+              <div class="trait"><img src="Images/Teaching.png" alt=""><span>Educator</span></div>
+              <div class="trait"><img src="Images/Book.png" alt=""><span>Avid Reader</span></div>
+            </div>
+          </section>
+        </article>
 
-        <div class="detail-panel about-cta">
-          <img class="about-cta-logo" src="Images/Cedille and Co Logo.png" alt="Cedille and Co Logo">
+        <aside class="about-cta" aria-label="Recent commissions">
+          <img class="about-cta-logo" src="Images/Cedille White Circle Logo.png" alt="Cédille and Co. logo">
+          <p>Check out our recent custom commissions:</p>
           <a class="btn btn-gold" href="commissions.html">View Portfolio</a>
-        </div>
+        </aside>
+
+        <article class="package-card credentials-card" id="credentials">
+          <h2>Credentials</h2>
+          <div class="credentials-intro">
+            <dl class="education-list">
+              <div>
+                <dt>Master of Music</dt>
+                <dd>Manhattan School of Music</dd>
+              </div>
+              <div>
+                <dt>Bachelor of Arts, English Linguistics</dt>
+                <dd>University of Arkansas at Little Rock</dd>
+              </div>
+              <div>
+                <dt>Bachelor of Arts, French Language and Literature</dt>
+                <dd>University of Arkansas at Little Rock</dd>
+              </div>
+              <div>
+                <dt>Diplôme d'Études de la Langue Française</dt>
+                <dd>L'Université d'Orléans, France</dd>
+              </div>
+            </dl>
+            <img class="credentials-bust" src="Images/Statue Bust.png" alt="Classical statue bust">
+          </div>
+
+          <div class="credential-certificates">
+            <figure class="credential-card">
+              <h3>Web Development Diploma</h3>
+              <img src="Images/SheCodes Front-End Diploma.png" alt="SheCodes Front-End Developer Diploma" tabindex="0">
+            </figure>
+            <figure class="credential-card">
+              <h3>SEO Diploma</h3>
+              <img src="Images/Hubspot SEO Certificate.png" alt="HubSpot SEO Certification" tabindex="0">
+            </figure>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="credentials-anchor" id="credentials" aria-label="Credentials">
-      <h2 class="credentials-heading">Credentials</h2>
-      <div class="credentials-grid">
-        <dl class="education-list">
-          <div>
-            <dt>Master of Music</dt>
-            <dd>Manhattan School of Music</dd>
-          </div>
-          <div>
-            <dt>Bachelor of Arts, English Linguistics</dt>
-            <dd>University of Arkansas at Little Rock</dd>
-          </div>
-          <div>
-            <dt>Bachelor of Arts, French Language and Literature</dt>
-            <dd>University of Arkansas at Little Rock</dd>
-          </div>
-          <div>
-            <dt>Diplome d'Etudes de la Langue Francaise</dt>
-            <dd>L'universite d'Orleans, France</dd>
-          </div>
-        </dl>
+    <section class="about-faq-section" id="faq" aria-labelledby="about-faq-heading">
+      <div class="about-faq-wrap">
+        <h2 id="about-faq-heading">Frequently Asked Questions</h2>
+        <div class="gold-star-divider" aria-hidden="true"><span></span></div>
 
-        <figure class="credential-card">
-          <h2>Web Development Certification</h2>
-          <img src="Images/SheCodes Front-End Diploma.png" alt="SheCodes Front-End Developer Diploma" tabindex="0">
-        </figure>
+        <div class="about-faq-list">
+          <details class="about-faq-item">
+            <summary>What kinds of websites do you create?</summary>
+            <div class="about-faq-answer"><p>Cédille &amp; Co. creates custom websites for small businesses, artists, creative professionals, and service-based organizations. Projects can range from simple portfolio websites to multi-page business sites with blogs, galleries, forms, and search optimization.</p></div>
+          </details>
 
-        <figure class="credential-card">
-          <h2>SEO Certification</h2>
-          <img src="Images/Hubspot SEO Certificate.png" alt="HubSpot SEO Certification" tabindex="0">
-        </figure>
+          <details class="about-faq-item">
+            <summary>Do you use templates or website builders?</summary>
+            <div class="about-faq-answer"><p>No. Websites are custom-designed and developed rather than built from pre-made templates. This allows the final site to better reflect your brand, your audience, and the way you actually work.</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>Can you redesign or migrate my existing website?</summary>
+            <div class="about-faq-answer"><p>Yes. If your current website is built on a platform such as Wix, Squarespace, WordPress, Shopify, Webflow, or another website builder, Cédille &amp; Co. can help redesign and migrate the site into a custom-built experience while preserving the content and functionality that still serves your business well.</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>Is SEO included with my website?</summary>
+            <div class="about-faq-answer"><p>Yes. Every website includes foundational SEO practices such as thoughtful page structure, optimized titles, metadata, image alt text, responsive design, and performance considerations. More comprehensive SEO services are available for businesses that want additional search optimization.</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>Will my website work on phones and tablets?</summary>
+            <div class="about-faq-answer"><p>Yes. Every website is designed responsively so that the experience remains clear, polished, and easy to navigate across desktop, tablet, and mobile devices.</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>Will my website be accessible?</summary>
+            <div class="about-faq-answer"><p>Accessibility is an important consideration throughout the design and development process. Websites are built with WCAG accessibility best practices in mind and run through an audit prior to launch.</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>Can I update the website myself after it launches?</summary>
+            <div class="about-faq-answer"><p>Yes, but additional costs depend on the features you need. Blogs, galleries, scheduling forms, and other frequently updated sections can be built with simple management tools where appropriate. Cédille &amp; Co. also offers ongoing website stewardship for clients who would rather have updates handled professionally.</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>Do you offer branding services too?</summary>
+            <div class="about-faq-answer"><p>Yes. Brand identity refreshes are available for clients who need help refining their logo, colors, typography, or overall visual direction before beginning a website project. I highly recommend clients use our Inspiration Guide prior to starting a project!</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>How long does a typical website project take?</summary>
+            <div class="about-faq-answer"><p>Most projects take approximately one to two weeks, depending on the size of the site, the complexity of the project, and how quickly content and approvals are provided. A more specific timeline is established before development begins.</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>What makes Cédille &amp; Co. Design different?</summary>
+            <div class="about-faq-answer"><p>Cédille &amp; Co. takes a thoughtful, relationship-first approach to design. The goal is not simply to make a website look polished, but to understand the people, work, and purpose behind the business so the finished site feels genuinely representative of the client and the care they have invested in their craft.</p></div>
+          </details>
+
+          <details class="about-faq-item">
+            <summary>What does Cédille mean?</summary>
+            <div class="about-faq-answer">
+              <p><strong>Cédille</strong> (pronounced <em>say-DEE</em>) comes from the French word for <em>cedilla</em>—the small mark beneath the <strong>Ç</strong> in my last name, Lançon.</p>
+              <p>The name is a nod to my husband's French heritage, which has always been an important part of our family. I also speak French, and French language and culture have shaped much of the way we live, travel, and appreciate art, design, and craftsmanship.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
   </main>
@@ -157,6 +224,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="commissions.html">Recent Commissions</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html#faq">FAQ</a></li>
               </ul>
             </nav>
 
