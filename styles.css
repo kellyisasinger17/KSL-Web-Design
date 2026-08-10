@@ -4330,9 +4330,9 @@ body.page-services  {
 
     body.page-services .package-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1.75rem;
-      max-width: 1320px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -4359,6 +4359,14 @@ body.page-services  {
 
     body.page-services .package-card h3 {
       font-size: calc(1.4rem + 1px);
+    }
+
+    body.page-services .package-includes {
+      margin: 0 0 1.25rem;
+      color: var(--ksl-accent);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.9rem;
+      text-align: center;
     }
 
     body.page-services .package-subtitle {
@@ -4419,17 +4427,14 @@ body.page-services  {
 
     body.page-services .enhancements-split {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin-top: 3rem;
+      grid-template-columns: 1fr;
+      width: min(100%, 900px);
+      margin: 3rem auto 0;
       border: 1px solid var(--ksl-accent);
     }
 
     body.page-services .enhancement-col {
       padding: 2rem 3rem 2.5rem;
-    }
-
-    body.page-services .enhancement-col:first-child {
-      border-right: 1px solid var(--ksl-accent);
     }
 
     body.page-services .enhancement-col-label {
@@ -4478,10 +4483,32 @@ body.page-services  {
       text-align: center;
     }
 
+    body.page-services .services-inspiration-video-frame {
+      width: min(500px, 100%);
+      margin-inline: auto;
+      padding-block: 24px;
+    }
+
+    body.page-services .services-inspiration-video-frame video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--ksl-accent);
+      border-radius: 8px;
+      box-shadow: 0 12px 26px rgba(31, 42, 68, 0.16);
+    }
+
     body.page-services .enhancements-cta p {
       margin: 0 0 1.25rem;
       font-size: 1rem;
       font-style: italic;
+    }
+
+    body.page-services .enhancements-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
 
     body.page-services .btn-enhancements-contact {
@@ -4507,12 +4534,9 @@ body.page-services  {
       color: var(--ksl-secondary);
     }
 
-    body.page-services .package-cta {
-      min-width: 160px;
-      min-height: 42px;
-      align-self: center;
-      margin-top: 2rem;
-      padding-inline: 1.5rem;
+    body.page-services .package-actions {
+      margin-top: 3rem;
+      text-align: center;
     }
 
 
@@ -4788,11 +4812,6 @@ body.page-services  {
 
       body.page-services .enhancements-split {
         grid-template-columns: 1fr;
-      }
-
-      body.page-services .enhancement-col:first-child {
-        border-right: none;
-        border-bottom: 1px solid var(--ksl-accent);
       }
 
       body.page-services .migration-banner {
@@ -5700,6 +5719,7 @@ body.page-about .about-hero-heading {
 }
 
 body.page-about .about-hero-heading h1 {
+  padding-top: 20px;
   margin: 0 0 0.75rem;
   font-size: clamp(2.2rem, 3vw, 3rem);
   font-weight: 400;
@@ -6111,6 +6131,8 @@ body[class*="page-"] .footer-cta-text h2 {
 
 body[class*="page-"] .footer-talk-btn {
   width: 100%;
+  padding-inline: 10px;
+  font-size: calc(0.85rem - 2px);
   justify-content: center;
 }
 
@@ -6245,7 +6267,7 @@ body[class*="page-"] .btn-view-sample {
   body[class*="page-"] .footer-talk-btn {
     width: min(100%, 280px);
     min-width: 0;
-    padding-inline: 1.25rem;
+    padding-inline: 10px;
     white-space: normal;
   }
 

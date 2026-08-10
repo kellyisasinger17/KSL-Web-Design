@@ -77,7 +77,7 @@
 
         <div class="contact-layout">
           <div class="form-shell">
-            <h2>Consultation Form</h2>
+            <h2>Start Your Website Commission</h2>
             <div class="gold-star-divider" aria-hidden="true"><span></span></div>
             <form class="contact-form" action="https://formspree.io/f/mlgybnjl" method="POST">
               <input type="hidden" name="_subject" value="New KSL Web Design consultation request">
@@ -85,19 +85,19 @@
               <div class="form-grid">
                 <div class="form-field">
                   <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
-                  <input id="name" name="name" type="text" required autocomplete="name">
+                  <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your Name">
                 </div>
                 <div class="form-field">
                   <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
-                  <input id="email" name="email" type="email" required autocomplete="email">
+                  <input id="email" name="email" type="email" required autocomplete="email" placeholder="Your Email">
                 </div>
                 <div class="form-field">
                   <label for="phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
-                  <input id="phone" name="phone" type="tel" required autocomplete="tel">
+                  <input id="phone" name="phone" type="tel" required autocomplete="tel"  placeholder="Your Number">
                 </div>
                 <div class="form-field">
                   <label for="website">Website (if applicable)</label>
-                  <input id="website" name="website" type="url" autocomplete="url">
+                  <input id="website" name="website" type="url" autocomplete="url" placeholder="www.mywebsite.com">
                 </div>
                 <div class="form-field">
                   <label for="contact-preference">Contact Preference <span class="req" aria-hidden="true">*</span></label>
@@ -118,23 +118,11 @@
                     <option value="Still Exploring">Still Exploring</option>
                   </select>
                 </div>
-                <div class="form-field form-field-full">
-                  <label for="business-description">Tell me a bit about your business. <span class="req" aria-hidden="true">*</span></label>
-                  <textarea id="business-description" name="business_description" rows="4" required></textarea>
-                </div>
-                <div class="form-field form-field-full">
-                  <label for="pages-features">What pages or features do you think you'll need?</label>
-                  <textarea id="pages-features" name="pages_features" rows="4"></textarea>
+                <div class="form-field">
+                  <label for="estimated-budget">Estimated Budget</label>
+                  <input id="estimated-budget" name="estimated_budget" type="text" inputmode="decimal" placeholder="Ex. $500-1000, $2000">
                 </div>
                 <div class="form-field">
-                  <label for="color-palette">What color palette(s) do you prefer?</label>
-                  <input id="color-palette" name="color_palette_preference" type="text">
-                </div>
-                <div class="form-field">
-                  <label for="font-preference">What font(s) do you prefer?</label>
-                  <input id="font-preference" name="font_preference" type="text">
-                </div>
-                <div class="form-field form-field-full">
                   <label for="referral">How did you hear about Cédille &amp; Co.?</label>
                   <select id="referral" name="referral_source">
                     <option value="" selected disabled></option>
@@ -144,6 +132,10 @@
                     <option value="Flyer">Flyer</option>
                     <option value="Other">Other</option>
                   </select>
+                </div>
+                <div class="form-field form-field-full">
+                  <label for="business-description">Tell me a bit about your business. <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="business-description" name="business_description" rows="4" placeholder="Please include as much detail as possible about what you're looking for." required></textarea>
                 </div>
               </div>
               <div class="form-submit">
@@ -204,8 +196,8 @@
           </div>
         </section>
 
-        <section class="footer-card footer-action-card" aria-label="Request a proposal">
-          <a class="footer-talk-btn" href="contact.html">Request Proposal</a>
+        <section class="footer-card footer-action-card" aria-label="Start your commission">
+          <a class="footer-talk-btn" href="contact.html">Start Your Commission</a>
         </section>
       </div>
 
