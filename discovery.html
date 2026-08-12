@@ -13,11 +13,12 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="page-thanks page-discovery">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <nav class="navbar navbar-expand-md" aria-label="Primary navigation">
       <div class="nav-inner">
         <a class="navbar-brand" href="index.html" aria-label="Cédille and Co. home">
-          <img src="Images/Cedille and Co Logo.png" alt="Cedille and Co Logo">
+          <img src="Images/Cedille and Co Logo.png" alt="Cedille and Co primary logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -50,13 +51,13 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="standard-hero" aria-label="Discovery questionnaire introduction">
       <div class="standard-hero-copy">
         <h1>Website Discovery</h1>
-        <h2 class="script-heading">tell us about your vision.</h2>
+        <h2 class="script-heading">tell me about what you envision.</h2>
         <div class="gold-star-divider" aria-hidden="true"><span></span></div>
-        <p>Share the details that will help us understand your business, your audience, and the website you want to create.</p>
+        <p>Share the details that will help me understand your business, your audience, and the website you want to create.</p>
       </div>
     </section>
 
@@ -67,7 +68,7 @@
 
           <section class="discovery-part" aria-labelledby="discovery-part-1">
             <h2 id="discovery-part-1">Part I — About You</h2>
-            <p class="discovery-subtitle">Tell us about yourself and your business to help us understand your vision.</p>
+            <p class="discovery-subtitle">Tell me a bit about yourself and your business.</p>
 
             <div class="discovery-field">
               <label for="business-description">How would you describe what you do to someone you’ve just met?</label>
@@ -80,15 +81,15 @@
             </div>
 
             <div class="discovery-field">
-              <label for="business-words">Choose 3–5 words that best describe your business.</label>
-              <p class="discovery-examples">Examples: Professional, Welcoming, Timeless, Creative, Modern, Traditional, Warm, Elegant, Bold, Trustworthy, Luxurious, Friendly, Refined, Playful, Sophisticated</p>
-              <input id="business-words" name="business_descriptive_words" type="text" required>
+              <label for="business-words">Choose 3–5 words that best describe your vision.</label>
+              <p class="discovery-examples" id="business-words-help">Examples: Professional, Welcoming, Timeless, Creative, Modern, Traditional, Warm, Elegant, Bold, Trustworthy, Luxurious, Friendly, Down-to-earth, Playful, Sophisticated</p>
+              <input id="business-words" name="business_descriptive_words" type="text" aria-describedby="business-words-help" required>
             </div>
           </section>
 
           <section class="discovery-part" aria-labelledby="discovery-part-2">
             <h2 id="discovery-part-2">Part II — Your Audience</h2>
-            <p class="discovery-subtitle">Help us get to know your ideal clients and website visitors.</p>
+            <p class="discovery-subtitle">Let's get to know your ideal clients and website visitors.</p>
 
             <div class="discovery-field">
               <label for="website-audience">Who are you hoping will visit your website?</label>
@@ -96,13 +97,13 @@
             </div>
 
             <div class="discovery-field">
-              <label for="visitor-action">After someone visits your website, what do you want them to do?</label>
+              <label for="visitor-action">When someone visits your website, what do you want them to do?</label>
               <select id="visitor-action" name="desired_visitor_action" required>
                 <option value="" selected disabled>Select an option</option>
                 <option>Contact you</option>
                 <option>Schedule a consultation</option>
                 <option>Purchase artwork</option>
-                <option>Book lessons</option>
+                <option>Book lessons or services</option>
                 <option>Request a quote</option>
                 <option>Donate</option>
                 <option>Subscribe</option>
@@ -112,8 +113,8 @@
 
             <div class="discovery-field">
               <label for="customer-questions">What questions do customers ask you most often?</label>
-              <p class="discovery-hint">Hint: These answers belong in an FAQ.</p>
-              <input id="customer-questions" name="frequent_customer_questions" type="text" required>
+              <p class="discovery-hint" id="customer-questions-help">Hint: These answers belong in an FAQ.</p>
+              <input id="customer-questions" name="frequent_customer_questions" type="text" aria-describedby="customer-questions-help" required>
             </div>
           </section>
 
@@ -123,12 +124,13 @@
 
             <div class="discovery-field">
               <label for="brand-assets">Which brand assets do you already have?</label>
-              <p class="discovery-examples">Examples: Logo, brand colors, fonts / typography, photography, brand guidelines, social media graphics</p>
-              <input id="brand-assets" name="existing_brand_assets" type="text">
+              <p class="discovery-examples" id="brand-assets-help">Examples: Logo, brand colors, fonts / typography, photography, brand guidelines, social media graphics</p>
+              <input id="brand-assets" name="existing_brand_assets" type="text" aria-describedby="brand-assets-help">
             </div>
 
             <div class="discovery-field">
               <label for="business-colors">What colors feel most like your business?</label>
+              <p class="discovery-hint" id="website-inspiration-help">Use our <a href="inspiration/index.html" target="_blank">Design Inspiration Tool</a> to explore color palettes.</p>
               <input id="business-colors" name="business_colors" type="text">
             </div>
 
@@ -141,14 +143,14 @@
                 <option>Confident</option>
                 <option>Curious</option>
                 <option>Excited</option>
-                <option>Calm</option>
+                <option>Chill</option>
               </select>
             </div>
 
             <div class="discovery-field">
               <label for="website-inspiration">Are there any websites you like?</label>
-              <p class="discovery-hint">What do you like about them?</p>
-              <input id="website-inspiration" name="website_inspiration" type="text">
+              <p class="discovery-hint" id="website-inspiration-help">What do you like about them?</p>
+              <input id="website-inspiration" name="website_inspiration" type="text" aria-describedby="website-inspiration-help">
             </div>
 
             <div class="discovery-field">
@@ -159,7 +161,7 @@
 
           <section class="discovery-part" aria-labelledby="discovery-part-4">
             <h2 id="discovery-part-4">Part IV — Content</h2>
-            <p class="discovery-subtitle">Content is key—share what you have and what you’ll need.</p>
+            <p class="discovery-subtitle">Content is everything. Please share what you have and what you’ll need.</p>
 
             <div class="discovery-field">
               <label for="written-content">Do you already have written content?</label>
@@ -189,20 +191,20 @@
                 <option>Replacing an outdated website</option>
                 <option>Better SEO</option>
                 <option>Better mobile experience</option>
-                <option>Easier navigation</option>
+                <option>Need to increase online presence</option>
               </select>
             </div>
 
             <div class="discovery-field">
               <label for="website-pages">What pages do you expect to need?</label>
-              <p class="discovery-examples">Examples: Home, About, Services, Portfolio, Gallery, Shop, Blog, Events, Contact, FAQ</p>
-              <input id="website-pages" name="expected_website_pages" type="text" required>
+              <p class="discovery-examples" id="website-pages-help">Examples: Home, About, Services, Portfolio, Gallery, Shop, Blog, Events, Contact, FAQ</p>
+              <input id="website-pages" name="expected_website_pages" type="text" aria-describedby="website-pages-help" required>
             </div>
 
             <div class="discovery-field">
               <label for="special-functionality">Will your website need any special functionality?</label>
-              <p class="discovery-examples">Examples: Contact forms, ecommerce store, appointment scheduling, donations, event registration, blog, newsletter signup, professional email</p>
-              <input id="special-functionality" name="special_functionality" type="text">
+              <p class="discovery-examples" id="special-functionality-help">Examples: Contact forms, ecommerce store, appointment scheduling, donations, event registration, blog, newsletter signup, professional email</p>
+              <input id="special-functionality" name="special_functionality" type="text" aria-describedby="special-functionality-help">
             </div>
           </section>
 
@@ -226,8 +228,8 @@
 
             <div class="discovery-field">
               <label for="current-platform">Is your website built with:</label>
-              <p class="discovery-examples">Wix, Squarespace, WordPress, Shopify, Webflow, or another CMS provider?</p>
-              <input id="current-platform" name="current_website_platform" type="text">
+              <p class="discovery-examples" id="current-platform-help">Wix, Squarespace, WordPress, Shopify, Webflow, or another CMS provider?</p>
+              <input id="current-platform" name="current_website_platform" type="text" aria-describedby="current-platform-help">
             </div>
 
             <div class="discovery-field">
@@ -266,8 +268,8 @@
 
             <div class="discovery-field">
               <label for="milestone">Is there an upcoming event or milestone we should plan around?</label>
-              <p class="discovery-examples">Examples: Product launch, exhibition, concert, conference, grand opening</p>
-              <input id="milestone" name="upcoming_event_or_milestone" type="text">
+              <p class="discovery-examples" id="milestone-help">Examples: Product launch, exhibition, concert, conference, grand opening</p>
+              <input id="milestone" name="upcoming_event_or_milestone" type="text" aria-describedby="milestone-help">
             </div>
           </section>
 
@@ -290,7 +292,7 @@
     <div class="container">
       <div class="footer-cards">
         <section class="footer-card footer-logo-card" aria-label="Cédille and Co">
-          <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo.png" alt="Cedille and Co Logo">
+          <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo.png" alt="Cedille and Co expanded logo">
         </section>
 
         <section class="footer-card footer-info-card" aria-label="Footer information and links">
@@ -340,7 +342,7 @@
         </section>
       </div>
 
-      <p class="footer-bottom">&copy; 2026 C&eacute;dille &amp; Co. Web Design. All rights reserved.</p>
+      <p class="footer-bottom">&copy; 2026 <span lang="fr">C&eacute;dille</span> &amp; Co. Web Design. All rights reserved.</p>
     </div>
   </footer>
 

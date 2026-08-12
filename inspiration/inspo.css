@@ -57,6 +57,14 @@ body.page-services .standard-hero-copy > p {
   font-size: 1.08rem !important;
 }
 
+body.page-services .standard-hero-copy > .inspiration-hero-kicker {
+  margin: 0;
+  color: var(--ksl-primary);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
+  line-height: 1.25;
+}
+
 .eyebrow {
   margin: 0 0 22px;
   color: var(--accent);

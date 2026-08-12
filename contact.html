@@ -12,11 +12,12 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="page-contact">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <nav class="navbar navbar-expand-md" aria-label="Primary navigation">
       <div class="nav-inner">
-        <a class="navbar-brand" href="index.html" aria-label="KSL Web Design home">
-          <img src="Images/Cedille and Co Logo.png" alt="Cedille and Co Logo">
+        <a class="navbar-brand" href="index.html" aria-label="Cédille and Co. home">
+          <img src="Images/Cedille and Co Logo.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -49,7 +50,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="standard-hero" aria-label="Contact introduction">
       <div class="standard-hero-copy">
         <h1>Let's Craft Something</h1>
@@ -61,7 +62,7 @@
       </div>
     </section>
 
-    <section class="contact-page" aria-label="Contact KSL Web Design">
+    <section class="contact-page" aria-label="Contact Cédille and Co.">
       <div class="contact-inner">
         <div class="contact-hero">
           <div class="contact-info">
@@ -81,7 +82,7 @@
             <h2>Start Your Website Commission</h2>
             <div class="gold-star-divider" aria-hidden="true"><span></span></div>
             <form class="contact-form" action="https://formspree.io/f/mlgybnjl" method="POST">
-              <input type="hidden" name="_subject" value="New KSL Web Design consultation request">
+              <input type="hidden" name="_subject" value="New Cédille and Co. consultation request">
               <input type="hidden" name="_next" value="thanks.html">
               <div class="form-grid">
                 <div class="form-field">
@@ -121,10 +122,11 @@
                 </div>
                 <div class="form-field">
                   <label for="estimated-budget">Estimated Budget</label>
-                  <input id="estimated-budget" name="estimated_budget" type="text" inputmode="decimal" placeholder="Ex. $500-1000, $2000">
+                  <input id="estimated-budget" name="estimated_budget" type="text" inputmode="decimal" placeholder="Ex. $500-1000, $2000" aria-describedby="estimated-budget-help">
+                  <p id="estimated-budget-help" class="visually-hidden">Example budget ranges include $500–1000 or $2000.</p>
                 </div>
                 <div class="form-field">
-                  <label for="referral">How did you hear about Cédille &amp; Co.?</label>
+                  <label for="referral">How did you hear about <span lang="fr">Cédille</span> &amp; Co.?</label>
                   <select id="referral" name="referral_source">
                     <option value="" selected disabled></option>
                     <option value="Google Search">Google Search</option>
@@ -136,7 +138,8 @@
                 </div>
                 <div class="form-field form-field-full">
                   <label for="business-description">Tell me a bit about your business. <span class="req" aria-hidden="true">*</span></label>
-                  <textarea id="business-description" name="business_description" rows="4" placeholder="Please include as much detail as possible about what you're looking for." required></textarea>
+                  <textarea id="business-description" name="business_description" rows="4" placeholder="Please include as much detail as possible about what you're looking for." aria-describedby="business-description-help" required></textarea>
+                  <p id="business-description-help" class="visually-hidden">Please include as much detail as possible about what you're looking for.</p>
                 </div>
               </div>
               <div class="form-submit">
@@ -153,7 +156,7 @@
     <div class="container">
       <div class="footer-cards">
         <section class="footer-card footer-logo-card" aria-label="Cédille and Co">
-          <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo.png" alt="Cedille and Co Logo">
+          <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo.png" alt="ALT TEXT REQUIRED">
         </section>
 
         <section class="footer-card footer-info-card" aria-label="Footer information and links">
@@ -203,7 +206,7 @@
         </section>
       </div>
 
-      <p class="footer-bottom">&copy; 2026 C&eacute;dille &amp; Co. Web Design. All rights reserved.</p>
+      <p class="footer-bottom">&copy; 2026 <span lang="fr">C&eacute;dille</span> &amp; Co. Web Design. All rights reserved.</p>
     </div>
   </footer>
 

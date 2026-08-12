@@ -750,6 +750,7 @@ function createHexButton(color, className = "hex-button") {
   button.className = className;
   button.textContent = color.toUpperCase();
   button.setAttribute("aria-label", `Copy ${color.toUpperCase()} to clipboard`);
+  button.setAttribute("aria-live", "polite");
   button.addEventListener("click", (event) => {
     event.stopPropagation();
     copyHexCode(color, button);
@@ -954,3 +955,6 @@ renderSelectedPalette();
 renderBrandPreview();
 updateSectionSummaries();
 initializeCollapsibleSections();
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.querySelectorAll("video[autoplay]").forEach((video) => video.pause());
+}
