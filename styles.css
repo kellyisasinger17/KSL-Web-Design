@@ -5806,18 +5806,26 @@ body.page-about .ny-mark {
 }
 
 body.page-about .passions {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   margin-top: 2.75rem;
 }
 
 body.page-about .passions h2 {
   margin-bottom: 1.5rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 body.page-about .trait-list {
+  width: 100%;
+  min-width: 0;
   gap: 1.25rem 2rem;
 }
 
 body.page-about .trait {
+  min-width: 0;
   grid-template-columns: 42px minmax(0, 1fr);
   gap: 0.8rem;
   text-align: left;
@@ -5829,7 +5837,9 @@ body.page-about .trait img {
 }
 
 body.page-about .trait-list span {
+  min-width: 0;
   font-size: 0.88rem;
+  overflow-wrap: anywhere;
 }
 
 body.page-about .about-cta {
@@ -6267,8 +6277,12 @@ body[class*="page-"] .btn-view-sample {
   body[class*="page-"] .footer-talk-btn {
     width: min(100%, 280px);
     min-width: 0;
-    padding-inline: 10px;
+    padding: 1rem clamp(0.625rem, 4vw, 1.25rem);
+    font-size: clamp(0.7rem, 3.5vw, 0.7875rem);
+    line-height: 1.25;
+    text-align: center;
     white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   body.page-index .hero-actions {
@@ -6410,9 +6424,19 @@ body[class*="page-"] .btn-view-sample {
     gap: 1.35rem;
   }
 
+  body.page-about .passions h2 {
+    font-size: clamp(1.1rem, 6vw, 1.4rem);
+    line-height: 1.25;
+  }
+
   body.page-about .trait {
     grid-template-columns: 34px minmax(0, 1fr);
     gap: 0.75rem;
+  }
+
+  body.page-about .trait-list span {
+    font-size: clamp(0.72rem, 3.75vw, 0.88rem);
+    line-height: 1.3;
   }
 
   body.page-about .trait img,
