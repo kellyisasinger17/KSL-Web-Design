@@ -40,7 +40,7 @@
                 <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Design</span><span class="dropdown-item-text">Custom websites designed around your mission, audience, and goals.</span></a></li>
                 <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Migration</span><span class="dropdown-item-text">Guiding organizations from outdated platforms to modern, maintainable websites.</span></a></li>
                 <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Technical SEO</span><span class="dropdown-item-text">Helping search engines understand your website so the right people can find it.</span></a></li>
-                <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Stewardship</span><span class="dropdown-item-text">Ongoing care, updates, and maintenance to keep your website secure and effective.</span></a></li>
+                <li><a class="dropdown-item" href="marketing.html"><span class="dropdown-item-title">Digital Marketing</span><span class="dropdown-item-text">Helping your business get discovered online.</span></a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
@@ -79,7 +79,8 @@
 
         <div class="contact-layout">
           <div class="form-shell">
-            <h2>Start Your Website Commission</h2>
+            <h2>Start Your Commission</h2>
+            <p>After submitting this form, you'll have the option to request a phone consultation, or complete our discovery questionnaire entirely online.</p>
             <div class="gold-star-divider" aria-hidden="true"><span></span></div>
             <form class="contact-form" action="https://formspree.io/f/meajzjwk" method="POST">
               <input type="hidden" name="_subject" value="New KSL Web Design consultation request">
@@ -121,9 +122,14 @@
                   </select>
                 </div>
                 <div class="form-field">
-                  <label for="estimated-budget">Estimated Budget</label>
-                  <input id="estimated-budget" name="estimated_budget" type="text" inputmode="decimal" placeholder="Ex. $500-1000, $2000" aria-describedby="estimated-budget-help">
-                  <p id="estimated-budget-help" class="visually-hidden">Example budget ranges include $500–1000 or $2000.</p>
+                  <label for="service">Select Service</label>
+                  <select id="service" name="service">
+                    <option value="" selected disabled>Select service</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="New Website">New Website</option>
+                    <option value="Website Redesign/Migration">Website Redesign/Migration</option>
+                    <option value="Both (Marketing + Website)">Both (Marketing + Website)</option>
+                  </select>
                 </div>
                 <div class="form-field">
                   <label for="referral">How did you hear about <span lang="fr">Cédille</span> &amp; Co.?</label>
@@ -206,7 +212,7 @@
         </section>
       </div>
 
-      <p class="footer-bottom">&copy; 2026 <span lang="fr">C&eacute;dille</span> &amp; Co. Web Design. All rights reserved.</p>
+      <p class="footer-bottom">&copy; 2026 <span lang="fr">C&eacute;dille</span> &amp; Co. LLC. All rights reserved.</p>
     </div>
   </footer>
 

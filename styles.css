@@ -1846,6 +1846,15 @@ body.page-contact  {
       text-transform: uppercase;
     }
 
+    body.page-contact .form-shell > .form-intro {
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto 1.5rem;
+      color: var(--ksl-ink);
+      line-height: 1.5;
+      text-align: center;
+    }
+
     body.page-contact .form-shell .gold-star-divider {
       width: 138px;
       margin-bottom: 2rem;
@@ -5431,6 +5440,194 @@ body.page-thanks  {
       zoom: 0.7;
     }
 
+    body.page-phoneconsult .consultation-card {
+      max-width: 1000px;
+      padding: 1.5rem;
+      zoom: 1;
+    }
+
+    body.page-phoneconsult .calendly-inline-widget {
+      width: 100%;
+    }
+
+    body.page-marketing .marketing-hero-copy {
+      padding-bottom: 3.5rem;
+    }
+
+    body.page-marketing .marketing-intro {
+      display: grid;
+      gap: 1rem;
+      width: min(100%, 880px);
+      margin: 0 auto;
+    }
+
+    body.page-marketing .marketing-intro p {
+      max-width: none;
+      margin: 0;
+    }
+
+    body.page-marketing .marketing-page {
+      padding: clamp(2rem, 5vw, 4.5rem) 1.25rem;
+      background: var(--ksl-panel);
+    }
+
+    body.page-marketing .marketing-form-card {
+      width: min(100%, 960px);
+      margin: 0 auto;
+      padding: clamp(1.5rem, 5vw, 4rem);
+      border: 1px solid var(--ksl-accent);
+      border-radius: 12px;
+      background: #fbfbfb;
+    }
+
+    body.page-marketing .marketing-form {
+      display: grid;
+      gap: 3rem;
+    }
+
+    body.page-marketing .marketing-form-section,
+    body.page-marketing .marketing-choice-group {
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    body.page-marketing .marketing-form-section > legend {
+      width: 100%;
+      margin: 0 0 1.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--ksl-accent);
+      color: var(--ksl-primary);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(1.25rem, 2vw, 1.55rem);
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    body.page-marketing .marketing-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    body.page-marketing .marketing-form-grid-single {
+      grid-template-columns: 1fr;
+    }
+
+    body.page-marketing .marketing-field {
+      display: grid;
+      gap: 0.55rem;
+      align-content: start;
+    }
+
+    body.page-marketing .marketing-field label,
+    body.page-marketing .marketing-choice-group > legend {
+      color: var(--ksl-primary);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    body.page-marketing .marketing-field input,
+    body.page-marketing .marketing-field select,
+    body.page-marketing .marketing-field textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid rgba(31, 42, 68, 0.35);
+      border-radius: 6px;
+      color: var(--ksl-ink);
+      background: #fff;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1rem;
+    }
+
+    body.page-marketing .marketing-field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    body.page-marketing .marketing-field input:focus,
+    body.page-marketing .marketing-field select:focus,
+    body.page-marketing .marketing-field textarea:focus {
+      border-color: var(--ksl-accent);
+      outline: 3px solid rgba(198, 167, 94, 0.22);
+    }
+
+    body.page-marketing .marketing-field small {
+      color: var(--ksl-muted);
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+
+    body.page-marketing .marketing-choice-group {
+      margin-bottom: 1.75rem;
+    }
+
+    body.page-marketing .marketing-choice-group > legend {
+      margin-bottom: 0.9rem;
+    }
+
+    body.page-marketing .marketing-options {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem 1.25rem;
+    }
+
+    body.page-marketing .marketing-options label {
+      display: flex;
+      gap: 0.55rem;
+      align-items: center;
+      color: var(--ksl-ink);
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    body.page-marketing .marketing-options input {
+      width: 1rem;
+      height: 1rem;
+      accent-color: var(--ksl-accent);
+    }
+
+    body.page-marketing .marketing-upload-section > p {
+      margin: -0.5rem auto 1.75rem;
+      color: var(--ksl-primary);
+      text-align: center;
+    }
+
+    body.page-marketing .marketing-submit {
+      width: min(100%, 560px);
+      margin: 0 auto;
+      padding: 1.35rem 2rem;
+      border: 0;
+      border-radius: 11px;
+      color: #fff;
+      background: #d2ad5d;
+      box-shadow: 14px 18px 24px rgba(31, 42, 68, 0.2);
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    body.page-marketing .marketing-submit:focus-visible {
+      outline: 3px solid var(--ksl-primary);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 767.98px) {
+      body.page-marketing .marketing-form-grid,
+      body.page-marketing .marketing-options {
+        grid-template-columns: 1fr;
+      }
+
+      body.page-marketing .marketing-form-card {
+        padding-inline: 1.25rem;
+      }
+    }
+
     body.page-thanks .thanks-headline {
       margin: 0 0 2.25rem;
       font-size: clamp(1.85rem, 3vw, 2.5rem);
@@ -5448,41 +5645,17 @@ body.page-thanks  {
       color: var(--ksl-primary);
     }
 
-    body.page-thanks .thanks-scheduling {
+    body.page-thanks .thanks-actions {
       display: grid;
-      grid-template-columns: minmax(320px, 1.4fr) minmax(240px, 0.8fr);
-      gap: clamp(2rem, 5vw, 5rem);
-      align-items: center;
-      max-width: 900px;
+      gap: 1.5rem;
+      width: min(100%, 560px);
       margin: 0 auto;
-    }
-
-    body.page-thanks .thanks-calendly {
-      min-width: 0;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    body.page-thanks .thanks-calendly .calendly-inline-widget {
-      width: 100%;
-    }
-
-    body.page-thanks .thanks-details {
-      display: grid;
-      gap: 3.5rem;
-    }
-
-    body.page-thanks .thanks-details p {
-      margin: 0;
-      color: var(--ksl-primary);
-      font-size: clamp(1.15rem, 2vw, 1.55rem);
-      line-height: 1.42;
     }
 
     body.page-thanks .thanks-email-button {
       display: inline-block;
-      width: min(100%, 560px);
-      margin-top: 3.75rem;
+      width: 100%;
+      margin: 0;
       padding: 1.35rem 2rem;
       border: 0;
       border-radius: 11px;
@@ -5671,17 +5844,6 @@ body.page-thanks  {
         padding: 2.5rem 1.75rem;
       }
 
-      body.page-thanks .thanks-scheduling {
-        grid-template-columns: 1fr;
-      }
-
-      body.page-thanks .thanks-details {
-        gap: 2rem;
-      }
-
-      body.page-thanks .thanks-email-button {
-        margin-top: 2.75rem;
-      }
     }
 
     @media (max-width: 575.98px) {
