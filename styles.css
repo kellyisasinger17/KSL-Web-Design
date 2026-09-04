@@ -5898,21 +5898,26 @@ body.page-about .about-hero-heading .script-heading {
 
 body.page-about .about-hero-grid {
   width: min(100%, 1320px);
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
-  gap: 4rem;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 0;
+  align-items: center;
   padding: 0 3rem;
+  text-align: center;
 }
 
 body.page-about .about-copy {
   max-width: 940px;
+  margin: 0 auto;
   padding: 2.5rem 0 2rem;
+  text-align: center;
 }
 
 body.page-about .about-copy p {
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
   font-size: 1rem;
   line-height: 1.35;
+  text-align: center;
 }
 
 body.page-about .about-portrait {
