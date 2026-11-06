@@ -1,235 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cédille and Co. Design | Home</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU+Guides&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cédille &amp; Co. Jewelry — historically inspired jewelry for romantics, readers, and lovers of another century.">
+  <title>Cédille &amp; Co. Jewelry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Cinzel+Decorative:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet"><script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
-<body class="page-index">
+<body class="page-index jewelry-home">
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="jewelry-header" data-header>
+    <a class="jewelry-brand" href="index.html" aria-label="Cédille and Co. Jewelry home"><img src="Images/Cedille and Co Stone Logo - Transparent.png" alt="Cédille and Co. Jewelry"></a>
+    <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false"><span>Menu</span><i data-lucide="menu" aria-hidden="true"></i></button>
+    <nav class="jewelry-nav" id="primary-menu" aria-label="Primary navigation"><a href="#newest-arrivals">Shop All</a><a href="#our-story">Our Story</a><a href="contact.html">Contact</a></nav>
+    <a class="bag-link" href="#" aria-label="Shopping bag — store coming soon" title="Store coming soon"><i data-lucide="shopping-bag" aria-hidden="true"></i><span>0</span></a>
+  </header>
   <main id="main-content">
-    <section class="homepage-hero" aria-label="Cédille and Co. introduction">
-      <header class="site-header">
-        <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
-          <div class="nav-frame">
-            <a class="brand-ribbon" href="index.html" aria-label="Cédille and Co. home">
-              <img src="Images/Cedille and Co Logo.png" alt="Cedille and Co primary logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="primaryNavbar">
-              <ul class="navbar-nav align-items-lg-center justify-content-between w-100">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                  <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                    <li><a class="dropdown-item" href="about.html"><span class="dropdown-item-title">About</span><span class="dropdown-item-text">About the developer.</span></a></li>
-                    <li><a class="dropdown-item" href="about.html#credentials"><span class="dropdown-item-title">Credentials</span><span class="dropdown-item-text">Education and background.</span></a></li>
-                    <li><a class="dropdown-item" href="commissions.html"><span class="dropdown-item-title">Portfolio</span><span class="dropdown-item-text">View recent website commissions.</span></a></li>
-                    <li><a class="dropdown-item" href="about.html#faq"><span class="dropdown-item-title">FAQ</span><span class="dropdown-item-text">Frequently asked questions.</span></a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                    <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Design</span><span class="dropdown-item-text">Custom websites designed around your mission, audience, and goals.</span></a></li>
-                    <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Website Migration</span><span class="dropdown-item-text">Guiding organizations from outdated platforms to modern, maintainable websites.</span></a></li>
-                    <li><a class="dropdown-item" href="services.html"><span class="dropdown-item-title">Technical SEO</span><span class="dropdown-item-text">Helping search engines understand your website so the right people can find it.</span></a></li>
-                    <li><a class="dropdown-item" href="marketing.html"><span class="dropdown-item-title">Digital Marketing</span><span class="dropdown-item-text">Helping your business get discovered online.</span></a></li>
-                  </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <div class="hero-copy">
-        <div class="hero-content">
-          <h1>Crafting websites for people who have</h1>
-          <h2 class="script-line">mastered their craft.</h2>
-          <div class="gold-rule" aria-hidden="true"></div>
-          <p>Creating custom websites that communicate your purpose
-            <br> with clarity and class, because your work deserves <em>more than a template</em>.</p>
-          <div class="hero-actions" aria-label="Audience paths">
-            <a class="btn btn-audience-outline" href="contact.html">Learn More</a>
-          </div>
-        </div>
-      </div>
+    <section class="jewelry-hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"><!-- Replace this image with the documented video element when footage is ready. --><img src="Images/Luxe Jewelry Display Background.png" alt="" fetchpriority="high"></div><div class="hero-shade" aria-hidden="true"></div>
+      <div class="jewelry-hero-copy"><p class="eyebrow">EST. MMXXVI</p><h1 id="hero-title"><span lang="fr">Cédille</span> & Co. Jewelry</h1><p>Inspired by history, heritage, literature, and the art of adornment.</p><a class="jewelry-button jewelry-button-light" href="#newest-arrivals">Explore the Collection</a></div>
+      <a class="scroll-cue" href="#newest-arrivals" aria-label="Scroll to newest arrivals"><span>Discover</span><i data-lucide="arrow-down" aria-hidden="true"></i></a>
     </section>
-    <section class="intro-band" aria-label="Design philosophy">
-      <p>Break free from the chains of content management systems like Wix and WordPress with a custom-built website.</p>
-      <div class="star-divider" aria-hidden="true">
-        <span></span>
+    <section class="arrivals-section" id="newest-arrivals" aria-labelledby="arrivals-title">
+      <div class="section-heading reveal"><h2 id="arrivals-title">Newest Arrivals</h2><p class="eyebrow">Recently added</p></div>
+      <div class="product-grid" aria-label="Sample products">
+        <article class="product-card reveal"><a class="product-image" href="#sample-catalog" aria-label="View Snapdragon Cascade Earrings — sample product"><img src="Images/Snapdragon SS Cascade Earrings.png" alt="Sterling silver snapdragon cascade earrings" width="1199" height="1312"><span>Sample catalog</span></a><div class="product-meta"><h3><a href="#sample-catalog">Snapdragon Cascade Earrings</a></h3><p>$168.00</p></div></article>
+        <article class="product-card reveal"><a class="product-image" href="#sample-catalog" aria-label="View Joan of Arc Shield Pendant — sample product"><img src="Images/Gold Joan of Arc Shield Pendant.png" alt="Gold Joan of Arc shield pendant" width="1086" height="1448" loading="lazy"><span>Sample catalog</span></a><div class="product-meta"><h3><a href="#sample-catalog">Joan of Arc Shield Pendant</a></h3><p>$225.00</p></div></article>
+        <article class="product-card reveal"><a class="product-image" href="#sample-catalog" aria-label="View Fleur-de-Lis Signet Pendant — sample product"><img src="Images/SS Hexagon Fleur-de-Lis.png" alt="Sterling silver hexagonal fleur-de-lis pendant" width="1123" height="1401" loading="lazy"><span>Sample catalog</span></a><div class="product-meta"><h3><a href="#sample-catalog">Fleur-de-Lis Signet Pendant</a></h3><p>$148.00</p></div></article>
       </div>
-      <div class="migration-examples">
-        <p class="examples-label">Migrate your website from:</p>
-        <div class="examples-grid">
-          <div class="example-item"><img src="Images/Wix Logo.png" alt="Wix Logo"><span>Wix</span></div>
-          <div class="example-item"><img src="Images/Squarespace Logo.png" alt="Squarespace Logo"><span>Squarespace</span></div>
-          <div class="example-item"><img src="Images/Wordpress Logo.png" alt="WordPress Logo"><span>WordPress</span></div>
-          <div class="example-item"><img src="Images/Shopify Logo.png" alt="Shopify Logo"><span>Shopify</span></div>
-          <div class="example-item"><img src="Images/Webflow Logo.png" alt="Webflow Logo"><span>Webflow</span></div>
-          <div class="example-item"><img src="Images/Lovable Logo.png" alt="Lovable Logo"><span>Lovable</span></div>
-        </div>
-      </div>
+      <div class="section-link reveal" id="sample-catalog"><a href="#newest-arrivals">View All Jewelry <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
     </section>
+    <section class="story-section" id="our-story" aria-labelledby="story-title">
+      <div class="story-image reveal"><img src="Images/Shay Cedille Headshot.png" alt="Shay Cédille, founder of Cédille and Co." loading="lazy"><p>Founder &amp; designer</p></div>
+      <div class="story-copy reveal"><p class="eyebrow">Our story</p><h2 id="story-title">A little history,<br>a little romance.</h2><p>You know the feeling. <br> <br> You'd happily spend an afternoon wandering through an old bookshop, have strong opinions about your favorite period dramas, and occasionally wonder why we ever stopped writing love letters. Maybe you've fallen in love with a fictional character from two hundred years ago. (No judgment here.) <br> <br>
 
-
-    <section class="featured-work" aria-label="Featured work">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-3">
-            <p class="section-kicker">Featured Work</p>
-            <h3 class="section-title">Custom<br>commissions.</h3>
-            <a class="portfolio-link" href="commissions.html">View Portfolio <i data-lucide="arrow-right"></i></a>
-          </div>
-          <div class="col-lg-9">
-            <div class="row g-4 align-items-start">
-              <div class="col-md-4">
-                <article class="work-card">
-                  <a href="https://maisonlancon.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="Images/ML WEBSITE.png" alt="Maison Lançon Homepage Image">
-                  </a>
-                  <h3>Maison Lançon Jewelry</h3>
-                  <p>Luxury Website Design</p>
-                </article>
-              </div>
-              <div class="col-md-4">
-                <article class="work-card">
-                  <a href="https://lightningautoservice.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="Images/LA Website.png" alt="Lightning Auto Service Homepage Image">
-                  </a>
-                  <h3>Lightning Auto Service</h3>
-                  <p>Business Website Migration</p>
-                </article>
-              </div>
-              <div class="col-md-4">
-                <article class="work-card">
-                  <a href="https://alymartenbodywork.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="Images/AlyMarten.png" alt="Aly Marten Bodywork Homepage Image">
-                  </a>
-                  <h3>Aly Marten Bodywork</h3>
-                  <p>Branding and Web Design</p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+I've always been fascinated by the classics, history, and mythology of many cultures. <span lang="fr">Cédille</span> & Co. is about making that old-world beauty accessible: inspired by the past, but very much in the present. Each design begins with a story, a historical detail, or simply the thought that someone, somewhere, might have worn something like this a century ago. Let's dust off our velvet-lined jewelry boxes, girls.<br> <br>
+<em>With love,</em><br>Shay</p></div>
     </section>
-
-    <section class="process-anchor" id="our-process" aria-label="Our process">
-      <div class="container">
-        <p class="center-kicker">The Process</p>
-        <div class="center-star-divider" aria-hidden="true">
-          <span></span>
-        </div>
-        <h2>Clear processes and pricing, from start to finish.</h2>
-        <div class="process-timeline">
-          <article class="process-step">
-            <div class="process-icon" aria-hidden="true"><img src="Images/discovery.png" alt="Vintage Telephone with text, I need a website!"></div>
-            <h3>Discovery</h3>
-            <p>Tell us about your goals, audience, and what success looks like.</p>
-          </article>
-          <article class="process-step">
-            <div class="process-icon" aria-hidden="true"><img src="Images/Research.png" alt="Vintage Hourglass icon"></div>
-            <h3>Research + Planning</h3>
-            <p>I'll map out the structure and content for your site, for your approval</p>
-          </article>
-          <article class="process-step">
-            <div class="process-icon" aria-hidden="true"><img src="Images/Design.png" alt="Vintage hand writing icon"></div>
-            <h3>Design</h3>
-            <p>Your brand and vision come to life on a custom website.</p>
-          </article>
-          <article class="process-step">
-            <div class="process-icon" aria-hidden="true"><img src="Images/Development.png" alt="Antique architectural print"></div>
-            <h3>Development</h3>
-            <p>Construction of a fast, secure website that works everywhere.</p>
-          </article>
-          <article class="process-step">
-            <div class="process-icon" aria-hidden="true"><img src="Images/Statue Bust.png" alt="Greek Bust Statue"></div>
-            <h3>Refinement</h3>
-            <p>The testing and tweaking phase, to ensure your vision is perfect.</p>
-          </article>
-          <article class="process-step">
-            <div class="process-icon" aria-hidden="true"><img src="Images/launch.png" alt="Star Print icon"></div>
-            <h3>Launch</h3>
-            <p>Everything is QA tested, performance is optimized, and your site is launched.</p>
-          </article>
-        </div>
-        <a class="btn btn-process" href="services.html#website-packages">Learn More</a>
+    <section class="instagram-section" aria-labelledby="instagram-title">
+      <div class="section-heading reveal"><h2 id="instagram-title">A Glimpse Into Our World</h2><p class="eyebrow">From the atelier</p></div>
+      <div class="instagram-embed reveal">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/cedillejewelry/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+          <p><a href="https://www.instagram.com/cedillejewelry/" target="_blank" rel="noopener noreferrer">View @cedillejewelry on Instagram</a></p>
+        </blockquote>
       </div>
+      <a class="jewelry-button reveal" href="https://www.instagram.com/cedillejewelry/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-cards">
-        <section class="footer-card footer-logo-card" aria-label="Cédille and Co">
-          <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo.png" alt="Cedille and Co expanded logo">
-        </section>
-
-        <section class="footer-card footer-info-card" aria-label="Footer information and links">
-          <div class="footer-cta-text">
-            <h2>Let's build something classically <em>you.</em></h2>
-            <p>Crafting websites for people who have mastered their craft.</p>
-          </div>
-
-          <div class="footer-content">
-            <nav class="footer-column" aria-label="Footer quick links">
-              <h3>Quick Links</h3>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="commissions.html">Recent Commissions</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html#faq">FAQ</a></li>
-              </ul>
-            </nav>
-
-            <nav class="footer-column" aria-label="Footer services">
-              <h3>Services</h3>
-              <ul>
-                <li><a href="services.html">Custom Web Design</a></li>
-                <li><a href="services.html">Website Migration</a></li>
-                <li><a href="services.html">SEO Foundations</a></li>
-                <li><a href="services.html">Accessibility</a></li>
-                <li><a href="services.html">Website Care</a></li>
-                <li><a href="inspiration/index.html">Design Inspiration Tool</a></li>
-              </ul>
-            </nav>
-
-            <nav class="footer-column" aria-label="Footer account and legal">
-              <h3>Account &amp; Legal</h3>
-              <ul>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms &amp; Conditions</a></li>
-                <li><a href="accessibility.html">Accessibility Statement</a></li>
-              </ul>
-            </nav>
-          </div>
-        </section>
-
-        <section class="footer-card footer-action-card" aria-label="Start your commission">
-          <a class="footer-talk-btn" href="contact.html">Start Your Commission</a>
-        </section>
-      </div>
-
-      <p class="footer-bottom">&copy; 2026 <span lang="fr">C&eacute;dille</span> &amp; Co. LLC. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="site-footer"><div class="container"><div class="footer-cards footer-cards-simplified">
+    <section class="footer-card footer-logo-card" aria-label="Cédille and Co">
+      <img class="footer-logo-large" src="Images/Cedille and Co Footer Logo - Transparent.png" alt="Cedille and Co expanded logo">
+    </section>
+    <section class="footer-card footer-info-card footer-links-card" aria-label="Footer links">
+      <nav class="footer-link-groups" aria-label="Footer navigation">
+        <div class="footer-column"><h3>Main Menu</h3><ul><li><a href="index.html">Home</a></li><li><a href="#newest-arrivals">New Arrivals</a></li><li><a href="#our-story">About</a></li><li><span>Shop</span></li></ul></div>
+        <div class="footer-column"><h3>Information</h3><ul><li><a href="accessibility.html">Accessibility</a></li><li><a href="returns.html">Return Policy</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      </nav>
+    </section>
+  </div><p class="footer-bottom">&copy; 2026 <span lang="fr">C&eacute;dille</span> &amp; Co. LLC. All rights reserved.</p></div></footer>
+  <script async src="https://www.instagram.com/embed.js"></script>
   <script type="module" src="js/main.js"></script>
-</body>
-</html>
+</body></html>
